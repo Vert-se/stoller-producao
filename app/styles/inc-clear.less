@@ -1,0 +1,139 @@
+*{
+	border: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+header, section, main, footer, aside, nav{display: block;}
+
+textarea,
+input,
+button,
+button{
+  -webkit-border-radius: 0;
+  outline: none;
+  resize: none;
+}
+
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  font: inherit;
+}
+::-webkit-input-placeholder {
+   color: inherit;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: inherit;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: inherit;  
+}
+
+:-ms-input-placeholder {  
+   color: inherit;  
+}
+
+
+html, body, main{
+	height: 100%;
+	width: 100%;
+}
+
+.inner{
+	width: 90%;
+	max-width: 1078px;
+	margin: 0 auto;
+	position: relative;
+	
+	&.inner_small{
+		max-width: 977px;	
+	}
+	&.inner_big{
+		max-width: 1174px;	
+	}
+}
+
+.inner_small{
+	width: 90%;
+	
+	margin: 0 auto;	
+}
+
+a{
+	color: inherit;
+}
+
+// main{
+// 	font-family: 'HelveticaRounded LT Std BdCn';
+// }
+
+
+.tac{
+	text-align: center;
+}
+
+
+@media screen and (min-width: 100px) {
+
+	.mobile_only{
+		display: block;
+	}
+
+	html{
+		font-size: 42.5% !important;
+	}
+
+	body{
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+	// 	color: @purple;
+	// 	padding-top: 50px !important;
+	// 	font-size: inherit;
+	// 	&.modal-active{
+	// 		overflow: hidden;
+	// 	}
+	}
+}
+
+@media screen and (min-width: 400px) {
+	html{
+		font-size: 47.5% !important;
+	}
+}
+
+@media screen and (min-width: 700px) {
+
+	html{font-size: 52.5% !important;}
+}
+
+@media screen and (min-width: 850px) {
+	.mobile_only{
+		display: none;
+	}
+	// body{
+	// 	padding-top: 80px !important;
+	// }
+}
+
+@media screen and (min-width: 1000px) {
+
+	html{font-size: 62.5% !important;}
+}

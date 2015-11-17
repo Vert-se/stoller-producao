@@ -1,0 +1,46 @@
+@dark: #000000;
+@light: #ffffff;
+
+@grey: #666666;
+@grey_l: #cccccc;
+@grey_sl: #999999;
+@grey_d: #333333;
+
+@green: #c1d52e;
+@green_m: #a5b626;
+@green_d: #819011;
+
+.clearfix{
+	&:after{
+		display: block;
+		content: '';
+		height: 0;
+		width: 100%;
+		clear: both;
+	}
+}
+
+.sprite(@pos: 0 0){
+	background: url('../images/stoller_sprite.png') no-repeat @pos;
+}
+
+.trans(@trans: all 0.2s){
+    -webkit-transition: @trans;
+       -moz-transition: @trans;
+        -ms-transition: @trans;
+         -o-transition: @trans;
+            transition: @trans;
+}
+
+.seta_1{
+	cursor: pointer;
+	&:after{
+		display: inline-block;
+		content: '';
+		.sprite(-156px -117px);
+		width: 15px;
+		height: 15px;
+		margin: 0 0 0 10px;
+		vertical-align: middle;		
+	}
+}
