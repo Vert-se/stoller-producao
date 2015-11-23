@@ -1,0 +1,24 @@
+.area{
+	width: 100%;
+	display: inline-block;
+	.clearfix;
+	&.area_full{
+		min-height: 100%;
+	}
+	&.area_light{
+		color: @grey_sl;
+	}
+	&.area_dark{
+		color: @light;
+	}
+}
+
+@media screen and (min-width:100px){
+	.area{
+		padding-top: 60px;
+		padding-bottom: 160px;
+		&.area_top{
+			padding-top: 143px;
+		}
+	}
+}

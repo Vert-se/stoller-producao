@@ -52,9 +52,15 @@ button {
 }
 
 
-html, body, main{
+html, body{
 	height: 100%;
 	width: 100%;
+}
+
+main{
+	width: 100%;
+	height: 100%;
+	.clearfix;
 }
 
 .inner{
@@ -75,6 +81,30 @@ html, body, main{
 	width: 90%;
 	
 	margin: 0 auto;	
+}
+
+.degrade{
+	background: -webkit-radial-gradient(@light, #fcfcfc, #c4c5c7); /* Safari 5.1 to 6.0 */
+	background: -o-radial-gradient(@light, #fcfcfc, #c4c5c7); /* For Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(@light, #fcfcfc, #c4c5c7); /* For Firefox 3.6 to 15 */
+	background: radial-gradient(@light, #fcfcfc, #c4c5c7); /* Standard syntax */
+}
+
+// titles
+
+.title_green{
+	color: @green;
+	font-weight: 700;
+	font-size: 7.2em;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+// text
+
+p{
+	font-size: 1.6em;
+	margin-bottom: 20px;
 }
 
 a{
