@@ -24,6 +24,24 @@ site.init = function(){
 
     // this.clear_form_errors();
 
+    $('.grid_gallery').slick({
+      dots: false,
+      slide: '.grid_box',
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 849,
+          settings: "unslick"
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+
 };
 
 site.resize = function(){

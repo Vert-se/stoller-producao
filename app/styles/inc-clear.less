@@ -100,6 +100,14 @@ main{
 	text-transform: uppercase;
 }
 
+.title_blue{
+	color: @blue;
+	font-weight: 700;
+	font-size: 7.2em;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
 // text
 
 p{
@@ -120,6 +128,29 @@ a{
 	text-align: center;
 }
 
+.tal{
+	text-align: left;
+}
+
+.voltar_seta{
+	position: absolute;
+	z-index: 2;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	top: 50%;
+	left: 0;
+	-webkit-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	transform: translateX(-100%);
+
+	width: 31px;
+	height: 46px;
+	overflow: hidden;
+	text-indent: -3000px;
+
+	.sprite(-133px 0);
+}
 
 @media screen and (min-width: 100px) {
 

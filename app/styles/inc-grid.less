@@ -18,11 +18,18 @@
 	 	&.grid_2,
 	 	&.grid_3,
 	 	&.grid_4{
+	 		.grid_box{
+	 			outline: none;
+	 		}
+	 		.slick-arrow{
+	 			display: none;
+	 		}
 	 		.grid_item{
+	 			vertical-align: top;
 		 		width: 100%;
 		 		display: inline-block;
 		 		margin-bottom: 30px;
-		 		padding-bottom: 20px;
+		 		padding: 0 20px 20px;
 
 		 		a.full{
 		 			display: block;
@@ -51,6 +58,7 @@
 		 				border-bottom: 0;
 		 			}
 		 		}
+
 	 		}
 	 	}
 	}
@@ -63,10 +71,47 @@
 	 	&.grid_2,
 	 	&.grid_3,
 	 	&.grid_4{
+
+	 		.slick-arrow{
+	 			position: absolute;
+	 			top: 50%;
+	 			-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+
+				width: 31px;
+				height: 46px;
+				overflow: hidden;
+				text-indent: -3000px;
+				z-index: 3;
+
+				&.slick-prev{
+					left: 0;
+		 			-webkit-transform: translateX(-100%);
+					-ms-transform: translateX(-100%);
+					transform: translateX(-100%);
+
+					.sprite(-133px 0);
+				}
+				&.slick-next{
+					right: 0;
+		 			-webkit-transform: translateX(100%);
+					-ms-transform: translateX(100%);
+					transform: translateX(100%);
+
+					.sprite(-166px 0);
+				}
+				&.slick-disabled{
+					display: none !important;
+				}
+	 		}
 	 		.grid_item{
 		 		&.border{
 		 			border-bottom: 0;
 		 			border-right: 1px solid rgba(204, 204, 204, 0.5);
+		 		}
+		 		&.mh_1{
+		 			min-height: 240px;
 		 		}
 	 		}
 	 	}
@@ -83,7 +128,7 @@
 	 			}
 	 		}
 	 	}
-	 	&.grid_3{
+	 	&.grid_4{
 	 		.grid_item{
 	 			width: 24.9%;
 	 		}

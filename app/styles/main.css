@@ -145,6 +145,14 @@ main:after {
   text-transform: uppercase;
 }
 
+.title_blue {
+  margin-bottom: 20px;
+  font-size: 7.2em;
+  font-weight: 700;
+  color: #336699;
+  text-transform: uppercase;
+}
+
 p {
   margin-bottom: 20px;
   font-size: 1.6em;
@@ -156,6 +164,28 @@ a {
 
 .tac {
   text-align: center;
+}
+
+.tal {
+  text-align: left;
+}
+
+.voltar_seta {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  width: 31px;
+  height: 46px;
+  overflow: hidden;
+  text-indent: -3000px;
+  background: url('../images/stoller_sprite.png') no-repeat -133px 0;
+  -webkit-transform: translateY(-50%);
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateY(-50%);
+      -ms-transform: translateX(-100%);
+          transform: translateY(-50%);
+  transform: translateX(-100%);
 }
 
 @media screen and (min-width: 100px) {
@@ -699,14 +729,27 @@ footer .social li.youtube a {
   .grid {
     padding: 40px 0;
   }
+  .grid.grid_1 .grid_box,
+  .grid.grid_2 .grid_box,
+  .grid.grid_3 .grid_box,
+  .grid.grid_4 .grid_box {
+    outline: none;
+  }
+  .grid.grid_1 .slick-arrow,
+  .grid.grid_2 .slick-arrow,
+  .grid.grid_3 .slick-arrow,
+  .grid.grid_4 .slick-arrow {
+    display: none;
+  }
   .grid.grid_1 .grid_item,
   .grid.grid_2 .grid_item,
   .grid.grid_3 .grid_item,
   .grid.grid_4 .grid_item {
     display: inline-block;
     width: 100%;
-    padding-bottom: 20px;
+    padding: 0 20px 20px;
     margin-bottom: 30px;
+    vertical-align: top;
   }
   .grid.grid_1 .grid_item a.full,
   .grid.grid_2 .grid_item a.full,
@@ -751,12 +794,59 @@ footer .social li.youtube a {
   .grid {
     padding: 40px 0;
   }
+  .grid.grid_1 .slick-arrow,
+  .grid.grid_2 .slick-arrow,
+  .grid.grid_3 .slick-arrow,
+  .grid.grid_4 .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    width: 31px;
+    height: 46px;
+    overflow: hidden;
+    text-indent: -3000px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .grid.grid_1 .slick-arrow.slick-prev,
+  .grid.grid_2 .slick-arrow.slick-prev,
+  .grid.grid_3 .slick-arrow.slick-prev,
+  .grid.grid_4 .slick-arrow.slick-prev {
+    left: 0;
+    background: url('../images/stoller_sprite.png') no-repeat -133px 0;
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  .grid.grid_1 .slick-arrow.slick-next,
+  .grid.grid_2 .slick-arrow.slick-next,
+  .grid.grid_3 .slick-arrow.slick-next,
+  .grid.grid_4 .slick-arrow.slick-next {
+    right: 0;
+    background: url('../images/stoller_sprite.png') no-repeat -166px 0;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  .grid.grid_1 .slick-arrow.slick-disabled,
+  .grid.grid_2 .slick-arrow.slick-disabled,
+  .grid.grid_3 .slick-arrow.slick-disabled,
+  .grid.grid_4 .slick-arrow.slick-disabled {
+    display: none !important;
+  }
   .grid.grid_1 .grid_item.border,
   .grid.grid_2 .grid_item.border,
   .grid.grid_3 .grid_item.border,
   .grid.grid_4 .grid_item.border {
     border-right: 1px solid rgba(204, 204, 204, 0.5);
     border-bottom: 0;
+  }
+  .grid.grid_1 .grid_item.mh_1,
+  .grid.grid_2 .grid_item.mh_1,
+  .grid.grid_3 .grid_item.mh_1,
+  .grid.grid_4 .grid_item.mh_1 {
+    min-height: 240px;
   }
   .grid.grid_2 .grid_item {
     width: 49.9%;
@@ -767,7 +857,7 @@ footer .social li.youtube a {
   .grid.grid_3 .grid_item:nth-child(3n+3) {
     border-right: 0;
   }
-  .grid.grid_3 .grid_item {
+  .grid.grid_4 .grid_item {
     width: 24.9%;
   }
 }
