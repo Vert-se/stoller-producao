@@ -153,6 +153,22 @@ main:after {
   text-transform: uppercase;
 }
 
+.title_green_d {
+  margin-bottom: 20px;
+  font-size: 7.2em;
+  font-weight: 700;
+  color: #006600;
+  text-transform: uppercase;
+}
+
+.title_orange {
+  margin-bottom: 20px;
+  font-size: 7.2em;
+  font-weight: 700;
+  color: #ff9933;
+  text-transform: uppercase;
+}
+
 p {
   margin-bottom: 20px;
   font-size: 1.6em;
@@ -717,7 +733,7 @@ footer .social li.youtube a {
 }
 
 .grid.grid_center {
-  text-align: center;
+  text-align: left;
 }
 
 .grid.grid_center .grid_item {
@@ -844,6 +860,12 @@ footer .social li.youtube a {
   .grid.grid_4 .grid_item.border {
     border-right: 1px solid rgba(204, 204, 204, 0.5);
     border-bottom: 0;
+  }
+  .grid.grid_1 .grid_item.border:last-child,
+  .grid.grid_2 .grid_item.border:last-child,
+  .grid.grid_3 .grid_item.border:last-child,
+  .grid.grid_4 .grid_item.border:last-child {
+    border-right: 0;
   }
   .grid.grid_1 .grid_item.mh_1,
   .grid.grid_2 .grid_item.mh_1,

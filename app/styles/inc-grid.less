@@ -1,7 +1,7 @@
 .grid{
 	width: 100%;
 	&.grid_center{
-		text-align: center;
+		text-align: left;
 		.grid_item{
 			text-align: center;
 			a.full{
@@ -109,6 +109,9 @@
 		 		&.border{
 		 			border-bottom: 0;
 		 			border-right: 1px solid rgba(204, 204, 204, 0.5);
+		 			&:last-child{
+		 				border-right: 0;
+		 			}
 		 		}
 		 		&.mh_1{
 		 			min-height: 240px;
