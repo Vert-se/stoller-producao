@@ -170,24 +170,6 @@ a {
   text-align: left;
 }
 
-.voltar_seta {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 2;
-  width: 31px;
-  height: 46px;
-  overflow: hidden;
-  text-indent: -3000px;
-  background: url('../images/stoller_sprite.png') no-repeat -133px 0;
-  -webkit-transform: translateY(-50%);
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateY(-50%);
-      -ms-transform: translateX(-100%);
-          transform: translateY(-50%);
-  transform: translateX(-100%);
-}
-
 @media screen and (min-width: 100px) {
   .mobile_only {
     display: block;
@@ -198,6 +180,9 @@ a {
   body {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
+  }
+  .voltar_seta {
+    display: none;
   }
 }
 
@@ -216,6 +201,24 @@ a {
 @media screen and (min-width: 850px) {
   .mobile_only {
     display: none;
+  }
+  .voltar_seta {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 31px;
+    height: 46px;
+    overflow: hidden;
+    text-indent: -3000px;
+    background: url('../images/stoller_sprite.png') no-repeat -133px 0;
+    -webkit-transform: translateY(-50%);
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateY(-50%);
+        -ms-transform: translateX(-100%);
+            transform: translateY(-50%);
+    transform: translateX(-100%);
   }
 }
 
@@ -860,4 +863,46 @@ footer .social li.youtube a {
   .grid.grid_4 .grid_item {
     width: 24.9%;
   }
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.btn.btn_center {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.btn.btn_med {
+  padding: 10px;
+  font-size: 1.6em;
+}
+
+.btn.btn_med.seta {
+  position: relative;
+  padding-right: 55px;
+}
+
+.btn.btn_med.seta:after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url('../images/stoller_sprite.png') no-repeat -156px -50px;
+  content: '';
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.btn.btn_green_y {
+  color: #ffffff;
+  background: #cccc33;
 }
