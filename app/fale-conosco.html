@@ -128,48 +128,177 @@
     <!-- <main> -->
 
 
-      <section class="area area_top area_full area_dark image area_nav" data-title="A Stoller" id="a-stoller" style="background-image: url('images/a-stoller_bg.jpg');">
+      <section class="area area_top area_full area_dark image" style="background-image: url('images/fale-conosco_bg.jpg');">
         <section class="inner inner_small">
-          <h1 class="title_green">A Stoller</h1>
-          
-          <p>A Stoller foi criada em 1970 por Jerry Stoller, com a missão de proporcionar aos agricultores a possibilidade de aproveitar ao máximo o potencial genético de suas plantas.</p>
-
-          <p>Nesse sentido, a empresa desenvolve soluções que aliam amplo conhecimento técnico, um rigoroso trabalho de pesquisa e as mais inovadoras tecnologias. Além disso, sua equipe é extremamente capacitada para prestar um serviço de excelência aos produtores.</p>
-
-          <p>As soluções Stoller ampliam o equilíbrio hormonal das plantas, tornando-as mais resistentes ao estresse e mais fortes durante todo o seu ciclo de vida. O resultado? Plantas menos suscetíveis a doenças e com maior capacidade de adaptação às condições climáticas.</p>
-
-          <p>Além desses benefícios, é fundamental destacar um dos pilares da atuação da Stoller: a valorização do elemento humano e dos relacionamentos. A empresa investe constantemente no estabelecimento de parcerias sólidas e duradouras com seus clientes e fornecedores.</p>
-
-          <p>Com soluções que atuam em todos os estágios das plantas, a Stoller conquistou a confiança e o respeito do público agricultor – e foi assim que ela se transformou no líder mundial em nutrição com foco na fisiologia vegetal e em soluções biológicas.</p>
-
-          <a href="" class="big_btn seta">
-            Trabalhe<br />
-            Conosco
-          </a>
-
-          <a href="" class="big_btn seta">
-            Fale<br />
-            Conosco
-          </a>
-
-          <a href="" class="seta_down white" rel="scroll" data-target="certificacoes"></a>
-
-
-        </section>
-      </section>
-
-      <section class="area area_full area_light degrade area_nav" data-title="Certificações" id="certificacoes">
-        <section class="inner inner_small">
-          <h2 class="title_green">Certificações</h2>
+          <h1 class="title_white">FALE <span class="green light">CONOSCO</span></h1>
           
           <p>
-            <strong>ISO 9001</strong><br />
-            Em 1999, a Stoller recebeu essa certificação, que garante que todos os processos desenvolvidos na empresa estão em conformidade com as normas da International Organization for Standartization.
+            Para mais informações sobre a Stoller ou sobre um sobre nossos produtos, envie um e-mail.<br />
+            Temos uma equipe sempre pronta para ouvi-lo e tirar as suas mais diversas dúvidas.
           </p>
 
-          <p>
-            <img src="images/certificacao_iso.jpg" alt="" class="center">
-          </p>
+          <form action="" method="post">
+
+            <fieldset class="grid grid_3 grid_form">
+              <p><strong>Dados Pessoais</strong></p>
+              
+              <label for="contato_nome" class="grid_item grid_item_form">
+                <span class="title_field">Nome</span>
+                <input type="text" name="contato[nome]" id="contato_nome" class="input_text form_type form_type_nome">
+              </label>
+
+              <label for="contato_email" class="grid_item grid_item_form">
+                <span class="title_field">E-mail</span>
+                <input type="text" name="contato[email]" id="contato_email" class="input_text form_type form_type_email">
+              </label>
+
+              <label for="contato_telefone" class="grid_item grid_item_form">
+                <span class="title_field">Telefone</span>
+                <input type="text" name="contato[telefone]" id="contato_telefone" class="input_text form_type form_type_telefone">
+              </label>
+
+
+              <label for="" class="grid_item grid_item_form">
+                <span class="title_field">Como conheceu a Stoller</span>
+                <aside class="select_box">
+                  <select name="contato[conheceu]" id="contato_conheceu">
+                    <option value="" selected="selected">Selecione ...</option>
+                    <option value="Indicação">Indicação</option>
+                    <option value="Google">Google</option>
+                    <option value="Revistas">Revistas</option>
+                    <option value="Jornais">Jornais</option>
+                    <option value="Outras mídias">Outras mídias</option>
+                    <option value="Outros">Outros</option>
+                  </select>                 
+                </aside>
+
+              </label>
+
+              <label for="contato_cidade_id_uf" class="grid_item grid_item_form">
+                <span class="title_field">Estado</span>
+                <aside class="select_box">
+                  <select name="contato[cidade_id][uf]" id="contato_cidade_id_uf">
+                    <option value="AC" selected="selected">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select>
+                </aside>
+              </label>
+
+              <label for="contato_cidade_id_cidade" class="grid_item grid_item_form">
+                <span class="title_field">Cidade</span>
+
+                <aside class="select_box">
+                  <select name="contato[cidade_id][cidade]" id="contato_cidade_id_cidade">
+                    <option value="" selected="selected">Escolha a cidade</option>
+                    <option value="1">Acrelândia</option>
+                    <option value="2">Assis Brasil</option>
+                    <option value="3">Brasileia</option>
+                    <option value="4">Bujari</option>
+                    <option value="5">Capixaba</option>
+                    <option value="6">Cruzeiro do Sul</option>
+                    <option value="7">Epitaciolândia</option>
+                    <option value="8">Feijó</option>
+                    <option value="9">Jordão</option>
+                    <option value="10">Mâncio Lima</option>
+                    <option value="11">Manoel Urbano</option>
+                    <option value="12">Marechal Taumaturgo</option>
+                    <option value="13">Plácido de Castro</option>
+                    <option value="14">Porto Acre</option>
+                    <option value="15">Porto Walter</option>
+                    <option value="16">Rio Branco</option>
+                    <option value="17">Rodrigues Alves</option>
+                    <option value="18">Santa Rosa do Purus</option>
+                    <option value="19">Sena Madureira</option>
+                    <option value="20">Senador Guiomard</option>
+                    <option value="21">Tarauacá</option>
+                    <option value="22">Xapuri</option>
+                  </select>
+                </aside>
+
+              </label>
+
+              <hr>
+              
+            </fieldset>
+
+            
+
+            <fieldset class="grid grid_3 grid_form">
+              <p><strong>Mensagem</strong></p>
+              
+              <label for="contato_departamento" class="grid_item grid_item_form">
+                <span class="title_field">Qual departamento você quer falar ?</span>
+                <aside class="select_box">
+                  <select name="contato[departamento]" id="contato_departamento">
+                    <option value="" selected="selected">Selecione ...</option>
+                    <option value="1">Departamento 1</option>
+                    <option value="2">Departamento 2</option>
+                    <option value="3">Departamento 3</option>
+                  </select>
+                </aside>
+              </label>
+
+              <label for="contato_assunto" class="grid_item grid_item_form">
+                <span class="title_field">Assunto</span>
+                <input type="text" name="contato[assunto]" id="contato_assunto" class="input_text form_type form_type_nome">
+              </label>
+
+            </fieldset>
+
+            <fieldset class="grid grid_1 grid_form">
+
+              <label for="contato_mensagem" class="grid_item grid_item_form">
+                <span class="title_field">Mensagem</span>
+                <textarea name="contato[mensagem]" id="contato_mensagem" class="input_text form_type form_type_mensagem"></textarea>
+              </label>
+
+            </fieldset>
+
+            <fieldset class="grid grid_4 grid_form">
+              <label for="contato_novidades" class="grid_item grid_item_form">
+                <input type="checkbox" name="contato[novidades]" id="contato_novidades" />
+                <span class="title_field_mini">Deseja receber<br />novidades da Stoller?</span>
+              </label>
+              <label for="contato_novidades" class="grid_item grid_item_form">
+                <input type="checkbox" name="contato[novidades]" id="contato_novidades" />
+                <span class="title_field_mini">Deseja receber<br />novidades da Stoller?</span>
+              </label>
+
+              <aside class="grid_item grid_item_form"></aside>
+
+              <aside class="grid_item grid_item_form">
+                <button type="submit" class="botton_submit">Enviar</button>
+              </aside>
+            </fieldset>
+
+                          
+
+          </form>
 
 
         </section>

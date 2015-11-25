@@ -92,36 +92,42 @@ main{
 
 // titles
 
-.title_green{
-	color: @green;
+.title_multi{
 	font-weight: 700;
 	font-size: 7.2em;
 	margin-bottom: 20px;
 	text-transform: uppercase;
+	.light{
+		font-weight: 300;
+	}
+	.green{
+		color: @green;
+	}
+}
+
+.title_green{
+	color: @green;
+	.title_multi;
 }
 
 .title_blue{
 	color: @blue;
-	font-weight: 700;
-	font-size: 7.2em;
-	margin-bottom: 20px;
-	text-transform: uppercase;
+	.title_multi;
 }
 
 .title_green_d{
 	color: #006600;
-	font-weight: 700;
-	font-size: 7.2em;
-	margin-bottom: 20px;
-	text-transform: uppercase;	
+	.title_multi;	
 }
 
 .title_orange{
 	color: #ff9933;
-	font-weight: 700;
-	font-size: 7.2em;
-	margin-bottom: 20px;
-	text-transform: uppercase;	
+	.title_multi;	
+}
+
+.title_white{
+	color: @light;
+	.title_multi;	
 }
 
 

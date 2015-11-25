@@ -20,6 +20,20 @@
   content: '';
 }
 
+.seta_2 {
+  cursor: pointer;
+}
+
+.seta_2:after {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 0 10px;
+  vertical-align: middle;
+  background: url('../images/stoller_sprite.png') no-repeat -156px -50px;
+  content: '';
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -137,12 +151,35 @@ main:after {
 
 }
 
+.title_multi {
+  margin-bottom: 20px;
+  font-size: 7.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title_multi .light {
+  font-weight: 300;
+}
+
+.title_multi .green {
+  color: #c1d52e;
+}
+
 .title_green {
   margin-bottom: 20px;
   font-size: 7.2em;
   font-weight: 700;
   color: #c1d52e;
   text-transform: uppercase;
+}
+
+.title_green .light {
+  font-weight: 300;
+}
+
+.title_green .green {
+  color: #c1d52e;
 }
 
 .title_blue {
@@ -153,6 +190,14 @@ main:after {
   text-transform: uppercase;
 }
 
+.title_blue .light {
+  font-weight: 300;
+}
+
+.title_blue .green {
+  color: #c1d52e;
+}
+
 .title_green_d {
   margin-bottom: 20px;
   font-size: 7.2em;
@@ -161,12 +206,44 @@ main:after {
   text-transform: uppercase;
 }
 
+.title_green_d .light {
+  font-weight: 300;
+}
+
+.title_green_d .green {
+  color: #c1d52e;
+}
+
 .title_orange {
   margin-bottom: 20px;
   font-size: 7.2em;
   font-weight: 700;
   color: #ff9933;
   text-transform: uppercase;
+}
+
+.title_orange .light {
+  font-weight: 300;
+}
+
+.title_orange .green {
+  color: #c1d52e;
+}
+
+.title_white {
+  margin-bottom: 20px;
+  font-size: 7.2em;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.title_white .light {
+  font-weight: 300;
+}
+
+.title_white .green {
+  color: #c1d52e;
 }
 
 p {
@@ -769,6 +846,9 @@ footer .social li.youtube a {
   .grid {
     padding: 40px 0;
   }
+  .grid.grid_form {
+    padding: 10px 0 0;
+  }
   .grid.grid_1 .grid_box,
   .grid.grid_2 .grid_box,
   .grid.grid_3 .grid_box,
@@ -790,6 +870,12 @@ footer .social li.youtube a {
     padding: 0 20px 20px;
     margin-bottom: 30px;
     vertical-align: top;
+  }
+  .grid.grid_1 .grid_item.grid_item_form,
+  .grid.grid_2 .grid_item.grid_item_form,
+  .grid.grid_3 .grid_item.grid_item_form,
+  .grid.grid_4 .grid_item.grid_item_form {
+    padding: 0 0 10px;
   }
   .grid.grid_1 .grid_item a.full,
   .grid.grid_2 .grid_item a.full,
@@ -831,9 +917,6 @@ footer .social li.youtube a {
 }
 
 @media screen and (min-width: 850px) {
-  .grid {
-    padding: 40px 0;
-  }
   .grid.grid_1 .slick-arrow,
   .grid.grid_2 .slick-arrow,
   .grid.grid_3 .slick-arrow,
@@ -904,7 +987,7 @@ footer .social li.youtube a {
     border-right: 0;
   }
   .grid.grid_4 .grid_item {
-    width: 24.9%;
+    width: 24.8%;
   }
 }
 
@@ -1081,5 +1164,118 @@ footer .social li.youtube a {
   .area_nav_box ul li.active a span {
     opacity: 1;
     filter: alpha(opacity=100);
+  }
+}
+
+@media screen and (min-width: 100px) {
+  .grid_form input.input_text,
+  .grid_form textarea.input_text {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 21px;
+    font-size: 1.4em;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+  }
+  .grid_form textarea.input_text {
+    height: 200px;
+  }
+  .grid_form .select_box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 21px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+  }
+  .grid_form .select_box:after {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    display: block;
+    width: 12px;
+    height: 13px;
+    background: url('../images/stoller_sprite.png') no-repeat -156px -103px;
+    content: '';
+  }
+  .grid_form .select_box select {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 15px;
+    background-color: transparent;
+    outline: none;
+    -webkit-appearance: none;
+  }
+  .grid_form span.title_field {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.8em !important;
+  }
+  .grid_form span.title_field_mini {
+    float: left;
+    width: auto !important;
+    padding-left: 10px;
+  }
+  .grid_form input[type=checkbox] {
+    display: inline-block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    outline: none;
+    -webkit-transition: all 0.2s;
+       -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+         -o-transition: all 0.2s;
+            transition: all 0.2s;
+    -webkit-appearance: none;
+  }
+  .grid_form input[type=checkbox]:checked {
+    background: #ffffff;
+  }
+  .grid_form .botton_submit {
+    float: right;
+    margin-right: 0;
+    font-size: 1.8em;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  .grid_form .botton_submit:after {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 0 0 10px;
+    vertical-align: middle;
+    background: url('../images/stoller_sprite.png') no-repeat -156px -50px;
+    content: '';
+  }
+  .grid_form hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .grid_form input.input_text,
+  .grid_form .select_box {
+    width: 90%;
+    margin-bottom: 0;
+  }
+  .grid_form textarea.input_text {
+    width: 96%;
+    margin-bottom: 0;
+  }
+  .grid_form .botton_submit {
+    margin-right: 15%;
+  }
+  .grid_form hr {
+    width: 96%;
   }
 }
