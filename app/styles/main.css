@@ -278,6 +278,9 @@ a {
   .mobile_only {
     display: block;
   }
+  .not_mobile {
+    display: none;
+  }
   html {
     font-size: 42.5% !important;
   }
@@ -305,6 +308,9 @@ a {
 @media screen and (min-width: 850px) {
   .mobile_only {
     display: none;
+  }
+  .not_mobile {
+    display: block;
   }
   .voltar_seta {
     position: absolute;
@@ -978,7 +984,7 @@ footer .social li.youtube a {
     min-height: 240px;
   }
   .grid.grid_2 .grid_item {
-    width: 49.9%;
+    width: 49.8%;
   }
   .grid.grid_3 .grid_item {
     width: 33%;
@@ -1180,12 +1186,41 @@ footer .social li.youtube a {
   .grid_form textarea.input_text {
     height: 200px;
   }
+  .grid_form .file_box {
+    position: relative;
+    width: auto;
+  }
+  .grid_form .file_box input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 116px;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  .grid_form .file_box #file-text {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.4em;
+    color: #ffffff;
+    background-color: transparent;
+  }
   .grid_form .select_box {
     position: relative;
     width: 100%;
     margin-bottom: 21px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
+  }
+  .grid_form .select_box.select_box_mini {
+    display: inline-block;
+    width: 27%;
+    margin-right: 3%;
   }
   .grid_form .select_box:after {
     position: absolute;
@@ -1236,6 +1271,34 @@ footer .social li.youtube a {
   .grid_form input[type=checkbox]:checked {
     background: #ffffff;
   }
+  .grid_form input[type=radio] {
+    display: inline-block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+    outline: none;
+    -webkit-transition: all 0.2s;
+       -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+         -o-transition: all 0.2s;
+            transition: all 0.2s;
+    -webkit-appearance: none;
+  }
+  .grid_form input[type=radio]:checked {
+    background: #ffffff;
+  }
+  .grid_form label.title_field_mini {
+    float: left;
+    width: auto !important;
+    padding-left: 5px;
+    margin-right: 20px;
+    font-size: 1.4em !important;
+    line-height: 40px;
+  }
   .grid_form .botton_submit {
     float: right;
     margin-right: 0;
@@ -1253,11 +1316,18 @@ footer .social li.youtube a {
     background: url('../images/stoller_sprite.png') no-repeat -156px -50px;
     content: '';
   }
+  .grid_form .botton_submit.botton_file {
+    float: left;
+    text-align: left;
+  }
+  .grid_form .botton_submit.botton_file:after {
+    margin-top: -20px;
+  }
   .grid_form hr {
     display: block;
     width: 100%;
     height: 1px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     background: rgba(255, 255, 255, 0.5);
   }
 }
