@@ -66,6 +66,27 @@
 		 			}
 		 		}
 
+		 		&.grid_especialistas{
+		 			position: relative;
+		 			padding-bottom: 10px;
+		 			&:before{
+		 				display: block;
+		 				content: '';
+
+		 				position: absolute;
+		 				left: 0;
+		 				top: 0;
+
+		 				width: 25px;
+		 				height: 33px;
+		 				.sprite(-170px -82px);
+		 			}
+		 			p{
+		 				margin-bottom: 10px;
+		 				padding-left: 10px;
+		 			}
+		 		}
+
 	 		}
 	 	}
 	}
@@ -123,6 +144,11 @@
 		 		&.mh_1{
 		 			min-height: 240px;
 		 		}
+	 		}
+	 	}
+	 	&.grid_1{
+	 		.grid_item{
+	 			width: 100% !important;
 	 		}
 	 	}
 	 	&.grid_2{
