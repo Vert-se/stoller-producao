@@ -1,0 +1,76 @@
+body.culturas{
+
+	&.soja{
+		.cult_color{
+			color: #9fba67;
+		}
+		.cult_bg{
+			background: #9fba67 !important;
+		}
+	}
+
+
+
+	.area_cultura{
+		padding: 0;
+		position: relative;
+	}
+
+	.cult_text_intro{
+		max-width: 400px;
+		width: 90%;
+
+		position: relative;
+		display: block;
+
+		h1{
+			font-family: 'DINCond-Medium';
+			font-size: 6em;
+			font-weight: 400;
+		}
+
+	}
+}
+
+@media screen and(min-width:100px){
+	body.culturas{
+
+		.area{
+			
+			&.image.area_cultura{
+				background-size: auto 50%;
+				background-position: 10% 0%;
+				background-repeat: no-repeat;
+			}
+		}
+
+		.cult_text_intro{
+			height: auto;
+			position: absolute;
+			top: 50%;
+			left: 5%;
+
+		}
+
+	}
+}
+
+
+@media screen and(min-width:850px){
+	body.culturas{
+
+		.area{
+			
+			&.image.area_cultura{
+				background-size: cover;
+				background-position: 50% 50%;
+			}
+		}
+
+		.cult_text_intro{
+			left: 50%;
+			// top: 45%;
+		}
+
+	}
+}

@@ -342,6 +342,11 @@ main:after {
   color: #ffffff;
 }
 
+.sub_title {
+  font-size: 6em;
+  font-weight: 400;
+}
+
 p {
   margin-bottom: 20px;
   font-size: 1.8em;
@@ -434,6 +439,17 @@ a {
   }
 }
 
+@font-face {
+  font-family: 'DINCond-Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ufonts.com_dincond-medium-opentype.eot');
+  src: url('../fonts/ufonts.com_dincond-medium-opentype.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('../fonts/ufonts.com_dincond-medium-opentype.woff') format('woff'), /* Modern Browsers */
+   url('../fonts/ufonts.com_dincond-medium-opentype.ttf') format('truetype'), /* Safari, Android, iOS */
+   url('../fonts/ufonts.com_dincond-medium-opentype.svg#54bc58aaaf4d87e858b892df39ecdecb') format('svg');
+}
+
 header {
   position: absolute;
   top: 0;
@@ -517,8 +533,17 @@ header .stoller_id a {
     margin-bottom: 10px;
     text-transform: uppercase;
   }
-  header .menu > ul .has_sub li {
-    margin-bottom: 5px;
+  header .menu > ul .has_sub li a {
+    display: inline-block;
+    padding-top: 20px;
+    -webkit-transition: all 0.2s;
+       -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+         -o-transition: all 0.2s;
+            transition: all 0.2s;
+  }
+  header .menu > ul .has_sub li a:hover {
+    background: rgba(0, 0, 0, 0.5);
   }
   header form {
     display: none;
@@ -582,7 +607,15 @@ header .stoller_id a {
   header .stoller_id_nav ul li a {
     display: block;
     width: 100%;
-    padding: 16px 5px 7px 20px;
+    padding: 20px 5px 7px 20px;
+    -webkit-transition: all 0.2s;
+       -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+         -o-transition: all 0.2s;
+            transition: all 0.2s;
+  }
+  header .stoller_id_nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.5);
   }
   header .stoller_id_nav:hover ul {
     display: block;
@@ -912,6 +945,10 @@ footer .social li.youtube a {
   background: #eeeeed;
 }
 
+.area.area_grey_light {
+  background: #f4f3f3;
+}
+
 @media screen and (min-width: 100px) {
   .area {
     padding-top: 60px;
@@ -921,11 +958,21 @@ footer .social li.youtube a {
     padding-top: 143px;
   }
   .area.image {
+    display: block;
     background-position: 50% 50%;
+    background-repeat: no-repeat;
     background-size: auto 100%;
   }
   .area.area_mini {
     padding-bottom: 60px;
+  }
+  .area.area_map {
+    height: 100%;
+    padding: 0;
+  }
+  .area.area_map iframe {
+    width: 100%;
+    min-height: 100%;
   }
 }
 
@@ -1064,6 +1111,7 @@ footer .social li.youtube a {
     height: 46px;
     overflow: hidden;
     text-indent: -3000px;
+    cursor: pointer;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -1206,6 +1254,15 @@ footer .social li.youtube a {
   height: 35px;
   margin: 80px auto 0;
   clear: both;
+}
+
+.seta_down.posa {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .seta_down.white {
@@ -1661,5 +1718,55 @@ footer .social li.youtube a {
   }
   .box_especialista .box_especialista_buscar a {
     display: inline-block;
+  }
+}
+
+body.culturas.soja .cult_color {
+  color: #9fba67;
+}
+
+body.culturas.soja .cult_bg {
+  background: #9fba67 !important;
+}
+
+body.culturas .area_cultura {
+  position: relative;
+  padding: 0;
+}
+
+body.culturas .cult_text_intro {
+  position: relative;
+  display: block;
+  width: 90%;
+  max-width: 400px;
+}
+
+body.culturas .cult_text_intro h1 {
+  font-family: 'DINCond-Medium';
+  font-size: 6em;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 100px) {
+  body.culturas .area.image.area_cultura {
+    background-position: 10% 0;
+    background-repeat: no-repeat;
+    background-size: auto 50%;
+  }
+  body.culturas .cult_text_intro {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  body.culturas .area.image.area_cultura {
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  body.culturas .cult_text_intro {
+    left: 50%;
   }
 }
