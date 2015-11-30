@@ -53,6 +53,8 @@ site.init = function(){
         // settings: "unslick"
         // instead of a settings object
       ]
+    }).on('afterChange', function(e, slick) {
+        that.update_boltar_voltar_seta(slick.currentSlide);
     });
 
 };
@@ -66,6 +68,14 @@ site.areas_pos = function(){
         c++;
     });
 
+}
+
+// Oculta ou exibe o botão para voltar à home de "Soluções" - Rafael
+site.update_boltar_voltar_seta = function(index) {
+    this.$solucoes_voltar_seta = 
+        this.$solucoes_voltar_seta || $('.voltar_seta');
+    var method = index > 0 ? 'hide' : 'show';
+    this.$solucoes_voltar_seta[method]();
 }
 
 site.area_nav = function(){
