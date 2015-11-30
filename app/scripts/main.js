@@ -83,7 +83,7 @@ site.area_nav = function(){
 
     an.each(function(){
         c++;
-        var t = $(this), target = t.attr('id'), title = t.data('title').replace(' ', '&nbsp;'), tc = (c==1) ? 'active' : '';
+        var t = $(this), target = t.attr('id'), title = t.data('title').replace(/ /g, "&nbsp;"), tc = (c==1) ? 'active' : '';
 
         an_box += '<li class="'+tc+'"><a href="" rel="scroll" data-target="'+target+'" id="an_'+target+'">';
         an_box += '<span>'+title+'</span>';
@@ -156,7 +156,10 @@ site.link_set = function(){
         l_scroll = $('a[rel=scroll]'),
         l_close = $('a[rel=close]'),
         l_modal = $('a[rel=modal]'),
-        l_toggle = $('a[rel=toggle]');
+        l_toggle = $('a[rel=toggle]'),
+        l_ext = $('a[rel=external]');
+
+        l_ext.attr('target','_blank');
 
         l_menu.on('click',function(event){
             event.preventDefault();

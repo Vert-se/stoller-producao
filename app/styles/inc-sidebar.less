@@ -1,0 +1,50 @@
+@media screen and(min-width:100px){
+	.sidebar{
+		width: 100%;
+		max-width: 200px;
+		h2{
+			color: @grey_sl;
+			font-size: 2.8em;
+			font-weight: 400;
+			display: block;
+
+			margin-bottom: 20px;
+		}
+		nav{
+			margin: 0 0 30px;
+			li{
+				height: 35px;
+				margin-bottom: 1px;
+				a{
+					line-height: 35px;
+					font-size: 1.5em;
+					display: block;
+					background: @light;
+					padding-left: 52px;
+					font-weight: 400;
+
+					position: relative;
+
+					&:before{
+						display: block;
+						content: '';
+
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 44px;
+						height: 35px;
+					}
+				}
+				&.green{
+					a{
+						color: @green;
+						&:before{
+							.sprite(0 -60px);
+						}
+					}
+				}
+			}
+		}
+	}
+}

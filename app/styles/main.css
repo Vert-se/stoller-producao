@@ -158,6 +158,10 @@ main:after {
   text-transform: uppercase;
 }
 
+.title_multi .big {
+  font-size: 1.3em;
+}
+
 .title_multi .light {
   font-weight: 300;
 }
@@ -188,6 +192,10 @@ main:after {
   font-weight: 700;
   color: #c1d52e;
   text-transform: uppercase;
+}
+
+.title_green .big {
+  font-size: 1.3em;
 }
 
 .title_green .light {
@@ -222,6 +230,10 @@ main:after {
   text-transform: uppercase;
 }
 
+.title_blue .big {
+  font-size: 1.3em;
+}
+
 .title_blue .light {
   font-weight: 300;
 }
@@ -252,6 +264,10 @@ main:after {
   font-weight: 700;
   color: #006600;
   text-transform: uppercase;
+}
+
+.title_green_d .big {
+  font-size: 1.3em;
 }
 
 .title_green_d .light {
@@ -286,6 +302,10 @@ main:after {
   text-transform: uppercase;
 }
 
+.title_orange .big {
+  font-size: 1.3em;
+}
+
 .title_orange .light {
   font-weight: 300;
 }
@@ -316,6 +336,10 @@ main:after {
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
+}
+
+.title_white .big {
+  font-size: 1.3em;
 }
 
 .title_white .light {
@@ -971,6 +995,12 @@ footer .social li.youtube a {
     background-repeat: no-repeat;
     background-size: auto 100%;
   }
+  .area.image.image_b {
+    background-position: 50% 100%;
+  }
+  .area.image.image_t {
+    background-position: 50% 0;
+  }
   .area.area_mini {
     padding-bottom: 60px;
   }
@@ -1312,7 +1342,7 @@ footer .social li.youtube a {
     width: auto;
   }
   .area_nav_box ul li {
-    height: 51px;
+    height: 54px;
   }
   .area_nav_box ul li a {
     position: relative;
@@ -1667,6 +1697,12 @@ footer .social li.youtube a {
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
   }
+  .box_especialista.transp {
+    background: rgba(0, 0, 0, 0.15);
+  }
+  .box_especialista.transp .box_especialista_desc {
+    background: rgba(255, 255, 255, 0.9);
+  }
   .box_especialista .box_especialista_desc {
     display: inline-block;
     padding: 20px;
@@ -1685,6 +1721,7 @@ footer .social li.youtube a {
   .box_especialista .box_especialista_desc p {
     padding: 20px 0 0;
     margin: 0;
+    text-transform: uppercase;
   }
   .box_especialista .box_especialista_buscar {
     display: block;
@@ -1761,6 +1798,22 @@ body.culturas.soja .cult_bg {
   background: #9fba67 !important;
 }
 
+body.culturas.algodao .cult_color {
+  color: #3d8da4;
+}
+
+body.culturas.algodao .cult_bg {
+  background: #3d8da4 !important;
+}
+
+body.culturas.arroz .cult_color {
+  color: #eae0bd;
+}
+
+body.culturas.arroz .cult_bg {
+  background: #eae0bd !important;
+}
+
 body.culturas .area_cultura {
   position: relative;
   padding: 0;
@@ -1780,6 +1833,10 @@ body.culturas .cult_text_intro h1 {
 }
 
 @media screen and (min-width: 100px) {
+  body.culturas .area {
+    position: relative;
+    display: block;
+  }
   body.culturas .area.image.area_cultura {
     background-position: 10% 0;
     background-repeat: no-repeat;
@@ -1800,5 +1857,50 @@ body.culturas .cult_text_intro h1 {
   }
   body.culturas .cult_text_intro {
     left: 50%;
+  }
+}
+
+@media screen and (min-width: 100px) {
+  .sidebar {
+    width: 100%;
+    max-width: 200px;
+  }
+  .sidebar h2 {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 2.8em;
+    font-weight: 400;
+    color: #999999;
+  }
+  .sidebar nav {
+    margin: 0 0 30px;
+  }
+  .sidebar nav li {
+    height: 35px;
+    margin-bottom: 1px;
+  }
+  .sidebar nav li a {
+    position: relative;
+    display: block;
+    padding-left: 52px;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 35px;
+    background: #ffffff;
+  }
+  .sidebar nav li a:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 44px;
+    height: 35px;
+    content: '';
+  }
+  .sidebar nav li.green a {
+    color: #c1d52e;
+  }
+  .sidebar nav li.green a:before {
+    background: url('../images/stoller_sprite.png?2') no-repeat 0 -60px;
   }
 }
