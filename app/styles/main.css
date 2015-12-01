@@ -386,8 +386,20 @@ p img.center {
   margin: 0 auto;
 }
 
+p strong.big {
+  font-size: 1.3em;
+}
+
+p strong.med {
+  font-size: 1.2em;
+}
+
 a {
   color: inherit;
+}
+
+u {
+  text-decoration: underline;
 }
 
 .tac {
@@ -1058,6 +1070,12 @@ footer .social li.youtube a {
   .grid.grid_4 .slick-arrow {
     display: none;
   }
+  .grid.grid_1.grid_cult .grid_item,
+  .grid.grid_2.grid_cult .grid_item,
+  .grid.grid_3.grid_cult .grid_item,
+  .grid.grid_4.grid_cult .grid_item {
+    padding: 0 0 20px;
+  }
   .grid.grid_1 .grid_item,
   .grid.grid_2 .grid_item,
   .grid.grid_3 .grid_item,
@@ -1218,6 +1236,12 @@ footer .social li.youtube a {
   }
   .grid.grid_2 .grid_item {
     width: 49.8%;
+  }
+  .grid.grid_2.grid_cult .grid_item {
+    padding: 0 20px 20px 0;
+  }
+  .grid.grid_2.grid_cult .grid_item:nth-child(2n+2) {
+    padding-left: 20px;
   }
   .grid.grid_3 .grid_item {
     width: 33%;
@@ -1708,7 +1732,7 @@ footer .social li.youtube a {
             transform: translateX(-50%);
   }
   .box_especialista.transp {
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.25);
   }
   .box_especialista.transp .box_especialista_desc {
     background: rgba(255, 255, 255, 0.9);
@@ -2059,6 +2083,10 @@ body.culturas .area_cultura {
   padding: 0;
 }
 
+body.culturas #solucoes {
+  padding-bottom: 10px;
+}
+
 body.culturas #desenvolvimento {
   padding-bottom: 10px;
 }
@@ -2237,6 +2265,11 @@ body.culturas .cult_sec_title .big {
     font-weight: 400;
     line-height: 35px;
     background: #ffffff;
+    -webkit-transition: all 0.2s;
+       -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+         -o-transition: all 0.2s;
+            transition: all 0.2s;
   }
   .sidebar nav li a:before {
     position: absolute;
@@ -2247,10 +2280,25 @@ body.culturas .cult_sec_title .big {
     height: 35px;
     content: '';
   }
+  .sidebar nav li a:hover {
+    padding-left: 50px;
+  }
   .sidebar nav li.green a {
     color: #c1d52e;
   }
   .sidebar nav li.green a:before {
     background: url('../images/stoller_sprite.png?2') no-repeat 0 -60px;
+  }
+  .sidebar nav li.green_m a {
+    color: #a5b626;
+  }
+  .sidebar nav li.green_m a:before {
+    background: url('../images/stoller_sprite.png?2') no-repeat 0 -96px;
+  }
+  .sidebar nav li.green_d a {
+    color: #819011;
+  }
+  .sidebar nav li.green_d a:before {
+    background: url('../images/stoller_sprite.png?2') no-repeat 0 -132px;
   }
 }
