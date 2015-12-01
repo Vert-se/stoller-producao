@@ -1869,6 +1869,19 @@ body.culturas.algodao .cult_bg {
   background: #3d8da4 !important;
 }
 
+body.culturas.algodao .cult_color_dif_1 {
+  color: #ffffff;
+}
+
+body.culturas.algodao .cult_color_dif_2 {
+  color: #acdbe9;
+}
+
+body.culturas.algodao .sessao-galeria .sessao-galeria-text a {
+  color: #ffffff;
+  background: #3d8da4;
+}
+
 body.culturas.arroz .cult_color {
   color: #eae0bd;
 }
@@ -1910,7 +1923,7 @@ body.culturas .cult_sec_title {
 
 body.culturas .cult_sec_title strong {
   display: block;
-  font-size: 1.8em;
+  font-size: 1.7em;
   text-transform: uppercase;
   word-wrap: break-word;
 }
