@@ -1945,6 +1945,27 @@ body.culturas.cafe .sessao-galeria .sessao-galeria-text a {
   background: #c14255;
 }
 
+body.culturas.citros .cult_color {
+  color: #f68c38;
+}
+
+body.culturas.citros .cult_bg {
+  background: #f68c38 !important;
+}
+
+body.culturas.citros .cult_color_dif_1 {
+  color: #8e460d;
+}
+
+body.culturas.citros .cult_color_dif_2 {
+  color: #f9d2b3;
+}
+
+body.culturas.citros .sessao-galeria .sessao-galeria-text a {
+  color: #ffffff;
+  background: #f68c38;
+}
+
 body.culturas .area_cultura {
   position: relative;
   padding: 0;
