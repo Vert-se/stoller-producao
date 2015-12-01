@@ -2008,6 +2008,48 @@ body.culturas.milho .sessao-galeria .sessao-galeria-text a {
   background: #ffc718;
 }
 
+body.culturas.batata .cult_color {
+  color: #fde379;
+}
+
+body.culturas.batata .cult_bg {
+  background: #fde379 !important;
+}
+
+body.culturas.batata .cult_color_dif_1 {
+  color: #695814;
+}
+
+body.culturas.batata .cult_color_dif_2 {
+  color: #bfa53b;
+}
+
+body.culturas.batata .sessao-galeria .sessao-galeria-text a {
+  color: #ffffff;
+  background: #fde379;
+}
+
+body.culturas.tomate .cult_color {
+  color: #cf4834;
+}
+
+body.culturas.tomate .cult_bg {
+  background: #cf4834 !important;
+}
+
+body.culturas.tomate .cult_color_dif_1 {
+  color: #801708;
+}
+
+body.culturas.tomate .cult_color_dif_2 {
+  color: #fdbdb4;
+}
+
+body.culturas.tomate .sessao-galeria .sessao-galeria-text a {
+  color: #ffffff;
+  background: #cf4834;
+}
+
 body.culturas .area_cultura {
   position: relative;
   padding: 0;
@@ -2082,6 +2124,68 @@ body.culturas .cult_sec_title .big {
   body.culturas .cult_text_intro {
     left: 50%;
   }
+}
+
+/* CSS PROFISSIONAL */
+
+.sessao-galeria {
+  margin-top: 10px!important;
+}
+
+.sessao-galeria .empty {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.sessao-galeria .slide-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+     -moz-transition: all 0.8s;
+      -ms-transition: all 0.8s;
+       -o-transition: all 0.8s;
+          transition: all 0.8s;
+}
+
+.sessao-galeria .slide-wrapper.visible {
+  opacity: 1;
+}
+
+.sessao-galeria .slide-wrapper .image-wrapper {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.scroll-wrapper {
+  position: relative;
+  bottom: 60px;
+  width: 73%;
+  margin: 0 auto;
+}
+
+.scroll-wrapper .scroll-track {
+  background-color: #d1d2d4;
+  border-radius: 10px;
+}
+
+.scroll-wrapper .scroll-track .scroll-thumb {
+  cursor: pointer;
+  background: -webkit-linear-gradient(#fcfcfc, #e4e4e4);
+  background: -o-linear-gradient(#fcfcfc, #e4e4e4);
+  background: -moz-linear-gradient(#fcfcfc, #e4e4e4);
+  background: linear-gradient(#fcfcfc, #e4e4e4);
+  background-color: #b7b7b7;
+  border: 1px solid #d1d2d4;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 100px) {

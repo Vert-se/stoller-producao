@@ -1,0 +1,57 @@
+/* CSS PROFISSIONAL */
+.sessao-galeria {
+  margin-top: 10px!important;
+  .empty {
+    display: block;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .slide-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    z-index: 10;
+    -webkit-transition: all 0.8s;
+       -moz-transition: all 0.8s;
+        -ms-transition: all 0.8s;
+         -o-transition: all 0.8s;
+            transition: all 0.8s;
+    &.visible {
+      opacity: 1;
+    }
+    .image-wrapper{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+.scroll-wrapper {
+  position: relative;
+  width: 73%;
+  margin: 0 auto;
+  bottom: 60px;
+  .scroll-track {
+    background-color: #d1d2d4;
+    border-radius: 10px;
+    .scroll-thumb {
+      cursor: pointer;
+
+      border-radius: 10px;
+      border: 1px solid #d1d2d4;
+      
+      background-color: #b7b7b7;
+      background: -webkit-linear-gradient(#fcfcfc, #e4e4e4); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#fcfcfc, #e4e4e4); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#fcfcfc, #e4e4e4); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#fcfcfc, #e4e4e4); /* Standard syntax (must be last) */
+    }
+  }
+}
