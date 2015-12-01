@@ -1966,6 +1966,48 @@ body.culturas.citros .sessao-galeria .sessao-galeria-text a {
   background: #f68c38;
 }
 
+body.culturas.feijao .cult_color {
+  color: #dd9f60;
+}
+
+body.culturas.feijao .cult_bg {
+  background: #dd9f60 !important;
+}
+
+body.culturas.feijao .cult_color_dif_1 {
+  color: #915213;
+}
+
+body.culturas.feijao .cult_color_dif_2 {
+  color: #fcddbd;
+}
+
+body.culturas.feijao .sessao-galeria .sessao-galeria-text a {
+  color: #ffffff;
+  background: #dd9f60;
+}
+
+body.culturas.milho .cult_color {
+  color: #ffc718;
+}
+
+body.culturas.milho .cult_bg {
+  background: #ffc718 !important;
+}
+
+body.culturas.milho .cult_color_dif_1 {
+  color: #ffffff;
+}
+
+body.culturas.milho .cult_color_dif_2 {
+  color: #7c5e01;
+}
+
+body.culturas.milho .sessao-galeria .sessao-galeria-text a {
+  color: #ffffff;
+  background: #ffc718;
+}
+
 body.culturas .area_cultura {
   position: relative;
   padding: 0;
