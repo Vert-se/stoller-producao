@@ -123,17 +123,16 @@ main:after {
   margin: 0 auto;
 }
 
+.inner.inner_micro {
+  max-width: 780px;
+}
+
 .inner.inner_small {
   max-width: 977px;
 }
 
 .inner.inner_big {
   max-width: 1174px;
-}
-
-.inner_small {
-  width: 90%;
-  margin: 0 auto;
 }
 
 .degrade {
@@ -397,6 +396,10 @@ a {
 
 .tal {
   text-align: left;
+}
+
+.ttu {
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 100px) {
@@ -1336,7 +1339,7 @@ footer .social li.youtube a {
   .area_nav_box {
     position: fixed;
     top: 100px;
-    right: 20px;
+    right: 5%;
     z-index: 4;
     display: block;
     width: auto;
@@ -1409,6 +1412,13 @@ footer .social li.youtube a {
   .area_nav_box ul li.active a span {
     opacity: 1;
     filter: alpha(opacity=100);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .area_nav_box {
+    right: 50%;
+    margin-right: -590px;
   }
 }
 
@@ -1790,12 +1800,65 @@ body.solucoes .grid.grid_center .grid_item a:hover img {
   margin-bottom: 20px;
 }
 
+body.culturas .sessao-galeria {
+  position: relative;
+  margin: 20px auto;
+}
+
+body.culturas .sessao-galeria .sessao-galeria-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 977px;
+  color: #999999;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+body.culturas .sessao-galeria .sessao-galeria-text a {
+  display: inline-block;
+  padding: 10px;
+  font-weight: 400;
+  line-height: 96%;
+  cursor: pointer;
+}
+
+body.culturas .sessao-galeria .sessao-galeria-text a:after {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 0 10px;
+  vertical-align: middle;
+  background: url('../images/stoller_sprite.png?2') no-repeat -156px -50px;
+  content: '';
+}
+
+body.culturas .sessao-galeria .sessao-galeria-text a:after {
+  margin-top: -20px;
+  margin-left: 15px;
+}
+
 body.culturas.soja .cult_color {
   color: #9fba67;
 }
 
 body.culturas.soja .cult_bg {
   background: #9fba67 !important;
+}
+
+body.culturas.soja .cult_color_dif_1 {
+  color: #006633;
+}
+
+body.culturas.soja .cult_color_dif_2 {
+  color: #5a7423;
+}
+
+body.culturas.soja .sessao-galeria .sessao-galeria-text a {
+  color: #ffffff;
+  background: #9fba67;
 }
 
 body.culturas.algodao .cult_color {
@@ -1814,6 +1877,14 @@ body.culturas.arroz .cult_bg {
   background: #eae0bd !important;
 }
 
+body.culturas.cana .cult_color {
+  color: #dfcb6a;
+}
+
+body.culturas.cana .cult_bg {
+  background: #dfcb6a !important;
+}
+
 body.culturas .area_cultura {
   position: relative;
   padding: 0;
@@ -1830,6 +1901,36 @@ body.culturas .cult_text_intro h1 {
   font-family: 'DINCond-Medium';
   font-size: 6em;
   font-weight: 400;
+}
+
+body.culturas .cult_sec_title {
+  font-size: 3.6em;
+  font-weight: 300;
+}
+
+body.culturas .cult_sec_title strong {
+  display: block;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+body.culturas .cult_sec_title .bb {
+  display: inline-block;
+  border-bottom: 1px solid #999999;
+}
+
+body.culturas .cult_sec_title .min {
+  padding-bottom: 5px;
+  font-size: 0.8em;
+}
+
+body.culturas .cult_sec_title .med {
+  font-size: 1.3em;
+}
+
+body.culturas .cult_sec_title .big {
+  font-size: 1.6em;
 }
 
 @media screen and (min-width: 100px) {

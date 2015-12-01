@@ -68,7 +68,10 @@ main{
 	max-width: 1078px;
 	margin: 0 auto;
 	position: relative;
-	
+
+	&.inner_micro{
+		max-width: 780px;	
+	}	
 	&.inner_small{
 		max-width: 977px;	
 	}
@@ -77,11 +80,11 @@ main{
 	}
 }
 
-.inner_small{
-	width: 90%;
+// .inner_small{
+// 	width: 90%;
 	
-	margin: 0 auto;	
-}
+// 	margin: 0 auto;	
+// }
 
 .degrade{
 	background: -webkit-radial-gradient(@light, #fcfcfc, #c4c5c7); /* Safari 5.1 to 6.0 */
@@ -185,6 +188,9 @@ a{
 	text-align: left;
 }
 
+.ttu{
+	text-transform: uppercase;
+}
 
 
 @media screen and (min-width: 100px) {

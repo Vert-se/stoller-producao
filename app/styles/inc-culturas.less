@@ -1,11 +1,56 @@
 body.culturas{
 
+	// galeria
+
+	.sessao-galeria{
+		position: relative;
+		margin: 20px auto;
+
+		.sessao-galeria-text{
+			color: @grey_sl;
+
+			position: absolute;
+			top: 0;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+
+			width: 100%;
+			max-width: 977px;
+
+			a{
+				.seta_2;
+				display: inline-block;
+				font-weight: 400;
+				padding: 10px;
+				line-height: 96%;
+				&:after{
+					margin-top: -20px;
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+
 	&.soja{
 		.cult_color{
 			color: #9fba67;
 		}
 		.cult_bg{
 			background: #9fba67 !important;
+		}
+
+		.cult_color_dif_1{
+			color: #006633;
+		}
+		.cult_color_dif_2{
+			color: #5a7423;
+		}
+
+		.sessao-galeria .sessao-galeria-text a{
+			background: #9fba67;
+			color: @light;
 		}
 	}
 
@@ -27,7 +72,16 @@ body.culturas{
 			background: #eae0bd !important;
 		}
 	}
-	
+
+
+	&.cana{
+		.cult_color{
+			color: #dfcb6a;
+		}
+		.cult_bg{
+			background: #dfcb6a !important;
+		}
+	}	
 
 
 
@@ -49,6 +103,32 @@ body.culturas{
 			font-weight: 400;
 		}
 
+	}
+
+	.cult_sec_title{
+		font-size: 3.6em;
+		// color: @grey;
+		font-weight: 300;
+		strong{
+			display: block;
+			font-size: 1.8em;
+			text-transform: uppercase;
+			word-wrap: break-word;
+		}
+		.bb{
+			border-bottom: 1px solid @grey_sl;
+			display: inline-block;
+		}
+		.min{
+			font-size: 0.8em;
+			padding-bottom: 5px;
+		}
+		.med{
+			font-size: 1.3em;
+		}
+		.big{
+			font-size: 1.6em;
+		}
 	}
 }
 
