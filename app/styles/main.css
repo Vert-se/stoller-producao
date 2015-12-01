@@ -2059,6 +2059,24 @@ body.culturas .area_cultura {
   padding: 0;
 }
 
+body.culturas #desenvolvimento {
+  padding-bottom: 10px;
+}
+
+body.culturas #desenvolvimento:after {
+  position: relative;
+  top: -65px;
+  display: block;
+  width: 100%;
+  height: auto;
+  font-size: 1.8em;
+  font-weight: 400;
+  color: #999999;
+  text-align: center;
+  text-transform: uppercase;
+  content: 'Clique e arraste para ver as fases da planta.';
+}
+
 body.culturas .cult_text_intro {
   position: relative;
   display: block;
