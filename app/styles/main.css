@@ -1911,6 +1911,19 @@ body.culturas.cana .cult_bg {
   background: #dfcb6a !important;
 }
 
+body.culturas.cana .cult_color_dif_1 {
+  color: #9f8a22;
+}
+
+body.culturas.cana .cult_color_dif_2 {
+  color: #907c18;
+}
+
+body.culturas.cana .sessao-galeria .sessao-galeria-text a {
+  color: #ffffff;
+  background: #dfcb6a;
+}
+
 body.culturas .area_cultura {
   position: relative;
   padding: 0;
