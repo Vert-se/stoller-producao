@@ -1340,7 +1340,7 @@ footer .social li.youtube a {
     position: fixed;
     top: 100px;
     right: 5%;
-    z-index: 4;
+    z-index: 11;
     display: block;
     width: auto;
   }
@@ -1815,6 +1815,10 @@ body.culturas .sessao-galeria .sessao-galeria-text {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+body.culturas .sessao-galeria .sessao-galeria-text strong {
+  text-transform: uppercase;
 }
 
 body.culturas .sessao-galeria .sessao-galeria-text a {
