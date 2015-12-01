@@ -1890,6 +1890,19 @@ body.culturas.arroz .cult_bg {
   background: #eae0bd !important;
 }
 
+body.culturas.arroz .cult_color_dif_1 {
+  color: #a79864;
+}
+
+body.culturas.arroz .cult_color_dif_2 {
+  color: #cebf8b;
+}
+
+body.culturas.arroz .sessao-galeria .sessao-galeria-text a {
+  color: #ffffff;
+  background: #eae0bd;
+}
+
 body.culturas.cana .cult_color {
   color: #dfcb6a;
 }
