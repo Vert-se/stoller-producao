@@ -253,6 +253,84 @@ $(function() {
         return classes.length && classes[1];
     };
 
+    var createAnimationCarousel = function($wrapper, carr, cultureName) {
+        var baseUrl = window.Culturas.baseUrl,
+            $imageWrapper = $('<img src="' + baseUrl + 'empty.png" class="empty">');
+        $wrapper.append($imageWrapper);
+        carr.steps.forEach(function(step, i) {
+            var imgSrc = baseUrl + cultureName + '/' + (i + 1) + '.png',
+                $slideWrapper = $('<div class="' + sliderWrapperClass + '">'),
+                $imageWrapper = $('<img src="' + imgSrc + '" class="image-wrapper">'),
+                $textWrapper = $('<aside class="sessao-galeria-text">');
+
+            if(step.html.length) $textWrapper.html(step.html);
+
+            $wrapper.append($slideWrapper.append($textWrapper, $imageWrapper));
+        });
+
+        var scroller = new Scroller($wrapper, sliderWrapperClass);
+    };
+
+    var createDoubleCarousel = function($wrapper, carr, cultureName) {
+        var baseUrl = window.Culturas.baseUrl;
+
+        carr.list.forEach(function(carousel) {
+            var $carouselWrapper = $('<div class="carousel-single-wrapper" />'),
+                $carouselInner = $('<div class="carousel-single-inner" />'),
+                $carouselTitle = '<h4>' + carousel.name + '</h4>';
+
+            carousel.steps.forEach(function(step, i) {
+                var imgSrc = baseUrl + cultureName + '/carrosseis/' + carousel.type + '/' + (i + 1) + '.png',
+                    $slideWrapper = $('<div class="slide-single-wrapper">'),
+                    $imageWrapper = $('<img src="' + imgSrc + '" class="image-wrapper">'),
+                    $textWrapper = $('<aside class="slide-single-text">'),
+                    $title = '<h5>' + step.name  + '</h5>',
+                    $descr = '<p>' + step.description  + '</p>';
+
+                $carouselInner.append($slideWrapper.append($imageWrapper, $textWrapper.append($title, $descr)));
+            });
+
+            $wrapper.append($carouselWrapper.append($carouselTitle, $carouselInner));
+            $carouselInner.slick({
+                dots: false,
+                slide: '.slide-single-wrapper',
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            });
+
+        });
+
+    };
+
+    var createChartsCarousel = function($wrapper, carr, cultureName) {
+        var baseUrl = window.Culturas.baseUrl,
+            thumbUrl = baseUrl + cultureName + '/graficos/thumb.png',
+            $carouselWrapper = $('<div class="carousel-charts-wrapper" />'),
+            $carouselInner = $('<div class="carousel-charts-inner" />'),
+            $thumb = '<img alt="' + cultureName + '" src="' + thumbUrl + '" />',
+            $slideWrapper, $imageWrapper, c = 1;
+
+        while(c++ < carr.total) {
+            var imgSrc = baseUrl + cultureName + '/graficos/' + c + '.png';
+            $slideWrapper = $('<div class="slide-charts-wrapper">');
+            $imageWrapper = $('<img src="' + imgSrc + '">');
+            $carouselInner.append($slideWrapper.append($imageWrapper));
+        }
+
+        $wrapper.append($thumb, $carouselWrapper.append($carouselInner));
+        $carouselInner.slick({
+            dots: false,
+            slide: '.slide-charts-wrapper',
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+
+    };
+
     // SCROLLER CONSTRUCTOR
     var Scroller = function($wrapper, slideClass, idx) {
         this.$wrapper = $wrapper;
@@ -368,7 +446,6 @@ $(function() {
     if(window.Culturas && $('.sessao-galeria').length) {
         (function() {
             var cultureName = getCultureFromBody(),
-                baseUrl = window.Culturas.baseUrl,
                 carrosseis = window.Culturas.pages[cultureName],
                 $carrList = $('.sessao-galeria');
 
@@ -381,21 +458,15 @@ $(function() {
 
                 // Carrossel da animação
                 if(carr.type === 'animacao') {
-                    $imageWrapper = $('<img src="' + baseUrl + 'empty.png" class="empty">'),
-                    $carrWrapper.append($imageWrapper);
-                    carr.steps.forEach(function(step, i) {
-
-                        var imgSrc = baseUrl + cultureName + '/' + (i + 1) + '.png',
-                            $slideWrapper = $('<div class="' + sliderWrapperClass + '">'),
-                            $imageWrapper = $('<img src="' + imgSrc + '" class="image-wrapper">'),
-                            $textWrapper = $('<aside class="sessao-galeria-text">');
-
-                        if(step.html.length) $textWrapper.html(step.html);
-
-                        $carrWrapper.append($slideWrapper.append($textWrapper, $imageWrapper));
-                    });
-
-                    var scroller = new Scroller($carrWrapper, sliderWrapperClass);
+                    createAnimationCarousel($carrWrapper, carr, cultureName);
+                }
+                // Carrossel das bolinhas
+                if(carr.type === 'double') {
+                    createDoubleCarousel($carrWrapper, carr, cultureName);
+                }
+                // Carrossel dos gráficos
+                if(carr.type === 'grafico') {
+                    createChartsCarousel($carrWrapper, carr, cultureName);
                 }
 
             });
