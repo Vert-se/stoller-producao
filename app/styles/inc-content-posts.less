@@ -1,0 +1,140 @@
+.content{
+	&.posts{
+		display: inline-block;
+	}
+}
+
+@media screen and(min-width:100px){
+	.content{
+		&.posts{
+			display: inline-block;
+			width: 100%;
+			max-width: 683px;
+			margin-bottom: 20px;
+
+			.post{
+				.clearfix;
+				border-bottom: 1px solid @grey_l;
+				padding-bottom: 20px;
+				padding-top: 20px;
+				&:last-child{
+					border-bottom: 0;
+				}
+				.badge{
+					display: inline-block;
+					width: auto;
+					padding: 5px;
+
+					font-size: 1.4em;
+					font-weight: 400;
+					color: @light;
+
+					float: left;
+
+					margin-bottom: 5px;
+				}
+				.post_thumb{
+					clear: both;
+					float: left;
+					display: block;
+
+					width: auto;
+					height: auto;
+
+					border: 1px solid @grey_sl;
+
+					margin-bottom: 10px;
+				}
+
+				.post_content{
+					clear: left;
+					width: 100%;
+
+					h2{
+						font-size: 3em;
+						font-weight: 400;
+					}
+
+					p{
+						font-size: 1.4em;
+						font-weight: 400;
+						.post_autor{
+							font-style: italic;
+							display: block;
+						}
+					}
+
+					.post_leia{
+						display: inline-block;
+						color: @light;
+
+						font-size: 1.6em;
+						font-weight: 400;
+						padding: 5px 10px;
+						line-height: 15px;
+						border-radius: 5px;
+						.seta_2;
+
+						&:after{
+							zoom:0.5;
+						}
+					}
+				}
+
+				&.green{
+					.badge, .post_leia{
+						background: @green;
+					}
+					.post_content{
+						h2,.post_autor{
+							color: @green;
+						}
+					}
+				}
+				&.green_m{
+					.badge, .post_leia{
+						background: @green_m;
+					}
+					.post_content{
+						h2,.post_autor{
+							color: @green_m;
+						}
+					}
+				}
+				&.green_d{
+					.badge, .post_leia{
+						background: @green_d;
+					}
+					.post_content{
+						h2,.post_autor{
+							color: @green_d;
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+
+@media screen and(min-width:850px){
+	.content{
+		&.posts{
+			float: left;
+			width: 70%;
+			.post{
+				&.post_line{
+					.post_thumb{
+						width: 42.4%;
+						float: left;
+					}
+					.post_content{
+						width: 53%;
+						float: right;
+						clear: none;
+					}
+				}
+			}
+		}
+	}
+}

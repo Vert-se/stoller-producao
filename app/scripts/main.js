@@ -249,7 +249,8 @@ $(function() {
     };
 
     var getCultureFromBody = function() {
-        return $('body').attr('class').split(' ')[1];
+        var classes = $('body').attr('class').split(' ');
+        return classes.length && classes[1];
     };
 
     // SCROLLER CONSTRUCTOR
@@ -364,7 +365,7 @@ $(function() {
         }
     });
 
-    if(window.Culturas) {
+    if(window.Culturas && $('.sessao-galeria').length) {
         (function() {
             var cultureName = getCultureFromBody(),
                 baseUrl = window.Culturas.baseUrl,
