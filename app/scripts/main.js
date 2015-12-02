@@ -157,9 +157,14 @@ site.link_set = function(){
         l_close = $('a[rel=close]'),
         l_modal = $('a[rel=modal]'),
         l_toggle = $('a[rel=toggle]'),
-        l_ext = $('a[rel=external]');
+        l_ext = $('a[rel=external]'),
+        l_return = $('a[rel=return]');
 
         l_ext.attr('target','_blank');
+
+        l_return.on('click',function(event){
+            event.preventDefault();
+        });
 
         l_menu.on('click',function(event){
             event.preventDefault();

@@ -580,6 +580,9 @@ header .stoller_id a {
     margin-bottom: 10px;
     text-transform: uppercase;
   }
+  header .menu > ul .has_sub > a.return {
+    cursor: default;
+  }
   header .menu > ul .has_sub li a {
     display: inline-block;
     padding-top: 20px;
@@ -2723,6 +2726,21 @@ body.culturas .cult_sec_title .big {
   }
   .content.posts .post .post_content .post_leia:after {
     zoom: 0.5;
+  }
+  .content.posts .post.post_single .video {
+    position: relative;
+    height: 0;
+    padding-top: 30px;
+    padding-bottom: 51.8%;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .content.posts .post.post_single .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   .content.posts .post.green .badge,
   .content.posts .post.green .post_leia {
