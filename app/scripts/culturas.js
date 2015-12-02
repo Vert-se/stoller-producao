@@ -68,6 +68,10 @@ window.Culturas = {
                     },
                 ]
             },
+            {
+                type: 'grafico',
+                total: 4
+            }
         ],
         arroz: [
             {
@@ -79,6 +83,64 @@ window.Culturas = {
                     { html: '<p class="sub-title"><strong>INÍCIO DA EMISSÃO DA PANÍCULA</strong></p>' },
                     { html: '<p class="sub-title"><strong>Sistema Integrado Stoller (SIS)</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida do arroz. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
                 ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'vegetacao',
+                        name: 'Vegetação',
+                        steps: [
+                            { name: 'VO', description: 'Se inicia na emergência da plântula estendendo até o momento em que a nervura principal da primeira folha verdadeira alcança 2,5 cm de comprimento.'},
+                            { name: 'V1', description: 'Do final de V0 até que a nervura principal da segunda folha alcance 2,5 cm de comprimento.'},
+                            { name: 'V2', description: 'Do final de V1 até que a nervura central da terceira folha atinja 2,5 cm.'},
+                            { name: 'V3 VN', description: 'Segue o mesmo critério.'},
+                        ]
+                    },
+                    {
+                        type: 'botoes-florais',
+                        name: 'Botões Florais',
+                        steps: [
+                            { name: 'B1', description: 'Inicia-se quando o primeiro botão florão se torna visível.'},
+                            { name: 'B2', description: 'Primeiro botão floral do segundo ramo frutífero visível.'},
+                            { name: 'B3', description: 'Primeiro botão floral do terceiro ramo frutífero visível. Nesta época, o segundo botão do primeiro ramo também se torna visível.'},
+                            { name: 'B4 BN', description: 'Segue o mesmo critério.'},
+                        ]
+                    }
+                ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'micronutrientes',
+                        name: 'Micronutrientes',
+                        steps: [
+                            { name: 'ZINCO', description: 'As folhas novas apresentam tamanho reduzido e clorose difusa. Quando os sintomas são severos, os entrenós apresentam-se curtos e as nervuras escurecidas.'},
+                            { name: 'MANGANÊS', description: 'Folhas novas com clorose internerval caracterizando um “reticulado grosso”, em que as nervuras e regiões adjacentes permanecem verdes e o restante do limbo foliar apresenta-se verde-pálido ou amarelecido.'},
+                            { name: 'BORO', description: 'Folhas novas cloróticas, disformes e com o limbo enrugado (1). Escurecimento interno da parte basal de frutos em início de formação (2). Escurecimento da medula do pecíolo foliar, com a formação de vários anéis (3). Reduzida frutificação e capulhos de tamanho pequeno.'},
+                            { name: 'FERRO', description: 'Folhas novas com coloração verdepálida. A medida que o sintoma se agrava, ocorre clorose internerval com aspecto de “reticulado fino”, em que apenas as nervuras permanecem verdes.'},
+                            { name: 'COBRE', description: 'Folhas novas cloróticas, apresentando pontuações pardas na extremidade.'},
+                            { name: 'MOLIBDÊNIO', description: 'Nutriente fundamental para o metabolismo do nitrogênio. Sua falta acarreta acúmulo de nitrato nos tecidos da planta, levando à queda excessiva de flores e frutos jovens.'},
+                        ]
+                    },
+                    {
+                        type: 'macronutrientes',
+                        name: 'Macronutrientes',
+                        steps: [
+                            { name: 'NITROGÊNIO', description: 'Amarelecimento gradativo das folhas mais velhas, que com a evolução do sintoma passam a exibir manchas avermelhadas.'},
+                            { name: 'FÓSFORO', description: 'Plantas com crescimento lento, apresentando folhas pequenas e com coloração verde-escura. À medida que o sintoma progride, as folhas tornam-se pardacentas.'},
+                            { name: 'POTÁSSIO', description: 'Variegação verde-amarelado do limbo foliar com ligeira proeminência das nervuras; seca e necrose das bordas da folha; desenvolvimento reduzido do capulho e baixa qualidade de fibra.'},
+                            { name: 'MAGNÉSIO', description: 'Descoloração do limbo foliar nos espaços entre as nervuras. Com a progressão do sintoma, as nervuras mantêm a coloração verde, enquanto o restante do limbo torna-se vermelho-púrpura.'},
+                            { name: 'CÁLCIO', description: 'Folhas novas pequenas, freqüentemente com o limbo deformado. Plantas com sistema radicular pouco desenvolvido e apresentando baixa retenção de frutos.'},
+                            { name: 'ENXOFRE', description: 'Folhas novas com tamanho reduzido, apresentando coloração verde-clara uniforme em toda a extensão do limbo.'},
+                        ]
+                    },
+                ]
+            },
+            {
+                type: 'grafico',
+                total: 1
             }
         ],
         batata: [
@@ -93,6 +155,35 @@ window.Culturas = {
                     { html: '<p class="sub-title"><strong>SENESCÊNCIA</strong></p>' },
                     { html: '<p class="sub-title"><strong>Sistema Integrado Stoller (SIS)</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida da batata. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
                 ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'vegetacao',
+                        name: 'Vegetação',
+                        steps: [
+                            { name: 'VO', description: 'Se inicia na emergência da plântula estendendo até o momento em que a nervura principal da primeira folha verdadeira alcança 2,5 cm de comprimento.'},
+                            { name: 'V1', description: 'Do final de V0 até que a nervura principal da segunda folha alcance 2,5 cm de comprimento.'},
+                            { name: 'V2', description: 'Do final de V1 até que a nervura central da terceira folha atinja 2,5 cm.'},
+                            { name: 'V3 VN', description: 'Segue o mesmo critério.'},
+                        ]
+                    },
+                    {
+                        type: 'botoes-florais',
+                        name: 'Botões Florais',
+                        steps: [
+                            { name: 'B1', description: 'Inicia-se quando o primeiro botão florão se torna visível.'},
+                            { name: 'B2', description: 'Primeiro botão floral do segundo ramo frutífero visível.'},
+                            { name: 'B3', description: 'Primeiro botão floral do terceiro ramo frutífero visível. Nesta época, o segundo botão do primeiro ramo também se torna visível.'},
+                            { name: 'B4 BN', description: 'Segue o mesmo critério.'},
+                        ]
+                    }
+                ]
+            },
+            {
+                type: 'grafico',
+                total: 1
             }
         ],
         cana: [
@@ -108,6 +199,64 @@ window.Culturas = {
                     { html: '<p class="sub-title"><strong>cana planta/cana soca - maturação dos colmos</strong></p>' },
                     { html: '<p class="sub-title"><strong>Sistema Integrado Stoller (SIS)</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida do milho. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
                 ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'vegetacao',
+                        name: 'Vegetação',
+                        steps: [
+                            { name: 'VO', description: 'Se inicia na emergência da plântula estendendo até o momento em que a nervura principal da primeira folha verdadeira alcança 2,5 cm de comprimento.'},
+                            { name: 'V1', description: 'Do final de V0 até que a nervura principal da segunda folha alcance 2,5 cm de comprimento.'},
+                            { name: 'V2', description: 'Do final de V1 até que a nervura central da terceira folha atinja 2,5 cm.'},
+                            { name: 'V3 VN', description: 'Segue o mesmo critério.'},
+                        ]
+                    },
+                    {
+                        type: 'botoes-florais',
+                        name: 'Botões Florais',
+                        steps: [
+                            { name: 'B1', description: 'Inicia-se quando o primeiro botão florão se torna visível.'},
+                            { name: 'B2', description: 'Primeiro botão floral do segundo ramo frutífero visível.'},
+                            { name: 'B3', description: 'Primeiro botão floral do terceiro ramo frutífero visível. Nesta época, o segundo botão do primeiro ramo também se torna visível.'},
+                            { name: 'B4 BN', description: 'Segue o mesmo critério.'},
+                        ]
+                    }
+                ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'micronutrientes',
+                        name: 'Micronutrientes',
+                        steps: [
+                            { name: 'ZINCO', description: 'As folhas novas apresentam tamanho reduzido e clorose difusa. Quando os sintomas são severos, os entrenós apresentam-se curtos e as nervuras escurecidas.'},
+                            { name: 'MANGANÊS', description: 'Folhas novas com clorose internerval caracterizando um “reticulado grosso”, em que as nervuras e regiões adjacentes permanecem verdes e o restante do limbo foliar apresenta-se verde-pálido ou amarelecido.'},
+                            { name: 'BORO', description: 'Folhas novas cloróticas, disformes e com o limbo enrugado (1). Escurecimento interno da parte basal de frutos em início de formação (2). Escurecimento da medula do pecíolo foliar, com a formação de vários anéis (3). Reduzida frutificação e capulhos de tamanho pequeno.'},
+                            { name: 'FERRO', description: 'Folhas novas com coloração verdepálida. A medida que o sintoma se agrava, ocorre clorose internerval com aspecto de “reticulado fino”, em que apenas as nervuras permanecem verdes.'},
+                            { name: 'COBRE', description: 'Folhas novas cloróticas, apresentando pontuações pardas na extremidade.'},
+                            { name: 'MOLIBDÊNIO', description: 'Nutriente fundamental para o metabolismo do nitrogênio. Sua falta acarreta acúmulo de nitrato nos tecidos da planta, levando à queda excessiva de flores e frutos jovens.'},
+                        ]
+                    },
+                    {
+                        type: 'macronutrientes',
+                        name: 'Macronutrientes',
+                        steps: [
+                            { name: 'NITROGÊNIO', description: 'Amarelecimento gradativo das folhas mais velhas, que com a evolução do sintoma passam a exibir manchas avermelhadas.'},
+                            { name: 'FÓSFORO', description: 'Plantas com crescimento lento, apresentando folhas pequenas e com coloração verde-escura. À medida que o sintoma progride, as folhas tornam-se pardacentas.'},
+                            { name: 'POTÁSSIO', description: 'Variegação verde-amarelado do limbo foliar com ligeira proeminência das nervuras; seca e necrose das bordas da folha; desenvolvimento reduzido do capulho e baixa qualidade de fibra.'},
+                            { name: 'MAGNÉSIO', description: 'Descoloração do limbo foliar nos espaços entre as nervuras. Com a progressão do sintoma, as nervuras mantêm a coloração verde, enquanto o restante do limbo torna-se vermelho-púrpura.'},
+                            { name: 'CÁLCIO', description: 'Folhas novas pequenas, freqüentemente com o limbo deformado. Plantas com sistema radicular pouco desenvolvido e apresentando baixa retenção de frutos.'},
+                            { name: 'ENXOFRE', description: 'Folhas novas com tamanho reduzido, apresentando coloração verde-clara uniforme em toda a extensão do limbo.'},
+                        ]
+                    },
+                ]
+            },
+            {
+                type: 'grafico',
+                total: 3
             }
         ],
         cafe: [
@@ -121,6 +270,64 @@ window.Culturas = {
                     { html: '<p class="sub-title"><strong>início da maturação</strong></p>' },
                     { html: '<p class="sub-title"><strong>Sistema Integrado Stoller (SIS)</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida do café. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
                 ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'vegetacao',
+                        name: 'Vegetação',
+                        steps: [
+                            { name: 'VO', description: 'Se inicia na emergência da plântula estendendo até o momento em que a nervura principal da primeira folha verdadeira alcança 2,5 cm de comprimento.'},
+                            { name: 'V1', description: 'Do final de V0 até que a nervura principal da segunda folha alcance 2,5 cm de comprimento.'},
+                            { name: 'V2', description: 'Do final de V1 até que a nervura central da terceira folha atinja 2,5 cm.'},
+                            { name: 'V3 VN', description: 'Segue o mesmo critério.'},
+                        ]
+                    },
+                    {
+                        type: 'botoes-florais',
+                        name: 'Botões Florais',
+                        steps: [
+                            { name: 'B1', description: 'Inicia-se quando o primeiro botão florão se torna visível.'},
+                            { name: 'B2', description: 'Primeiro botão floral do segundo ramo frutífero visível.'},
+                            { name: 'B3', description: 'Primeiro botão floral do terceiro ramo frutífero visível. Nesta época, o segundo botão do primeiro ramo também se torna visível.'},
+                            { name: 'B4 BN', description: 'Segue o mesmo critério.'},
+                        ]
+                    }
+                ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'micronutrientes',
+                        name: 'Micronutrientes',
+                        steps: [
+                            { name: 'ZINCO', description: 'As folhas novas apresentam tamanho reduzido e clorose difusa. Quando os sintomas são severos, os entrenós apresentam-se curtos e as nervuras escurecidas.'},
+                            { name: 'MANGANÊS', description: 'Folhas novas com clorose internerval caracterizando um “reticulado grosso”, em que as nervuras e regiões adjacentes permanecem verdes e o restante do limbo foliar apresenta-se verde-pálido ou amarelecido.'},
+                            { name: 'BORO', description: 'Folhas novas cloróticas, disformes e com o limbo enrugado (1). Escurecimento interno da parte basal de frutos em início de formação (2). Escurecimento da medula do pecíolo foliar, com a formação de vários anéis (3). Reduzida frutificação e capulhos de tamanho pequeno.'},
+                            { name: 'FERRO', description: 'Folhas novas com coloração verdepálida. A medida que o sintoma se agrava, ocorre clorose internerval com aspecto de “reticulado fino”, em que apenas as nervuras permanecem verdes.'},
+                            { name: 'COBRE', description: 'Folhas novas cloróticas, apresentando pontuações pardas na extremidade.'},
+                            { name: 'MOLIBDÊNIO', description: 'Nutriente fundamental para o metabolismo do nitrogênio. Sua falta acarreta acúmulo de nitrato nos tecidos da planta, levando à queda excessiva de flores e frutos jovens.'},
+                        ]
+                    },
+                    {
+                        type: 'macronutrientes',
+                        name: 'Macronutrientes',
+                        steps: [
+                            { name: 'NITROGÊNIO', description: 'Amarelecimento gradativo das folhas mais velhas, que com a evolução do sintoma passam a exibir manchas avermelhadas.'},
+                            { name: 'FÓSFORO', description: 'Plantas com crescimento lento, apresentando folhas pequenas e com coloração verde-escura. À medida que o sintoma progride, as folhas tornam-se pardacentas.'},
+                            { name: 'POTÁSSIO', description: 'Variegação verde-amarelado do limbo foliar com ligeira proeminência das nervuras; seca e necrose das bordas da folha; desenvolvimento reduzido do capulho e baixa qualidade de fibra.'},
+                            { name: 'MAGNÉSIO', description: 'Descoloração do limbo foliar nos espaços entre as nervuras. Com a progressão do sintoma, as nervuras mantêm a coloração verde, enquanto o restante do limbo torna-se vermelho-púrpura.'},
+                            { name: 'CÁLCIO', description: 'Folhas novas pequenas, freqüentemente com o limbo deformado. Plantas com sistema radicular pouco desenvolvido e apresentando baixa retenção de frutos.'},
+                            { name: 'ENXOFRE', description: 'Folhas novas com tamanho reduzido, apresentando coloração verde-clara uniforme em toda a extensão do limbo.'},
+                        ]
+                    },
+                ]
+            },
+            {
+                type: 'grafico',
+                total: 2
             }
         ],
         citros: [
@@ -135,6 +342,64 @@ window.Culturas = {
                     { html: '<p class="sub-title"><strong>Fase final de maturação</strong></p>' },
                     { html: '<p class="sub-title"><strong>Sistema Integrado Stoller (SIS)</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida do citros. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
                 ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'vegetacao',
+                        name: 'Vegetação',
+                        steps: [
+                            { name: 'VO', description: 'Se inicia na emergência da plântula estendendo até o momento em que a nervura principal da primeira folha verdadeira alcança 2,5 cm de comprimento.'},
+                            { name: 'V1', description: 'Do final de V0 até que a nervura principal da segunda folha alcance 2,5 cm de comprimento.'},
+                            { name: 'V2', description: 'Do final de V1 até que a nervura central da terceira folha atinja 2,5 cm.'},
+                            { name: 'V3 VN', description: 'Segue o mesmo critério.'},
+                        ]
+                    },
+                    {
+                        type: 'botoes-florais',
+                        name: 'Botões Florais',
+                        steps: [
+                            { name: 'B1', description: 'Inicia-se quando o primeiro botão florão se torna visível.'},
+                            { name: 'B2', description: 'Primeiro botão floral do segundo ramo frutífero visível.'},
+                            { name: 'B3', description: 'Primeiro botão floral do terceiro ramo frutífero visível. Nesta época, o segundo botão do primeiro ramo também se torna visível.'},
+                            { name: 'B4 BN', description: 'Segue o mesmo critério.'},
+                        ]
+                    }
+                ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'micronutrientes',
+                        name: 'Micronutrientes',
+                        steps: [
+                            { name: 'ZINCO', description: 'As folhas novas apresentam tamanho reduzido e clorose difusa. Quando os sintomas são severos, os entrenós apresentam-se curtos e as nervuras escurecidas.'},
+                            { name: 'MANGANÊS', description: 'Folhas novas com clorose internerval caracterizando um “reticulado grosso”, em que as nervuras e regiões adjacentes permanecem verdes e o restante do limbo foliar apresenta-se verde-pálido ou amarelecido.'},
+                            { name: 'BORO', description: 'Folhas novas cloróticas, disformes e com o limbo enrugado (1). Escurecimento interno da parte basal de frutos em início de formação (2). Escurecimento da medula do pecíolo foliar, com a formação de vários anéis (3). Reduzida frutificação e capulhos de tamanho pequeno.'},
+                            { name: 'FERRO', description: 'Folhas novas com coloração verdepálida. A medida que o sintoma se agrava, ocorre clorose internerval com aspecto de “reticulado fino”, em que apenas as nervuras permanecem verdes.'},
+                            { name: 'COBRE', description: 'Folhas novas cloróticas, apresentando pontuações pardas na extremidade.'},
+                            { name: 'MOLIBDÊNIO', description: 'Nutriente fundamental para o metabolismo do nitrogênio. Sua falta acarreta acúmulo de nitrato nos tecidos da planta, levando à queda excessiva de flores e frutos jovens.'},
+                        ]
+                    },
+                    {
+                        type: 'macronutrientes',
+                        name: 'Macronutrientes',
+                        steps: [
+                            { name: 'NITROGÊNIO', description: 'Amarelecimento gradativo das folhas mais velhas, que com a evolução do sintoma passam a exibir manchas avermelhadas.'},
+                            { name: 'FÓSFORO', description: 'Plantas com crescimento lento, apresentando folhas pequenas e com coloração verde-escura. À medida que o sintoma progride, as folhas tornam-se pardacentas.'},
+                            { name: 'POTÁSSIO', description: 'Variegação verde-amarelado do limbo foliar com ligeira proeminência das nervuras; seca e necrose das bordas da folha; desenvolvimento reduzido do capulho e baixa qualidade de fibra.'},
+                            { name: 'MAGNÉSIO', description: 'Descoloração do limbo foliar nos espaços entre as nervuras. Com a progressão do sintoma, as nervuras mantêm a coloração verde, enquanto o restante do limbo torna-se vermelho-púrpura.'},
+                            { name: 'CÁLCIO', description: 'Folhas novas pequenas, freqüentemente com o limbo deformado. Plantas com sistema radicular pouco desenvolvido e apresentando baixa retenção de frutos.'},
+                            { name: 'ENXOFRE', description: 'Folhas novas com tamanho reduzido, apresentando coloração verde-clara uniforme em toda a extensão do limbo.'},
+                        ]
+                    },
+                ]
+            },
+            {
+                type: 'grafico',
+                total: 2
             }
         ],
         feijao: [
@@ -148,6 +413,64 @@ window.Culturas = {
                     { html: '<p class="sub-title"><strong>r7/r8</strong></p>' },
                     { html: '<p class="sub-title"><strong>Sistema Integrado Stoller (SIS)</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida do feijão. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
                 ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'vegetacao',
+                        name: 'Vegetação',
+                        steps: [
+                            { name: 'VO', description: 'Se inicia na emergência da plântula estendendo até o momento em que a nervura principal da primeira folha verdadeira alcança 2,5 cm de comprimento.'},
+                            { name: 'V1', description: 'Do final de V0 até que a nervura principal da segunda folha alcance 2,5 cm de comprimento.'},
+                            { name: 'V2', description: 'Do final de V1 até que a nervura central da terceira folha atinja 2,5 cm.'},
+                            { name: 'V3 VN', description: 'Segue o mesmo critério.'},
+                        ]
+                    },
+                    {
+                        type: 'botoes-florais',
+                        name: 'Botões Florais',
+                        steps: [
+                            { name: 'B1', description: 'Inicia-se quando o primeiro botão florão se torna visível.'},
+                            { name: 'B2', description: 'Primeiro botão floral do segundo ramo frutífero visível.'},
+                            { name: 'B3', description: 'Primeiro botão floral do terceiro ramo frutífero visível. Nesta época, o segundo botão do primeiro ramo também se torna visível.'},
+                            { name: 'B4 BN', description: 'Segue o mesmo critério.'},
+                        ]
+                    }
+                ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'micronutrientes',
+                        name: 'Micronutrientes',
+                        steps: [
+                            { name: 'ZINCO', description: 'As folhas novas apresentam tamanho reduzido e clorose difusa. Quando os sintomas são severos, os entrenós apresentam-se curtos e as nervuras escurecidas.'},
+                            { name: 'MANGANÊS', description: 'Folhas novas com clorose internerval caracterizando um “reticulado grosso”, em que as nervuras e regiões adjacentes permanecem verdes e o restante do limbo foliar apresenta-se verde-pálido ou amarelecido.'},
+                            { name: 'BORO', description: 'Folhas novas cloróticas, disformes e com o limbo enrugado (1). Escurecimento interno da parte basal de frutos em início de formação (2). Escurecimento da medula do pecíolo foliar, com a formação de vários anéis (3). Reduzida frutificação e capulhos de tamanho pequeno.'},
+                            { name: 'FERRO', description: 'Folhas novas com coloração verdepálida. A medida que o sintoma se agrava, ocorre clorose internerval com aspecto de “reticulado fino”, em que apenas as nervuras permanecem verdes.'},
+                            { name: 'COBRE', description: 'Folhas novas cloróticas, apresentando pontuações pardas na extremidade.'},
+                            { name: 'MOLIBDÊNIO', description: 'Nutriente fundamental para o metabolismo do nitrogênio. Sua falta acarreta acúmulo de nitrato nos tecidos da planta, levando à queda excessiva de flores e frutos jovens.'},
+                        ]
+                    },
+                    {
+                        type: 'macronutrientes',
+                        name: 'Macronutrientes',
+                        steps: [
+                            { name: 'NITROGÊNIO', description: 'Amarelecimento gradativo das folhas mais velhas, que com a evolução do sintoma passam a exibir manchas avermelhadas.'},
+                            { name: 'FÓSFORO', description: 'Plantas com crescimento lento, apresentando folhas pequenas e com coloração verde-escura. À medida que o sintoma progride, as folhas tornam-se pardacentas.'},
+                            { name: 'POTÁSSIO', description: 'Variegação verde-amarelado do limbo foliar com ligeira proeminência das nervuras; seca e necrose das bordas da folha; desenvolvimento reduzido do capulho e baixa qualidade de fibra.'},
+                            { name: 'MAGNÉSIO', description: 'Descoloração do limbo foliar nos espaços entre as nervuras. Com a progressão do sintoma, as nervuras mantêm a coloração verde, enquanto o restante do limbo torna-se vermelho-púrpura.'},
+                            { name: 'CÁLCIO', description: 'Folhas novas pequenas, freqüentemente com o limbo deformado. Plantas com sistema radicular pouco desenvolvido e apresentando baixa retenção de frutos.'},
+                            { name: 'ENXOFRE', description: 'Folhas novas com tamanho reduzido, apresentando coloração verde-clara uniforme em toda a extensão do limbo.'},
+                        ]
+                    },
+                ]
+            },
+            {
+                type: 'grafico',
+                total: 2
             }
         ],
         milho: [
@@ -160,6 +483,64 @@ window.Culturas = {
                     { html: '<p class="sub-title"><strong>Vt</strong></p>' },
                     { html: '<p class="sub-title"><strong>Sistema Integrado Stoller (SIS)</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida do milho. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
                 ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'vegetacao',
+                        name: 'Vegetação',
+                        steps: [
+                            { name: 'VO', description: 'Se inicia na emergência da plântula estendendo até o momento em que a nervura principal da primeira folha verdadeira alcança 2,5 cm de comprimento.'},
+                            { name: 'V1', description: 'Do final de V0 até que a nervura principal da segunda folha alcance 2,5 cm de comprimento.'},
+                            { name: 'V2', description: 'Do final de V1 até que a nervura central da terceira folha atinja 2,5 cm.'},
+                            { name: 'V3 VN', description: 'Segue o mesmo critério.'},
+                        ]
+                    },
+                    {
+                        type: 'botoes-florais',
+                        name: 'Botões Florais',
+                        steps: [
+                            { name: 'B1', description: 'Inicia-se quando o primeiro botão florão se torna visível.'},
+                            { name: 'B2', description: 'Primeiro botão floral do segundo ramo frutífero visível.'},
+                            { name: 'B3', description: 'Primeiro botão floral do terceiro ramo frutífero visível. Nesta época, o segundo botão do primeiro ramo também se torna visível.'},
+                            { name: 'B4 BN', description: 'Segue o mesmo critério.'},
+                        ]
+                    }
+                ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'micronutrientes',
+                        name: 'Micronutrientes',
+                        steps: [
+                            { name: 'ZINCO', description: 'As folhas novas apresentam tamanho reduzido e clorose difusa. Quando os sintomas são severos, os entrenós apresentam-se curtos e as nervuras escurecidas.'},
+                            { name: 'MANGANÊS', description: 'Folhas novas com clorose internerval caracterizando um “reticulado grosso”, em que as nervuras e regiões adjacentes permanecem verdes e o restante do limbo foliar apresenta-se verde-pálido ou amarelecido.'},
+                            { name: 'BORO', description: 'Folhas novas cloróticas, disformes e com o limbo enrugado (1). Escurecimento interno da parte basal de frutos em início de formação (2). Escurecimento da medula do pecíolo foliar, com a formação de vários anéis (3). Reduzida frutificação e capulhos de tamanho pequeno.'},
+                            { name: 'FERRO', description: 'Folhas novas com coloração verdepálida. A medida que o sintoma se agrava, ocorre clorose internerval com aspecto de “reticulado fino”, em que apenas as nervuras permanecem verdes.'},
+                            { name: 'COBRE', description: 'Folhas novas cloróticas, apresentando pontuações pardas na extremidade.'},
+                            { name: 'MOLIBDÊNIO', description: 'Nutriente fundamental para o metabolismo do nitrogênio. Sua falta acarreta acúmulo de nitrato nos tecidos da planta, levando à queda excessiva de flores e frutos jovens.'},
+                        ]
+                    },
+                    {
+                        type: 'macronutrientes',
+                        name: 'Macronutrientes',
+                        steps: [
+                            { name: 'NITROGÊNIO', description: 'Amarelecimento gradativo das folhas mais velhas, que com a evolução do sintoma passam a exibir manchas avermelhadas.'},
+                            { name: 'FÓSFORO', description: 'Plantas com crescimento lento, apresentando folhas pequenas e com coloração verde-escura. À medida que o sintoma progride, as folhas tornam-se pardacentas.'},
+                            { name: 'POTÁSSIO', description: 'Variegação verde-amarelado do limbo foliar com ligeira proeminência das nervuras; seca e necrose das bordas da folha; desenvolvimento reduzido do capulho e baixa qualidade de fibra.'},
+                            { name: 'MAGNÉSIO', description: 'Descoloração do limbo foliar nos espaços entre as nervuras. Com a progressão do sintoma, as nervuras mantêm a coloração verde, enquanto o restante do limbo torna-se vermelho-púrpura.'},
+                            { name: 'CÁLCIO', description: 'Folhas novas pequenas, freqüentemente com o limbo deformado. Plantas com sistema radicular pouco desenvolvido e apresentando baixa retenção de frutos.'},
+                            { name: 'ENXOFRE', description: 'Folhas novas com tamanho reduzido, apresentando coloração verde-clara uniforme em toda a extensão do limbo.'},
+                        ]
+                    },
+                ]
+            },
+            {
+                type: 'grafico',
+                total: 3
             }
         ],
         soja: [
@@ -261,6 +642,35 @@ window.Culturas = {
                     { html: '<p class="sub-title"><strong>60 dias</strong></p>' },
                     { html: '<p class="sub-title"><strong>Sistema Integrado Stoller (SIS)</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida do tomate. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
                 ]
+            },
+            {
+                type: 'double',
+                list: [
+                    {
+                        type: 'vegetacao',
+                        name: 'Vegetação',
+                        steps: [
+                            { name: 'VO', description: 'Se inicia na emergência da plântula estendendo até o momento em que a nervura principal da primeira folha verdadeira alcança 2,5 cm de comprimento.'},
+                            { name: 'V1', description: 'Do final de V0 até que a nervura principal da segunda folha alcance 2,5 cm de comprimento.'},
+                            { name: 'V2', description: 'Do final de V1 até que a nervura central da terceira folha atinja 2,5 cm.'},
+                            { name: 'V3 VN', description: 'Segue o mesmo critério.'},
+                        ]
+                    },
+                    {
+                        type: 'botoes-florais',
+                        name: 'Botões Florais',
+                        steps: [
+                            { name: 'B1', description: 'Inicia-se quando o primeiro botão florão se torna visível.'},
+                            { name: 'B2', description: 'Primeiro botão floral do segundo ramo frutífero visível.'},
+                            { name: 'B3', description: 'Primeiro botão floral do terceiro ramo frutífero visível. Nesta época, o segundo botão do primeiro ramo também se torna visível.'},
+                            { name: 'B4 BN', description: 'Segue o mesmo critério.'},
+                        ]
+                    }
+                ]
+            },
+            {
+                type: 'grafico',
+                total: 1
             }
         ]
     }

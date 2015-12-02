@@ -295,6 +295,7 @@ $(function() {
                 dots: false,
                 slide: '.slide-single-wrapper',
                 infinite: false,
+                accessibility: false,
                 speed: 300,
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -310,7 +311,7 @@ $(function() {
             $carouselWrapper = $('<div class="carousel-charts-wrapper" />'),
             $carouselInner = $('<div class="carousel-charts-inner" />'),
             $thumb = '<img alt="' + cultureName + '" src="' + thumbUrl + '" />',
-            $slideWrapper, $imageWrapper, c = 1;
+            $slideWrapper, $imageWrapper, c = 0;
 
         while(c++ < carr.total) {
             var imgSrc = baseUrl + cultureName + '/graficos/' + c + '.png';
@@ -324,6 +325,7 @@ $(function() {
             dots: false,
             slide: '.slide-charts-wrapper',
             infinite: false,
+            accessibility: false,
             speed: 300,
             slidesToShow: 1,
             slidesToScroll: 1,
