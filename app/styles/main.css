@@ -1450,6 +1450,27 @@ footer .social li.youtube a {
 }
 
 @media screen and (min-width: 100px) {
+  .w100 input.input_text,
+  .w100 textarea.input_text,
+  .w100 .select_box {
+    font-size: 1.9em !important;
+    font-weight: 400;
+    color: #999999;
+    background: #ffffff !important;
+  }
+  .w100 input.input_text select,
+  .w100 textarea.input_text select,
+  .w100 .select_box select {
+    font-family: inherit !important;
+    font-size: 1.05em !important;
+    color: #999999;
+  }
+  .w100 .title_field {
+    color: #ffffff;
+  }
+  .w100 .botton_submit {
+    margin-right: 3% !important;
+  }
   .grid_form input.input_text,
   .grid_form textarea.input_text {
     width: 100%;
@@ -1544,6 +1565,11 @@ footer .social li.youtube a {
             transition: all 0.2s;
     -webkit-appearance: none;
   }
+  .grid_form input[type=checkbox].checkbox_mini {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
   .grid_form input[type=checkbox]:checked {
     background: #ffffff;
   }
@@ -1609,6 +1635,13 @@ footer .social li.youtube a {
 }
 
 @media screen and (min-width: 850px) {
+  .w100 input.input_text,
+  .w100 .select_box {
+    width: 97% !important;
+  }
+  .w100 textarea.input_text {
+    width: 98.5% !important;
+  }
   .grid_form input.input_text,
   .grid_form .select_box {
     width: 90%;
@@ -2742,12 +2775,45 @@ body.culturas .cult_sec_title .big {
     width: 100%;
     height: 100%;
   }
+  .content.posts .post.post_depoimento {
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    color: #999999;
+    background: #e3e2e2;
+    border: 0;
+  }
+  .content.posts .post.post_depoimento h2 {
+    padding-bottom: 10px;
+    font-size: 3em;
+    font-weight: 400;
+    border-bottom: 1px solid #cccccc;
+  }
+  .content.posts .post.post_depoimento .post_dados {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    font-weight: 400;
+    border-bottom: 1px solid #cccccc;
+  }
+  .content.posts .post.post_depoimento .post_dados aside {
+    margin: 15px 0;
+  }
+  .content.posts .post.post_depoimento .post_thumb_box {
+    margin-top: 15px;
+  }
+  .content.posts .post.post_depoimento .post_thumb_box figcaption {
+    margin: 10px 0;
+    font-size: 1.4em;
+    font-weight: 400;
+  }
   .content.posts .post.green .badge,
   .content.posts .post.green .post_leia {
     background: #c1d52e;
   }
   .content.posts .post.green .post_content h2,
   .content.posts .post.green .post_content .post_autor {
+    color: #c1d52e;
+  }
+  .content.posts .post.green h2 {
     color: #c1d52e;
   }
   .content.posts .post.green_m .badge,
@@ -2758,6 +2824,9 @@ body.culturas .cult_sec_title .big {
   .content.posts .post.green_m .post_content .post_autor {
     color: #a5b626;
   }
+  .content.posts .post.green_m h2 {
+    color: #a5b626;
+  }
   .content.posts .post.green_d .badge,
   .content.posts .post.green_d .post_leia {
     background: #819011;
@@ -2765,6 +2834,24 @@ body.culturas .cult_sec_title .big {
   .content.posts .post.green_d .post_content h2,
   .content.posts .post.green_d .post_content .post_autor {
     color: #819011;
+  }
+  .content.posts .post.green_d h2 {
+    color: #819011;
+  }
+  .content.posts .depoimentos_form {
+    padding: 10px;
+    background: #a5b626;
+  }
+  .content.posts .depoimentos_form .grid_item {
+    margin-bottom: 0 !important;
+  }
+  .content.posts .depoimentos_form h3 {
+    font-size: 3em;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  .content.posts .depoimentos_form .select_box:after {
+    top: 20px !important;
   }
 }
 
@@ -2793,11 +2880,37 @@ body.culturas .cult_sec_title .big {
   .content.posts .post.post_box:nth-child(2n+2) {
     float: right;
   }
+  .content.posts .post.post_depoimento .post_content {
+    display: inline-block;
+    float: right;
+    width: 70%;
+  }
+  .content.posts .post.post_depoimento .post_content .post_dados {
+    width: 100%;
+    vertical-align: top;
+  }
+  .content.posts .post.post_depoimento .post_content .post_dados .s50 {
+    display: inline-block;
+    width: 49%;
+    padding-right: 5px;
+  }
+  .content.posts .post.post_depoimento .post_content .post_dados .s25 {
+    display: inline-block;
+    width: 24%;
+    padding-right: 5px;
+  }
+  .content.posts .post.post_depoimento .post_thumb_box {
+    display: inline-block;
+    width: 25%;
+  }
   .content.posts.post.line hr {
     display: block;
     width: 100%;
     height: 1px;
     margin-bottom: 20px;
     background: #cccccc;
+  }
+  .content.posts .depoimentos_form {
+    padding: 15px 10px 15px 20px;
   }
 }

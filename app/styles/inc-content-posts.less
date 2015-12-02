@@ -132,6 +132,40 @@
 
 				}
 
+				&.post_depoimento{
+					color: @grey_sl;
+					padding: 15px 20px;
+					background: #e3e2e2;
+					margin-bottom: 30px;
+					border: 0;
+
+					h2{
+						font-size: 3em;
+						font-weight: 400;
+						padding-bottom: 10px;
+						border-bottom: 1px solid @grey_l;
+					}
+
+					.post_dados{
+						font-size:1.4em;
+						font-weight: 400;
+						border-bottom: 1px solid @grey_l;
+						margin-bottom: 15px;
+						aside{
+							margin: 15px 0;
+						}
+					}
+
+					.post_thumb_box{
+						margin-top: 15px;
+						figcaption{
+							font-size:1.4em;
+							font-weight: 400;
+							margin: 10px 0;
+						}
+					}
+				}
+
 				&.green{
 					.badge, .post_leia{
 						background: @green;
@@ -140,6 +174,9 @@
 						h2,.post_autor{
 							color: @green;
 						}
+					}
+					h2{
+						color: @green;
 					}
 				}
 				&.green_m{
@@ -151,6 +188,9 @@
 							color: @green_m;
 						}
 					}
+					h2{
+						color: @green_m;
+					}
 				}
 				&.green_d{
 					.badge, .post_leia{
@@ -161,8 +201,26 @@
 							color: @green_d;
 						}
 					}
+					h2{
+						color: @green_d;
+					}
 				}
 
+			}
+			.depoimentos_form{
+				background: @green_m;
+				padding: 10px;
+				.grid_item{
+					margin-bottom: 0px !important;
+				}
+				h3{
+					font-size: 3em;
+					color: @light;
+					font-weight: 400;
+				}
+				.select_box:after{
+					top: 20px !important;
+				}
 			}
 		}
 	}
@@ -198,6 +256,46 @@
 						float: right;
 					}
 				}
+				&.post_depoimento{
+					.post_content{
+						width: 70%;
+						float: right;
+						display: inline-block;
+
+						.post_dados{
+							width: 100%;
+							vertical-align: top;
+							.s50{
+								width: 49%;
+								display: inline-block;
+								padding-right: 5px;
+							}
+							.s25{
+								width: 24%;
+								display: inline-block;
+								padding-right: 5px;
+							}
+						}
+					// 	font-size:1.4em;
+					// 	font-weight: 400;
+					// 	border-bottom: 1px solid @grey_l;
+					// 	margin-bottom: 10px;
+					// 	aside{
+					// 		margin: 10px 0;
+					// 	}
+					}
+
+					.post_thumb_box{
+						// float: left;
+						display: inline-block;
+						width: 25%;
+						// figcaption{
+						// 	font-size:1.4em;
+						// 	font-weight: 400;
+						// 	margin: 10px 0;
+						// }
+					}
+				}
 			}
 
 			&.post.line{
@@ -209,6 +307,10 @@
 					background: @grey_l;
 					margin-bottom: 20px;
 				}
+			}
+			.depoimentos_form{
+				
+				padding: 15px 10px 15px 20px;
 			}
 		}
 	}
