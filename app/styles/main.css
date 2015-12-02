@@ -967,7 +967,8 @@ footer .social li.youtube a {
 }
 
 .area {
-  display: inline-block;
+  position: relative;
+  display: block;
   width: 100%;
 }
 
