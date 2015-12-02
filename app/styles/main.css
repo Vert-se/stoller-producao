@@ -2222,11 +2222,12 @@ body.culturas .cult_sec_title .big {
   width: auto;
   height: auto;
   max-width: 100%;
+  margin: 0 auto;
 }
 
 .sessao-galeria.grafico .slick-arrow {
   position: absolute;
-  top: 40%;
+  top: 34%;
   z-index: 10;
   display: block;
   width: 31px;
