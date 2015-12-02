@@ -31,6 +31,139 @@
       max-width: 100%;
     }
   }
+
+  &.sessao-galeria-double{
+    text-align: center;
+    .carousel-single-wrapper{
+      display: inline-block;
+
+      .slide-single-wrapper{
+        outline: 0;
+      }
+
+      .slick-arrow{
+        position: absolute;
+        display: block;
+        cursor: pointer;
+
+        width: 31px;
+        height: 46px;
+
+        top: 130px;
+        z-index: 10;
+
+        opacity: 0.5;
+
+        text-indent: -3000px;
+        overflow: hidden;
+
+        .trans();
+
+        &.slick-prev{
+          .sprite(-133px 0);
+          left: -10px;
+        }
+
+        &.slick-next{
+          .sprite(-166px 0);
+          right: -10px;
+        }
+
+        &:hover{
+          opacity: 1;
+        }
+
+        &.slick-disabled,
+        &.slick-disabled:hover{
+          opacity: 0;
+          cursor: default;
+        }
+      }
+
+      h4{
+        font-size: 1.8em;
+        font-weight: 400;
+        line-height: 32px;
+
+        padding: 0 10px;
+        margin: 20px auto 30px;
+
+        height: 32px;
+        width: 100%;
+
+        border-radius: 16px;
+
+        max-width: 172px;
+
+        text-transform: uppercase;
+        text-align: center;
+
+        background: rgba(204,204,204,0.5);
+        color: @grey;
+      }
+
+      .image-wrapper{
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+
+        position: relative;
+        z-index: 2;
+      }
+
+      .slide-single-text{
+        position: relative;
+        z-index: 1;
+        &:before{
+          display: block;
+          content: '';
+          position: absolute;
+          z-index: 1;
+          background: url('../images/culturas-reflexo.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: 50% 0;
+
+          width: 100%;
+          height: 66px;
+
+          left: 0;
+          top: -53px;
+        }
+        h5{
+          font-size: 3em;
+          font-weight: 400;
+          margin: 40px 0 30px;
+        }
+        p{
+         font-size: 1.8em; 
+        }
+      }
+    }
+  }
+}
+
+// cult_bg
+
+.cult_bg{
+  .sessao-galeria-double{
+    .carousel-single-wrapper{
+      h4{
+        background: rgba(255, 255, 255, 0.5);
+      }
+      .slick-arrow{
+
+        &.slick-prev{
+          .sprite(0 -169px);
+        }
+
+        &.slick-next{
+          .sprite(-33px -169px);
+        }
+      }
+    }
+  }
 }
 
 .scroll-wrapper {
@@ -54,4 +187,28 @@
       background: linear-gradient(#fcfcfc, #e4e4e4); /* Standard syntax (must be last) */
     }
   }
+}
+
+@media screen and(min-width:100px){
+  .sessao-galeria {
+    &.sessao-galeria-double{
+      .carousel-single-wrapper{
+        width: 100%;
+      }
+    }
+  }  
+}
+
+@media screen and(min-width:850px){
+  .sessao-galeria {
+    &.sessao-galeria-double{
+      .carousel-single-wrapper{
+        width: 45%;
+        float: left;
+        &:nth-child(even){
+          float: right;
+        }
+      }
+    }
+  }  
 }

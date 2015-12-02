@@ -12,6 +12,38 @@
 			max-width: 683px;
 			margin-bottom: 20px;
 
+			.content_title{
+				font-size: 3.2em;
+				padding: 10px 20px;
+
+				font-weight: 300;
+				color: @light;
+
+				margin-bottom: 30px;
+			}
+
+			&.green{
+				.content_title{
+					background: @green;
+				}
+			}
+
+			&.green_m{
+				.content_title{
+					background: @green_m;
+				}
+			}
+
+			&.green_d{
+				.content_title{
+					background: @green_d;
+				}
+			}
+
+			hr{
+				display: none;
+			}
+ 
 			.post{
 				.clearfix;
 				border-bottom: 1px solid @grey_l;
@@ -38,7 +70,7 @@
 					float: left;
 					display: block;
 
-					width: auto;
+					width: 100%;
 					height: auto;
 
 					border: 1px solid @grey_sl;
@@ -133,6 +165,30 @@
 						float: right;
 						clear: none;
 					}
+				}
+				&.post_box{
+					width: 42.4%;
+					display: inline-block;
+
+					vertical-align: top;
+					float: left;
+					border-bottom: 0;
+					margin-bottom: 20px;
+
+					&:nth-child(2n+2){
+						float: right;
+					}
+				}
+			}
+
+			&.post.line{
+				hr{
+					display: block;
+					height: 1px;
+					width: 100%;
+
+					background: @grey_l;
+					margin-bottom: 20px;
 				}
 			}
 		}
