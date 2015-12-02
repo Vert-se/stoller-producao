@@ -57,6 +57,19 @@ site.init = function(){
         that.update_boltar_voltar_seta(slick.currentSlide);
     });
 
+    $('.banner_gallery').slick({
+      dots: false,
+      arrows: false,
+      slide: '.banner_item',
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      fade: true
+    });
+
 };
 
 site.areas_pos = function(){
