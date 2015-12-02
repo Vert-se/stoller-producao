@@ -2378,7 +2378,7 @@ body.culturas .cult_sec_title .big {
 
 .sessao-galeria.sessao-galeria-double .carousel-single-wrapper .slide-single-text:before {
   position: absolute;
-  top: -53px;
+  top: -15px;
   left: 0;
   z-index: 1;
   display: block;
@@ -2392,9 +2392,18 @@ body.culturas .cult_sec_title .big {
 }
 
 .sessao-galeria.sessao-galeria-double .carousel-single-wrapper .slide-single-text h5 {
-  margin: 40px 0 30px;
+  display: inline-block;
+  width: auto;
+  height: 54px;
+  min-width: 54px;
+  padding: 0 10px;
+  margin: 30px auto 5px;
   font-size: 3em;
   font-weight: 400;
+  line-height: 54px;
+  text-align: center;
+  background: #e5e5e5;
+  border-radius: 27px;
 }
 
 .sessao-galeria.sessao-galeria-double .carousel-single-wrapper .slide-single-text p {
@@ -2405,12 +2414,20 @@ body.culturas .cult_sec_title .big {
   background: rgba(255, 255, 255, 0.5);
 }
 
+.cult_bg .sessao-galeria-double .carousel-single-wrapper h5 {
+  background-color: transparent !important;
+}
+
 .cult_bg .sessao-galeria-double .carousel-single-wrapper .slick-arrow.slick-prev {
   background: url('../images/stoller_sprite.png?2') no-repeat 0 -169px;
 }
 
 .cult_bg .sessao-galeria-double .carousel-single-wrapper .slick-arrow.slick-next {
   background: url('../images/stoller_sprite.png?2') no-repeat -33px -169px;
+}
+
+.cana .sessao-galeria-double .carousel-single-wrapper h5 {
+  background-color: transparent !important;
 }
 
 .scroll-wrapper {
