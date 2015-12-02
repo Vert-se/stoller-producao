@@ -2109,6 +2109,10 @@ body.culturas #fases {
   padding-bottom: 10px;
 }
 
+body.culturas #produtos {
+  padding-bottom: 40px;
+}
+
 body.culturas #desenvolvimento {
   padding-bottom: 10px;
 }
@@ -2202,6 +2206,60 @@ body.culturas .cult_sec_title .big {
 
 .sessao-galeria {
   margin-top: 10px!important;
+}
+
+.sessao-galeria.grafico > img {
+  display: block;
+  margin: 30px auto 15px;
+}
+
+.sessao-galeria.grafico .slide-charts-wrapper {
+  outline: 0;
+}
+
+.sessao-galeria.grafico .slide-charts-wrapper img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.sessao-galeria.grafico .slick-arrow {
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+  display: block;
+  width: 31px;
+  height: 46px;
+  overflow: hidden;
+  text-indent: -3000px;
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: all 0.2s;
+     -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+       -o-transition: all 0.2s;
+          transition: all 0.2s;
+}
+
+.sessao-galeria.grafico .slick-arrow.slick-prev {
+  left: -10px;
+  background: url('../images/stoller_sprite.png?2') no-repeat -133px 0;
+}
+
+.sessao-galeria.grafico .slick-arrow.slick-next {
+  right: -10px;
+  background: url('../images/stoller_sprite.png?2') no-repeat -166px 0;
+}
+
+.sessao-galeria.grafico .slick-arrow:hover {
+  opacity: 1;
+}
+
+.sessao-galeria.grafico .slick-arrow.slick-disabled,
+.sessao-galeria.grafico .slick-arrow.slick-disabled:hover {
+  cursor: default;
+  opacity: 0;
 }
 
 .sessao-galeria .empty {

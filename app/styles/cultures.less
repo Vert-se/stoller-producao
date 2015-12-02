@@ -1,6 +1,63 @@
 /* CSS PROFISSIONAL */
 .sessao-galeria {
   margin-top: 10px!important;
+
+  &.grafico{
+    &>img{
+      margin: 30px auto 15px;
+      display: block;
+    }
+
+    .slide-charts-wrapper{
+      outline: 0;
+      img{
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        display: block;
+      }
+    }
+
+    .slick-arrow{
+      position: absolute;
+      display: block;
+      cursor: pointer;
+
+      width: 31px;
+      height: 46px;
+
+      top: 40%;
+      z-index: 10;
+
+      opacity: 0.5;
+
+      text-indent: -3000px;
+      overflow: hidden;
+
+      .trans();
+
+      &.slick-prev{
+        .sprite(-133px 0);
+        left: -10px;
+      }
+
+      &.slick-next{
+        .sprite(-166px 0);
+        right: -10px;
+      }
+
+      &:hover{
+        opacity: 1;
+      }
+
+      &.slick-disabled,
+      &.slick-disabled:hover{
+        opacity: 0;
+        cursor: default;
+      }
+    }
+  }
+
   .empty {
     display: block;
     overflow: hidden;
