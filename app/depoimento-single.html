@@ -130,7 +130,7 @@
       <section class="area area_top area_full area_light area_grey">
         <section class="inner inner_small">
 
-          <section class="content posts post green_m">
+          <section id="post-single" class="content posts post green_m">
 
             <h1 class="content_title">Depoimentos</h1>
 
@@ -138,180 +138,7 @@
               Veja as histórias de quem utilizou as soluções Stoller e obteve maior produtividade.
             </p>
 
-            <form action="" class="filtros_form">
-              
-              <h3>Filtros</h3>
-
-              <fieldset class="grid grid_2 grid_form">
-
-                <label for="filtros_cultura" class="grid_item grid_item_form">
-                  <aside class="select_box">
-                    <select name="filtros[cultura]" id="filtros_cultura">
-                      <option value="" selected="selected">Cultura</option>
-                      <option value="Algodão">Algodão</option>
-                      <option value="Arroz">Arroz</option>
-                      <option value="Batata">Batata</option>
-                      <option value="Cana">Cana</option>
-                      <option value="Café">Café</option>
-                      <option value="Citros">Citros</option>
-                      <option value="Feijão">Feijão</option>
-                      <option value="Milho">Milho</option>
-                      <option value="Soja">Soja</option>
-                      <option value="Tomate">Tomate</option>
-                    </select>
-                  </aside>
-                </label>
-
-                <label for="filtros_regiao" class="grid_item grid_item_right grid_item_form">
-                  <aside class="select_box">
-                    <select name="filtros[regiao]" id="filtros_regiao">
-                      <option value="" selected="selected">Região</option>
-                      <option value="AC">Acre</option>
-                      <option value="AL">Alagoas</option>
-                      <option value="AP">Amapá</option>
-                      <option value="AM">Amazonas</option>
-                      <option value="BA">Bahia</option>
-                      <option value="CE">Ceará</option>
-                      <option value="DF">Distrito Federal</option>
-                      <option value="ES">Espírito Santo</option>
-                      <option value="GO">Goiás</option>
-                      <option value="MA">Maranhão</option>
-                      <option value="MG">Minas Gerais</option>
-                      <option value="MS">Mato Grosso do Sul</option>
-                      <option value="MT">Mato Grosso</option>
-                      <option value="PA">Pará</option>
-                      <option value="PB">Paraíba</option>
-                      <option value="PR">Paraná</option>
-                      <option value="PE">Pernambuco</option>
-                      <option value="PI">Piauí</option>
-                      <option value="RJ">Rio de Janeiro</option>
-                      <option value="RN">Rio Grande do Norte</option>
-                      <option value="RS">Rio Grande do Sul</option>
-                      <option value="RO">Rondônia</option>
-                      <option value="RR">Roraima</option>
-                      <option value="SP">São Paulo</option>
-                      <option value="SC">Santa Catarina</option>
-                      <option value="SE">Sergipe</option>
-                      <option value="TO">Tocantins</option>
-                    </select>
-                  </aside>
-                </label>
-
-              </fieldset>
-
-            </form>
-
-            <section data-type="depoimento" id="posts-wrapper" class="articles-inner">
-
-            </section>
-
-            <form action="" method="post" class="depoimentos_form w100">
-
-              <h3>Compartilhe seu depoimento</h3>
-
-              <fieldset class="grid grid_2 grid_form">
-                
-                <label for="depoimentos_cultura" class="grid_item grid_item_form">
-                  <aside class="select_box">
-                    <select name="depoimentos[cultura]" id="depoimentos_cultura">
-                      <option value="" selected="selected">Cultura</option>
-                      <option value="Algodão">Algodão</option>
-                      <option value="Arroz">Arroz</option>
-                      <option value="Batata">Batata</option>
-                      <option value="Cana">Cana</option>
-                      <option value="Café">Café</option>
-                      <option value="Citros">Citros</option>
-                      <option value="Feijão">Feijão</option>
-                      <option value="Milho">Milho</option>
-                      <option value="Soja">Soja</option>
-                      <option value="Tomate">Tomate</option>
-                    </select>
-                  </aside>
-                </label>
-
-                <label for="depoimentos_regiao" class="grid_item grid_item_form">
-                  <aside class="select_box">
-                    <select name="depoimentos[regiao]" id="depoimentos_regiao">
-                      <option value="" selected="selected">Região</option>
-                      <option value="AC">Acre</option>
-                      <option value="AL">Alagoas</option>
-                      <option value="AP">Amapá</option>
-                      <option value="AM">Amazonas</option>
-                      <option value="BA">Bahia</option>
-                      <option value="CE">Ceará</option>
-                      <option value="DF">Distrito Federal</option>
-                      <option value="ES">Espírito Santo</option>
-                      <option value="GO">Goiás</option>
-                      <option value="MA">Maranhão</option>
-                      <option value="MG">Minas Gerais</option>
-                      <option value="MS">Mato Grosso do Sul</option>
-                      <option value="MT">Mato Grosso</option>
-                      <option value="PA">Pará</option>
-                      <option value="PB">Paraíba</option>
-                      <option value="PR">Paraná</option>
-                      <option value="PE">Pernambuco</option>
-                      <option value="PI">Piauí</option>
-                      <option value="RJ">Rio de Janeiro</option>
-                      <option value="RN">Rio Grande do Norte</option>
-                      <option value="RS">Rio Grande do Sul</option>
-                      <option value="RO">Rondônia</option>
-                      <option value="RR">Roraima</option>
-                      <option value="SP">São Paulo</option>
-                      <option value="SC">Santa Catarina</option>
-                      <option value="SE">Sergipe</option>
-                      <option value="TO">Tocantins</option>
-                    </select>
-                  </aside>
-                </label>
-
-                <label for="depoimentos_nome" class="grid_item grid_item_form">
-                  <input type="text" placeholder="Nome" name="depoimentos[nome]" id="depoimentos_nome" class="input_text form_type form_type_nome">
-                </label>
-
-                <label for="depoimentos_email" class="grid_item grid_item_form">
-                  <input type="text" placeholder="E-mail" name="depoimentos[email]" id="depoimentos_email" class="input_text form_type form_type_email">
-                </label>
-
-              </fieldset>
-
-              <fieldset class="grid grid_3 grid_form">
-                
-                <label for="depoimentos_area_de_controle" class="grid_item grid_item_form">
-                  <input type="text" placeholder="Área de Controle" name="depoimentos[area_de_controle]" id="depoimentos_area_de_controle" class="input_text form_type form_type_nome">
-                </label>
-
-                <label for="depoimentos_area_tratada" class="grid_item grid_item_form">
-                  <input type="text" placeholder="Área tratada com Stoller" name="depoimentos[area_tratada]" id="depoimentos_area_tratada" class="input_text form_type form_type_email">
-                </label>
-
-
-                <label for="depoimentos_incremento" class="grid_item grid_item_form">
-                  <input type="text" placeholder="Incremento obtido" name="depoimentos[incremento]" id="depoimentos_incremento" class="input_text form_type form_type_email">
-                </label>
-              </fieldset>
-
-              <fieldset class="grid grid_1 grid_form">
-
-                <label for="depoimentos_mensagem" class="grid_item grid_item_form">
-                  <textarea name="depoimentos[mensagem]" id="depoimentos_mensagem" class="input_text form_type form_type_mensagem"></textarea>
-                </label>
-
-              </fieldset>
-
-              <fieldset class="grid grid_2 grid_form">
-                <label for="depoimentos_aceite" class="grid_item grid_item_form">
-                <input type="checkbox" class="checkbox_mini" name="depoimentos[aceite]" id="depoimentos_aceite" />
-                <span class="title_field">Li e aceito os termos e condições</span>
-              </label>
-                <aside class="grid_item grid_item_form">
-                  <button type="submit" class="botton_submit">Enviar</button>
-                </aside>
-              </fieldset>
-
-            </form>
-
           </section>
-
 
           <hr>
 
@@ -322,7 +149,7 @@
             <nav class="canais">
               <ul>
                 <li class="green"><a href="palavra-do-produtor.html" title="Palavra do produtor">Palavra do produtor</a></li>
-                <li class="green_m"><a class="active" href="depoimentos.html" title="Depoimentos">Depoimentos</a></li>
+                <li class="green_m"><a href="depoimentos.html" title="Depoimentos">Depoimentos</a></li>
                 <li class="green_d"><a href="palavra-do-especialista.html" title="Palavra do especialista">Palavra do especialista</a></li>
               </ul>
             </nav>
@@ -443,7 +270,6 @@
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="scripts/culturas.js"></script>
     <script type="text/html" id="post-template">
-
       <article class="post post_depoimento green_m">
         <h2>{{=titulo}}</h2>
         <figure class="post_thumb_box">
@@ -474,7 +300,7 @@
         </aside>
       </article>
     </script>
-	  <script src="scripts/main.js"></script>
+	 <script src="scripts/main.js"></script>
 
 </body>
 </html>

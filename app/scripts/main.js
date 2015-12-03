@@ -513,7 +513,7 @@ $(function(){
             var $wrapper = $('#posts-wrapper'),
                 type = $wrapper.data('type') || null,
                 catsUrl = {
-                    depoimentos: 'depoimentos.html',
+                    depoimento: 'depoimentos.html',
                     produtor: 'palavra-do-produtor.html',
                     especialista: 'palavra-do-especialista.html'
                 };

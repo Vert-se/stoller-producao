@@ -24,8 +24,9 @@ class Post extends Eloquent {
     protected $appends = array('tipo_nome');
 
     public function getCriadoEmAttribute($value)
-    {
-        return Carbon::createFromFormat('Y-m-d H:i:s', $value)->format('d\/m\/Y');
+    {	
+    	$format = $this->attributes['tipo'] === 'depoimento' ? 'Y' : 'd\/m\/Y';
+        return Carbon::createFromFormat('Y-m-d H:i:s', $value)->format($format);
     }
 
     public function getImagemUrlAttribute()
@@ -36,6 +37,14 @@ class Post extends Eloquent {
     	return $this->attributes['imagem_url'];
     }
 
+    public function getTituloAttribute()
+    {
+    	if(!$this->attributes['titulo']) {
+    		return 'Diversos';
+    	}
+    	return $this->attributes['titulo'];
+    }
+
     public function getTipoNomeAttribute($value)
     {
 		return $this->types[$this->tipo];
@@ -44,9 +53,13 @@ class Post extends Eloquent {
     public function scopeFetch($query, $type)
     {
 	    if($type) {
-	        $posts = $query->where('tipo', $type)->orderBy('criado_em', 'DESC')->get();
+	        $posts = $query->where('tipo', $type)->orderBy('criado_em', 'DESC')->limit(60)->get();
 	    } else {
-	        $posts = $query->orderBy('criado_em', 'DESC')->get();
+	    	$esp = Post::where('tipo', 'especialista')->orderBy('criado_em', 'DESC')->limit(20)->get();
+	    	$pro = Post::where('tipo', 'produtor')->orderBy('criado_em', 'DESC')->limit(20)->get();
+	    	$dep = Post::where('tipo', 'depoimento')->orderBy('criado_em', 'DESC')->limit(20)->get();
+
+	        $posts = $esp->merge($pro)->merge($dep)->shuffle();
 	    }
 
 	    return $posts;

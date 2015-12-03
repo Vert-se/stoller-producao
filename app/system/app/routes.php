@@ -55,7 +55,6 @@ Route::get('/upload-depoimentos', function()
             for ($row = 9; $row <= $highestRow; $row++){ 
                 //  Read a row of data into an array
                 $rowData = $sheet->rangeToArray('A' . $row . ':' . 'J' . $row , NULL, true, FALSE);
-                
                 $data = [
                     'titulo' => $rowData[0][3],
                     'descricao' => $rowData[0][9],
@@ -67,15 +66,15 @@ Route::get('/upload-depoimentos', function()
                     'cidade' => $rowData[0][2],
                     'estado' => $rowData[0][1],
                     'tipo' => 'depoimento',
-                    'criado_em' => Carbon::createFromFormat($rowData[0][4], 'Y')->format('Y-m-d H:i:s')
+                    'criado_em' => Carbon::createFromFormat('Y', (string)$rowData[0][4])->format('Y-m-d H:i:s')
                 ];
 
-                dd($data);
+                Post::create($data);
                 
             }
 
         } catch(Exception $e) {
-            echo('Error loading file"'.pathinfo($inputFileName,PATHINFO_BASENAME).'": '.$e->getMessage());
+            echo('Error loading file"'.pathinfo($file,PATHINFO_BASENAME).'": '.$e->getMessage());
         }
 
 
