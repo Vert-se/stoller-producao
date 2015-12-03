@@ -1,0 +1,18 @@
+#landing-01{
+	padding-bottom: 0;
+	height: auto;
+}
+
+#landing-01 img{
+	display: block;
+	margin: 0 auto;
+
+	width: auto;
+	height: auto;
+
+	max-width: 90%;
+}
+
+#landing-01 img.full{
+	max-width: 100%;
+}

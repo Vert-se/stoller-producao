@@ -49,26 +49,23 @@ site.init = function(){
           breakpoint: 849,
           settings: "unslick"
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
       ]
     }).on('afterChange', function(e, slick) {
         that.update_boltar_voltar_seta(slick.currentSlide);
     });
 
-    $('.banner_gallery').slick({
-      dots: false,
-      arrows: false,
-      slide: '.banner_item',
-      infinite: true,
-      speed: 300,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      fade: true
-    });
+    // $('.banner_gallery').slick({
+    //   dots: false,
+    //   arrows: false,
+    //   slide: '.banner_item',
+    //   infinite: true,
+    //   speed: 300,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   autoplay: true,
+    //   autoplaySpeed: 10000,
+    //   fade: true
+    // });
 
 };
 
