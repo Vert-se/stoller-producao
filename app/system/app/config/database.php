@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'stoller',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => 'mysql57.vert.se',
+			'database'  => 'vert256',
+			'username'  => 'vert256',
+			'password'  => 'vert123',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

@@ -65,6 +65,47 @@ class Post extends Eloquent {
 	    return $posts;
     }
 
+    public function scopeCultures($query)
+    {
+	    return $query
+	    	->where('titulo', '!=', 'NULL')
+	    	->where('tipo', 'depoimento')
+	    	->groupBy('titulo')
+	    	->orderBy('titulo')
+	    	->lists('titulo');
+    }
+
+    public function scopeTestmonials($query, $cultura = null, $estado = null)
+    {
+    	if($cultura) $query->where('titulo', $cultura);
+    	if($estado) $query->where('estado', $estado);
+
+	    return $query
+	    	->where('tipo', 'depoimento')
+	    	->orderBy('criado_em', 'DESC')
+	    	->get();
+    }
+
+    public function scopeStates($query)
+    {
+	    return $query
+	    	->where('estado', '!=', 'NULL')
+	    	->where('tipo', 'depoimento')
+	    	->groupBy('estado')
+	    	->orderBy('estado')
+	    	->lists('estado');
+    }
+
+    public function scopeCities($query, $state)
+    {
+	    return $query
+	    	->where('estado', $state)
+	    	->where('tipo', 'depoimento')
+	    	->groupBy('cidade')
+	    	->orderBy('cidade')
+	    	->lists('cidade');
+    }
+
     protected function getDefaultImage()
     {
 	    $baseUrl = str_replace('system/public', '', url()) . 'images/';

@@ -36,7 +36,7 @@ use Carbon\Carbon;
 });*/
 
 // Upload Depoinmentos
-Route::get('/upload-depoimentos', function()
+/*Route::get('/upload-depoimentos', function()
 {
     $file = public_path() . '/files/20151111-depoimentos-stoller.xlsx';
     if (file_exists($file)) {
@@ -79,7 +79,7 @@ Route::get('/upload-depoimentos', function()
 
 
     }
-});
+});*/
 
 // Fetch Posts
 Route::get('/posts', function()
@@ -96,4 +96,26 @@ Route::get('/posts/{id}', function($id)
     $post = Post::find($id);
 
     return $post;
+});
+
+
+// Get Depoimentos UF
+Route::get('/depoimentos', function()
+{
+    $cultura = Input::get('cultura');
+    $estado = Input::get('estado');
+
+    return Post::testmonials($cultura, $estado);
+});
+
+// Get Depoimentos Cultures
+Route::get('/depoimentos/culturas', function()
+{
+    return Post::cultures();
+});
+
+// Get Depoimentos States
+Route::get('/depoimentos/estados', function()
+{
+    return Post::states();
 });

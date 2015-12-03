@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 
   </head>
-  <body>
+  <body class="depoimentos">
 
     <header>
 
@@ -142,29 +142,35 @@
               
               <h3>Filtros</h3>
 
-              <fieldset class="grid grid_2 grid_form">
+              <fieldset id="filtros-depoimentos" class="grid grid_2 grid_form">
 
                 <label for="filtros_cultura" class="grid_item grid_item_form">
                   <aside class="select_box">
-                    <select name="filtros[cultura]" id="filtros_cultura">
+                    <select name="cultura" id="filtros_cultura">
                       <option value="" selected="selected">Cultura</option>
+                      <option value="Abóbora">Abóbora</option>
                       <option value="Algodão">Algodão</option>
-                      <option value="Arroz">Arroz</option>
+                      <option value="Banana">Banana</option>
                       <option value="Batata">Batata</option>
-                      <option value="Cana">Cana</option>
                       <option value="Café">Café</option>
+                      <option value="Cana">Cana</option>
+                      <option value="Cebola">Cebola</option>
                       <option value="Citros">Citros</option>
                       <option value="Feijão">Feijão</option>
+                      <option value="Goiaba">Goiaba</option>
+                      <option value="Melancia">Melancia</option>
                       <option value="Milho">Milho</option>
+                      <option value="Pastagem">Pastagem</option>
                       <option value="Soja">Soja</option>
-                      <option value="Tomate">Tomate</option>
+                      <option value="Trigo">Trigo</option>
+                      <option value="Uva">Uva</option></option>
                     </select>
                   </aside>
                 </label>
 
                 <label for="filtros_regiao" class="grid_item grid_item_right grid_item_form">
                   <aside class="select_box">
-                    <select name="filtros[regiao]" id="filtros_regiao">
+                    <select name="estado" id="filtros_regiao">
                       <option value="" selected="selected">Região</option>
                       <option value="AC">Acre</option>
                       <option value="AL">Alagoas</option>
@@ -200,10 +206,10 @@
               </fieldset>
 
             </form>
-
-            <section data-type="depoimento" id="posts-wrapper" class="articles-inner">
-
-            </section>
+            
+            <!-- FETCH -->
+            <section data-type="depoimento" id="posts-wrapper" class="articles-inner"></section>
+            <!-- / FETCH -->
 
             <form action="" method="post" class="depoimentos_form w100">
 

@@ -505,29 +505,33 @@ $(function(){
             return 100 / this.len * this.actualSlide;
         }
     });
+    
+    var fetchPosts = function(data, endpoint, method) {
+        var $wrapper = $('#posts-wrapper'),
+            type = $wrapper.data('type') || null,
+            data = data || { tipo: type },
+            method = method || 'append'
+            endpoint = endpoint || '/posts',
+            catsUrl = {
+                depoimento: 'depoimentos.html',
+                produtor: 'palavra-do-produtor.html',
+                especialista: 'palavra-do-especialista.html'
+            };
 
+        $.get(site.baseEndpoint + endpoint, data, function(resp) {
+            var output = '';
+            resp.forEach(function(item, i) {
+                item.cat_url = catsUrl[item.tipo];
+                item.hr = i % 2 !== 0;
+                output += tmpl('post-template', item);
+            });
+            $wrapper[method](output);
+        });
+    };
     
     // Posts aggregation
     if($('#posts-wrapper').length) {
-        (function() {
-            var $wrapper = $('#posts-wrapper'),
-                type = $wrapper.data('type') || null,
-                catsUrl = {
-                    depoimento: 'depoimentos.html',
-                    produtor: 'palavra-do-produtor.html',
-                    especialista: 'palavra-do-especialista.html'
-                };
-
-            $.get(site.baseEndpoint + '/posts', { tipo: type }, function(resp) {
-                var output = '';
-                resp.forEach(function(item, i) {
-                    item.cat_url = catsUrl[item.tipo];
-                    item.hr = i % 2 !== 0;
-                    output += tmpl('post-template', item);
-                });
-                $wrapper.append(output);
-            });
-        })();
+        fetchPosts();
     }
     // Posts aggregation
     if($('#post-single').length) {
@@ -538,8 +542,21 @@ $(function(){
             if(!id) return;
 
             $.get(site.baseEndpoint + '/posts/' + id, function(resp) {
-                console.log(resp);
                 $wrapper.append(tmpl('post-template', resp));
+            });
+        })();
+    }
+
+    // Populate testimonials filters
+    if($('#filtros-depoimentos').length) {
+        (function() {
+            var $filtros = $('#filtros-depoimentos select'),
+                data = {};
+            $filtros.on('change', function() {
+                $filtros.each(function() {
+                    data[$(this).attr('name')] = $(this).val();
+                });
+                fetchPosts(data, '/depoimentos', 'html');
             });
         })();
     }
