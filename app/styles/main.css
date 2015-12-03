@@ -959,7 +959,7 @@ footer .social li.facebook a {
   background: url('../images/stoller_sprite.png') no-repeat -92px -51px;
 }
 
-footer .social li.twitter a {
+footer .social li.linkedin a {
   background: url('../images/stoller_sprite.png') no-repeat -92px -90px;
 }
 
@@ -2811,7 +2811,7 @@ body.culturas .cult_sec_title .big {
     background: #c1d52e;
   }
   .content.posts.green_m .content_title,
-  .content.posts.color-depoimentos .content_title {
+  .content.posts.color-depoimento .content_title {
     background: #a5b626;
   }
   .content.posts.green_d .content_title,
@@ -2955,19 +2955,19 @@ body.culturas .cult_sec_title .big {
     color: #c1d52e;
   }
   .content.posts .post.green_m .badge,
-  .content.posts .post.color-depoimentos .badge,
+  .content.posts .post.color-depoimento .badge,
   .content.posts .post.green_m .post_leia,
-  .content.posts .post.color-depoimentos .post_leia {
+  .content.posts .post.color-depoimento .post_leia {
     background: #a5b626;
   }
   .content.posts .post.green_m .post_content h2,
-  .content.posts .post.color-depoimentos .post_content h2,
+  .content.posts .post.color-depoimento .post_content h2,
   .content.posts .post.green_m .post_content .post_autor,
-  .content.posts .post.color-depoimentos .post_content .post_autor {
+  .content.posts .post.color-depoimento .post_content .post_autor {
     color: #a5b626;
   }
   .content.posts .post.green_m h2,
-  .content.posts .post.color-depoimentos h2 {
+  .content.posts .post.color-depoimento h2 {
     color: #a5b626;
   }
   .content.posts .post.green_d .badge,
