@@ -1,5 +1,7 @@
 const site = site || {};
 
+site.baseEndpoint = 'system/public';
+
 site.init = function(){
 
     var that = this;
@@ -233,7 +235,7 @@ site.link_set = function(){
 
         });
 
-}
+};
 
 
 site.scroll_item = function(item){
@@ -245,100 +247,72 @@ site.scroll_item = function(item){
     $('html, body').stop().animate({
         scrollTop: target_pos
     }, 750, 'easeInOutQuad');
-}
+};
 
 
-$(function(){
-    window.site = site;
-    window.site.init();
-});
 
-$(function() {
+var getParameterByName = function(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+};
 
-    var sliderWrapperClass = 'slide-wrapper';
 
-    var onNextTick = function(f, context) {
-        return window.setTimeout(function() {
-            f.call(context);
-        }, 0);
-    };
+var sliderWrapperClass = 'slide-wrapper';
 
-    var getCultureFromBody = function() {
-        var classes = $('body').attr('class').split(' ');
-        return classes.length && classes[1];
-    };
+var onNextTick = function(f, context) {
+    return window.setTimeout(function() {
+        f.call(context);
+    }, 0);
+};
 
-    var createAnimationCarousel = function($wrapper, carr, cultureName) {
-        var baseUrl = window.Culturas.baseUrl,
-            $imageWrapper = $('<img src="' + baseUrl + 'empty.png" class="empty">');
-        $wrapper.append($imageWrapper);
-        carr.steps.forEach(function(step, i) {
-            var imgSrc = baseUrl + cultureName + '/' + (i + 1) + '.png',
-                $slideWrapper = $('<div class="' + sliderWrapperClass + '">'),
+var getCultureFromBody = function() {
+    var classes = $('body').attr('class').split(' ');
+    return classes.length && classes[1];
+};
+
+var createAnimationCarousel = function($wrapper, carr, cultureName) {
+    var baseUrl = window.Culturas.baseUrl,
+        $imageWrapper = $('<img src="' + baseUrl + 'empty.png" class="empty">');
+    $wrapper.append($imageWrapper);
+    carr.steps.forEach(function(step, i) {
+        var imgSrc = baseUrl + cultureName + '/' + (i + 1) + '.png',
+            $slideWrapper = $('<div class="' + sliderWrapperClass + '">'),
+            $imageWrapper = $('<img src="' + imgSrc + '" class="image-wrapper">'),
+            $textWrapper = $('<aside class="sessao-galeria-text">');
+
+        if(step.html.length) $textWrapper.html(step.html);
+
+        $wrapper.append($slideWrapper.append($textWrapper, $imageWrapper));
+    });
+
+    var scroller = new Scroller($wrapper, sliderWrapperClass);
+};
+
+var createDoubleCarousel = function($wrapper, carr, cultureName) {
+    var baseUrl = window.Culturas.baseUrl;
+
+    carr.list.forEach(function(carousel) {
+        var $carouselWrapper = $('<div class="carousel-single-wrapper" />'),
+            $carouselInner = $('<div class="carousel-single-inner" />'),
+            $carouselTitle = '<h4>' + carousel.name + '</h4>';
+
+        carousel.steps.forEach(function(step, i) {
+            var imgSrc = baseUrl + cultureName + '/carrosseis/' + carousel.type + '/' + (i + 1) + '.png',
+                $slideWrapper = $('<div class="slide-single-wrapper">'),
                 $imageWrapper = $('<img src="' + imgSrc + '" class="image-wrapper">'),
-                $textWrapper = $('<aside class="sessao-galeria-text">');
+                $textWrapper = $('<aside class="slide-single-text">'),
+                $title = '<h5>' + step.name  + '</h5>',
+                $descr = '<p>' + step.description  + '</p>';
 
-            if(step.html.length) $textWrapper.html(step.html);
-
-            $wrapper.append($slideWrapper.append($textWrapper, $imageWrapper));
+            $carouselInner.append($slideWrapper.append($imageWrapper, $textWrapper.append($title, $descr)));
         });
 
-        var scroller = new Scroller($wrapper, sliderWrapperClass);
-    };
-
-    var createDoubleCarousel = function($wrapper, carr, cultureName) {
-        var baseUrl = window.Culturas.baseUrl;
-
-        carr.list.forEach(function(carousel) {
-            var $carouselWrapper = $('<div class="carousel-single-wrapper" />'),
-                $carouselInner = $('<div class="carousel-single-inner" />'),
-                $carouselTitle = '<h4>' + carousel.name + '</h4>';
-
-            carousel.steps.forEach(function(step, i) {
-                var imgSrc = baseUrl + cultureName + '/carrosseis/' + carousel.type + '/' + (i + 1) + '.png',
-                    $slideWrapper = $('<div class="slide-single-wrapper">'),
-                    $imageWrapper = $('<img src="' + imgSrc + '" class="image-wrapper">'),
-                    $textWrapper = $('<aside class="slide-single-text">'),
-                    $title = '<h5>' + step.name  + '</h5>',
-                    $descr = '<p>' + step.description  + '</p>';
-
-                $carouselInner.append($slideWrapper.append($imageWrapper, $textWrapper.append($title, $descr)));
-            });
-
-            $wrapper.append($carouselWrapper.append($carouselTitle, $carouselInner));
-            $carouselInner.slick({
-                dots: false,
-                slide: '.slide-single-wrapper',
-                infinite: false,
-                accessibility: false,
-                speed: 300,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            });
-
-        });
-
-    };
-
-    var createChartsCarousel = function($wrapper, carr, cultureName) {
-        var baseUrl = window.Culturas.baseUrl,
-            thumbUrl = baseUrl + cultureName + '/graficos/thumb.png',
-            $carouselWrapper = $('<div class="carousel-charts-wrapper" />'),
-            $carouselInner = $('<div class="carousel-charts-inner" />'),
-            $thumb = '<img alt="' + cultureName + '" src="' + thumbUrl + '" />',
-            $slideWrapper, $imageWrapper, c = 0;
-
-        while(c++ < carr.total) {
-            var imgSrc = baseUrl + cultureName + '/graficos/' + c + '.png';
-            $slideWrapper = $('<div class="slide-charts-wrapper">');
-            $imageWrapper = $('<img src="' + imgSrc + '">');
-            $carouselInner.append($slideWrapper.append($imageWrapper));
-        }
-
-        $wrapper.append($thumb, $carouselWrapper.append($carouselInner));
+        $wrapper.append($carouselWrapper.append($carouselTitle, $carouselInner));
         $carouselInner.slick({
             dots: false,
-            slide: '.slide-charts-wrapper',
+            slide: '.slide-single-wrapper',
             infinite: false,
             accessibility: false,
             speed: 300,
@@ -346,22 +320,94 @@ $(function() {
             slidesToScroll: 1,
         });
 
-    };
+    });
 
-    // SCROLLER CONSTRUCTOR
-    var Scroller = function($wrapper, slideClass, idx) {
-        this.$wrapper = $wrapper;
-        this.actualSlide = idx || 0;
-        if(slideClass) this.slideClass = slideClass;
+};
 
-        this.createScrollbar();
-        onNextTick(function() {
-            this.setInitStyles();
-            this.setDragEvent();
-        }, this);
+var createChartsCarousel = function($wrapper, carr, cultureName) {
+    var baseUrl = window.Culturas.baseUrl,
+        thumbUrl = baseUrl + cultureName + '/graficos/thumb.png',
+        $carouselWrapper = $('<div class="carousel-charts-wrapper" />'),
+        $carouselInner = $('<div class="carousel-charts-inner" />'),
+        $thumb = '<img alt="' + cultureName + '" src="' + thumbUrl + '" />',
+        $slideWrapper, $imageWrapper, c = 0;
 
-        this.changeSlide(this.actualSlide);
-    };
+    while(c++ < carr.total) {
+        var imgSrc = baseUrl + cultureName + '/graficos/' + c + '.png';
+        $slideWrapper = $('<div class="slide-charts-wrapper">');
+        $imageWrapper = $('<img src="' + imgSrc + '">');
+        $carouselInner.append($slideWrapper.append($imageWrapper));
+    }
+
+    $wrapper.append($thumb, $carouselWrapper.append($carouselInner));
+    $carouselInner.slick({
+        dots: false,
+        slide: '.slide-charts-wrapper',
+        infinite: false,
+        accessibility: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
+};
+
+// SCROLLER CONSTRUCTOR
+var Scroller = function($wrapper, slideClass, idx) {
+    this.$wrapper = $wrapper;
+    this.actualSlide = idx || 0;
+    if(slideClass) this.slideClass = slideClass;
+
+    this.createScrollbar();
+    onNextTick(function() {
+        this.setInitStyles();
+        this.setDragEvent();
+    }, this);
+
+    this.changeSlide(this.actualSlide);
+};
+
+
+// TEMPLATING ENGINE
+// Simple JavaScript Templating
+// John Resig - http://ejohn.org/ - MIT Licensed
+(function(){
+  var cache = {};
+  
+  this.tmpl = function tmpl(str, data){
+    // Figure out if we're getting a template, or if we need to
+    // load the template - and be sure to cache the result.
+    var html = document.getElementById(str).innerHTML,
+      
+      // Generate a reusable function that will serve as a template
+      // generator (and which will be cached).
+      fn = new Function("obj",
+        "var p=[],print=function(){p.push.apply(p,arguments);};" +
+        
+        // Introduce the data as local variables using with(){}
+            "with(obj){p.push('" +
+            
+        // Convert the template into pure JavaScript
+        html
+          .replace(/[\r\t\n]/g, " ")
+          .split("{{").join("\t")
+          .replace(/((^|\}\})[^\t]*)'/g, "$1\r")
+          .replace(/\t=(.*?)\}\}/g, "',$1,'")
+          .split("\t").join("');")
+          .split("}}").join("p.push('")
+          .split("\r").join("\\'")
+        + "');}return p.join('');");
+       
+    // Provide some basic currying to the user
+    return fn( data );
+  };
+})();
+
+
+$(function(){
+    window.site = site;
+    window.site.init();
+
 
     // SCROLLER PROTOTYPE
     $.extend(Scroller.prototype, {
@@ -459,6 +505,45 @@ $(function() {
             return 100 / this.len * this.actualSlide;
         }
     });
+
+    
+    // Posts aggregation
+    if($('#posts-wrapper').length) {
+        (function() {
+            var $wrapper = $('#posts-wrapper'),
+                type = $wrapper.data('type') || null,
+                catsUrl = {
+                    depoimentos: 'depoimentos.html',
+                    produtor: 'palavra-do-produtor.html',
+                    especialista: 'palavra-do-especialista.html'
+                };
+
+            $.get(site.baseEndpoint + '/posts', { tipo: type }, function(resp) {
+                var output = '';
+                resp.forEach(function(item, i) {
+                    item.cat_url = catsUrl[item.tipo];
+                    item.hr = i % 2 !== 0;
+                    output += tmpl('post-template', item);
+                });
+                $wrapper.append(output);
+            });
+        })();
+    }
+    // Posts aggregation
+    if($('#post-single').length) {
+        (function() {
+            var id = getParameterByName('id'),
+                $wrapper = $('#post-single');
+
+            if(!id) return;
+
+            $.get(site.baseEndpoint + '/posts/' + id, function(resp) {
+                console.log(resp);
+                $wrapper.append(tmpl('post-template', resp));
+            });
+        })();
+    }
+
 
     if(window.Culturas && $('.sessao-galeria').length) {
         (function() {

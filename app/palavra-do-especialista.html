@@ -130,7 +130,7 @@
       <section class="area area_top area_full area_light area_grey">
         <section class="inner inner_small">
 
-          <section class="content posts post line green_d">
+          <section data-type="especialista" id="posts-wrapper" class="content posts post line green_d">
 
             <h1 class="content_title">Palavra do Especialista</h1>
 
@@ -138,147 +138,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
             </p>
 
-            <article class="post post_box green_d">
-
-              <img src="images/especialistas/exemplo.jpg" alt="" class="post_thumb">
-
-              <aside class="post_content">
-
-                <h2><a href="palavra-do-especialista-single.html">Título</a></h2>
-
-                <p class="post_desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-                </p>
-
-                <p class="post_info">
-                  <a href="palavra-do-especialista-single.html" class="post_autor">Autor : Stoller Brasil</a>
-                  <span class="post_data">29/05/1985</span>
-                </p>
-
-                <a href="palavra-do-especialista-single.html" class="post_leia">Leia mais</a>
-
-              </aside>
-                
-            </article>
-
-            <article class="post post_box green_d">
-
-              <img src="images/especialistas/exemplo.jpg" alt="" class="post_thumb">
-
-              <aside class="post_content">
-
-                <h2><a href="palavra-do-especialista-single.html">Título</a></h2>
-
-                <p class="post_desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-                </p>
-
-                <p class="post_info">
-                  <a href="palavra-do-especialista-single.html" class="post_autor">Autor : Stoller Brasil</a>
-                  <span class="post_data">29/05/1985</span>
-                </p>
-
-                <a href="palavra-do-especialista-single.html" class="post_leia">Leia mais</a>
-                
-              </aside>
-                
-            </article>
-
-            <hr>
-
-            <article class="post post_box green_d">
-
-              <img src="images/especialistas/exemplo.jpg" alt="" class="post_thumb">
-
-              <aside class="post_content">
-
-                <h2><a href="palavra-do-especialista-single.html">Título</a></h2>
-
-                <p class="post_desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-                </p>
-
-                <p class="post_info">
-                  <a href="palavra-do-especialista-single.html" class="post_autor">Autor : Stoller Brasil</a>
-                  <span class="post_data">29/05/1985</span>
-                </p>
-
-                <a href="palavra-do-especialista-single.html" class="post_leia">Leia mais</a>
-                
-              </aside>
-                
-            </article>
-
-            <article class="post post_box green_d">
-
-              <img src="images/especialistas/exemplo.jpg" alt="" class="post_thumb">
-
-              <aside class="post_content">
-
-                <h2><a href="palavra-do-especialista-single.html">Título</a></h2>
-
-                <p class="post_desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-                </p>
-
-                <p class="post_info">
-                  <a href="palavra-do-especialista-single.html" class="post_autor">Autor : Stoller Brasil</a>
-                  <span class="post_data">29/05/1985</span>
-                </p>
-
-                <a href="palavra-do-especialista-single.html" class="post_leia">Leia mais</a>
-
-              </aside>
-                
-            </article>
-
-            <hr>
-
-            <article class="post post_box green_d">
-
-              <img src="images/especialistas/exemplo.jpg" alt="" class="post_thumb">
-
-              <aside class="post_content">
-
-                <h2><a href="palavra-do-especialista-single.html">Título</a></h2>
-
-                <p class="post_desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-                </p>
-
-                <p class="post_info">
-                  <a href="palavra-do-especialista-single.html" class="post_autor">Autor : Stoller Brasil</a>
-                  <span class="post_data">29/05/1985</span>
-                </p>
-
-                <a href="palavra-do-especialista-single.html" class="post_leia">Leia mais</a>
-                
-              </aside>
-                
-            </article>
-
-            <article class="post post_box green_d">
-
-              <img src="images/especialistas/exemplo.jpg" alt="" class="post_thumb">
-
-              <aside class="post_content">
-
-                <h2><a href="palavra-do-especialista-single.html">Título</a></h2>
-
-                <p class="post_desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-                </p>
-
-                <p class="post_info">
-                  <a href="palavra-do-especialista-single.html" class="post_autor">Autor : Stoller Brasil</a>
-                  <span class="post_data">29/05/1985</span>
-                </p>
-
-                <a href="palavra-do-especialista-single.html" class="post_leia">Leia mais</a>
-                
-              </aside>
-                
-            </article>
+            <!-- GIF LOADING -->
 
           </section>
 
@@ -411,6 +271,23 @@
 
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="scripts/culturas.js"></script>
+    <script type="text/html" id="post-template">
+      <article class="post post_box color-{{=tipo}}">
+        <img src="{{=imagem_url}}" alt="" class="post_thumb">
+        <aside class="post_content">
+          <h2><a href="{{=tipo}}-single.html?id={{=id}}">{{=titulo}}</a></h2>
+          <p class="post_desc">
+            {{=descricao}}
+          </p>
+          <p class="post_info">
+            <a href="{{=tipo}}-single.html?id={{=id}}" class="post_autor">{{=autor}}</a>
+            <span class="post_data">{{=criado_em}}</span>
+          </p>
+          <a href="{{=tipo}}-single.html?id={{=id}}" class="post_leia">Leia mais</a>
+        </aside>
+      </article>
+      {{ if(hr) { }} <hr> {{ } }}
+    </script>
 	<script src="scripts/main.js"></script>
 
 </body>
