@@ -2785,13 +2785,16 @@ body.culturas .cult_sec_title .big {
     font-weight: 300;
     color: #ffffff;
   }
-  .content.posts.green .content_title {
+  .content.posts.green .content_title,
+  .content.posts.color-produtor .content_title {
     background: #c1d52e;
   }
-  .content.posts.green_m .content_title {
+  .content.posts.green_m .content_title,
+  .content.posts.color-depoimentos .content_title {
     background: #a5b626;
   }
-  .content.posts.green_d .content_title {
+  .content.posts.green_d .content_title,
+  .content.posts.color-especialista .content_title {
     background: #819011;
   }
   .content.posts hr {
@@ -2915,36 +2918,51 @@ body.culturas .cult_sec_title .big {
     font-weight: 400;
   }
   .content.posts .post.green .badge,
-  .content.posts .post.green .post_leia {
+  .content.posts .post.color-produtor .badge,
+  .content.posts .post.green .post_leia,
+  .content.posts .post.color-produtor .post_leia {
     background: #c1d52e;
   }
   .content.posts .post.green .post_content h2,
-  .content.posts .post.green .post_content .post_autor {
+  .content.posts .post.color-produtor .post_content h2,
+  .content.posts .post.green .post_content .post_autor,
+  .content.posts .post.color-produtor .post_content .post_autor {
     color: #c1d52e;
   }
-  .content.posts .post.green h2 {
+  .content.posts .post.green h2,
+  .content.posts .post.color-produtor h2 {
     color: #c1d52e;
   }
   .content.posts .post.green_m .badge,
-  .content.posts .post.green_m .post_leia {
+  .content.posts .post.color-depoimentos .badge,
+  .content.posts .post.green_m .post_leia,
+  .content.posts .post.color-depoimentos .post_leia {
     background: #a5b626;
   }
   .content.posts .post.green_m .post_content h2,
-  .content.posts .post.green_m .post_content .post_autor {
+  .content.posts .post.color-depoimentos .post_content h2,
+  .content.posts .post.green_m .post_content .post_autor,
+  .content.posts .post.color-depoimentos .post_content .post_autor {
     color: #a5b626;
   }
-  .content.posts .post.green_m h2 {
+  .content.posts .post.green_m h2,
+  .content.posts .post.color-depoimentos h2 {
     color: #a5b626;
   }
   .content.posts .post.green_d .badge,
-  .content.posts .post.green_d .post_leia {
+  .content.posts .post.color-especialista .badge,
+  .content.posts .post.green_d .post_leia,
+  .content.posts .post.color-especialista .post_leia {
     background: #819011;
   }
   .content.posts .post.green_d .post_content h2,
-  .content.posts .post.green_d .post_content .post_autor {
+  .content.posts .post.color-especialista .post_content h2,
+  .content.posts .post.green_d .post_content .post_autor,
+  .content.posts .post.color-especialista .post_content .post_autor {
     color: #819011;
   }
-  .content.posts .post.green_d h2 {
+  .content.posts .post.green_d h2,
+  .content.posts .post.color-especialista h2 {
     color: #819011;
   }
   .content.posts .depoimentos_form {
