@@ -16,7 +16,7 @@
   height: 15px;
   margin: 0 0 0 10px;
   vertical-align: middle;
-  background: url('../images/stoller_sprite.png?2') no-repeat -156px -117px;
+  background: url('../images/stoller_sprite.png') no-repeat -156px -117px;
   content: '';
 }
 
@@ -30,7 +30,7 @@
   height: 30px;
   margin: 0 0 0 10px;
   vertical-align: middle;
-  background: url('../images/stoller_sprite.png?2') no-repeat -156px -50px;
+  background: url('../images/stoller_sprite.png') no-repeat -156px -50px;
   content: '';
 }
 
@@ -564,7 +564,7 @@ u {
     height: 46px;
     overflow: hidden;
     text-indent: -3000px;
-    background: url('../images/stoller_sprite.png?2') no-repeat -133px 0;
+    background: url('../images/stoller_sprite.png') no-repeat -133px 0;
     -webkit-transform: translateY(-50%);
     -webkit-transform: translateX(-100%);
         -ms-transform: translateY(-50%);
@@ -633,7 +633,7 @@ header .stoller_id a {
   height: 100%;
   overflow: hidden;
   text-indent: -3000px;
-  background: url('../images/stoller_sprite.png?2') no-repeat 0 0;
+  background: url('../images/stoller_sprite.png') no-repeat 0 0;
 }
 
 @media screen and (min-width: 100px) {
@@ -851,7 +851,7 @@ header .stoller_id a {
     width: 31px;
     height: 31px;
     margin: 0 auto;
-    background: url('../images/stoller_sprite.png?2') no-repeat -50px 0;
+    background: url('../images/stoller_sprite.png') no-repeat -50px 0;
     content: '';
   }
   header.busca_active {
@@ -881,7 +881,7 @@ header .stoller_id a {
     width: 19px;
     height: 19px;
     margin-left: 15px;
-    background: url('../images/stoller_sprite.png?2') no-repeat -50px -39px;
+    background: url('../images/stoller_sprite.png') no-repeat -50px -39px;
   }
 }
 
@@ -956,15 +956,15 @@ footer .social li a {
 }
 
 footer .social li.facebook a {
-  background: url('../images/stoller_sprite.png?2') no-repeat -92px -51px;
+  background: url('../images/stoller_sprite.png') no-repeat -92px -51px;
 }
 
 footer .social li.twitter a {
-  background: url('../images/stoller_sprite.png?2') no-repeat -92px -90px;
+  background: url('../images/stoller_sprite.png') no-repeat -92px -90px;
 }
 
 footer .social li.youtube a {
-  background: url('../images/stoller_sprite.png?2') no-repeat -92px -129px;
+  background: url('../images/stoller_sprite.png') no-repeat -92px -129px;
 }
 
 @media screen and (min-width: 100px) {
@@ -1027,7 +1027,7 @@ footer .social li.youtube a {
     height: 15px;
     margin: 0 0 0 10px;
     vertical-align: middle;
-    background: url('../images/stoller_sprite.png?2') no-repeat -156px -117px;
+    background: url('../images/stoller_sprite.png') no-repeat -156px -117px;
     content: '';
   }
 }
@@ -1252,7 +1252,7 @@ footer .social li.youtube a {
     display: block;
     width: 25px;
     height: 33px;
-    background: url('../images/stoller_sprite.png?2') no-repeat -170px -82px;
+    background: url('../images/stoller_sprite.png') no-repeat -170px -82px;
     content: '';
   }
   .grid.grid_1 .grid_item.grid_especialistas p,
@@ -1297,7 +1297,7 @@ footer .social li.youtube a {
   .grid.grid_3 .slick-arrow.slick-prev,
   .grid.grid_4 .slick-arrow.slick-prev {
     left: 0;
-    background: url('../images/stoller_sprite.png?2') no-repeat -133px 0;
+    background: url('../images/stoller_sprite.png') no-repeat -133px 0;
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
             transform: translateX(-100%);
@@ -1307,7 +1307,7 @@ footer .social li.youtube a {
   .grid.grid_3 .slick-arrow.slick-next,
   .grid.grid_4 .slick-arrow.slick-next {
     right: 0;
-    background: url('../images/stoller_sprite.png?2') no-repeat -166px 0;
+    background: url('../images/stoller_sprite.png') no-repeat -166px 0;
     -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);
             transform: translateX(100%);
@@ -1381,7 +1381,7 @@ footer .social li.youtube a {
   display: block;
   width: 48px;
   height: 48px;
-  background: url('../images/stoller_sprite.png?2') no-repeat -83px 0;
+  background: url('../images/stoller_sprite.png') no-repeat -83px 0;
   content: '';
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -1422,7 +1422,7 @@ footer .social li.youtube a {
   display: block;
   width: 30px;
   height: 30px;
-  background: url('../images/stoller_sprite.png?2') no-repeat -156px -50px;
+  background: url('../images/stoller_sprite.png') no-repeat -156px -50px;
   content: '';
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -1452,15 +1452,15 @@ footer .social li.youtube a {
 }
 
 .seta_down.white {
-  background: url('../images/stoller_sprite.png?2') no-repeat -130px -124px;
+  background: url('../images/stoller_sprite.png') no-repeat -130px -124px;
 }
 
 .seta_down.grey {
-  background: url('../images/stoller_sprite.png?2') no-repeat -130px -87px;
+  background: url('../images/stoller_sprite.png') no-repeat -130px -87px;
 }
 
 .seta_down.transp {
-  background: url('../images/stoller_sprite.png?2') no-repeat -130px -50px;
+  background: url('../images/stoller_sprite.png') no-repeat -130px -50px;
 }
 
 @media screen and (min-width: 100px) {
@@ -1533,7 +1533,7 @@ footer .social li.youtube a {
     display: block;
     width: 8px;
     height: 19px;
-    background: url('../images/stoller_sprite.png?2') no-repeat -71px -39px;
+    background: url('../images/stoller_sprite.png') no-repeat -71px -39px;
     content: '';
   }
   .area_nav_box ul li:hover a:after,
@@ -1576,6 +1576,27 @@ footer .social li.youtube a {
     color: #ffffff;
   }
   .w100 .botton_submit {
+    margin-right: 3% !important;
+  }
+  .filtros_form input.input_text,
+  .filtros_form textarea.input_text,
+  .filtros_form .select_box {
+    font-size: 1.9em !important;
+    font-weight: 400;
+    color: #999999;
+    background: #ffffff !important;
+  }
+  .filtros_form input.input_text select,
+  .filtros_form textarea.input_text select,
+  .filtros_form .select_box select {
+    font-family: inherit !important;
+    font-size: 1.05em !important;
+    color: #999999;
+  }
+  .filtros_form .title_field {
+    color: #ffffff;
+  }
+  .filtros_form .botton_submit {
     margin-right: 3% !important;
   }
   .grid_form input.input_text,
@@ -1634,7 +1655,7 @@ footer .social li.youtube a {
     display: block;
     width: 12px;
     height: 13px;
-    background: url('../images/stoller_sprite.png?2') no-repeat -156px -103px;
+    background: url('../images/stoller_sprite.png') no-repeat -156px -103px;
     content: '';
   }
   .grid_form .select_box select {
@@ -1722,7 +1743,7 @@ footer .social li.youtube a {
     height: 30px;
     margin: 0 0 0 10px;
     vertical-align: middle;
-    background: url('../images/stoller_sprite.png?2') no-repeat -156px -50px;
+    background: url('../images/stoller_sprite.png') no-repeat -156px -50px;
     content: '';
   }
   .grid_form .botton_submit.botton_file {
@@ -1796,7 +1817,7 @@ footer .social li.youtube a {
   display: block;
   width: 24px;
   height: 24px;
-  background: url('../images/stoller_sprite.png?2') no-repeat -173px -116px;
+  background: url('../images/stoller_sprite.png') no-repeat -173px -116px;
   content: '';
 }
 
@@ -1853,12 +1874,12 @@ footer .social li.youtube a {
 
 .navigation .navigation_btn.prev {
   left: 0;
-  background: url('../images/stoller_sprite.png?2') no-repeat -156px -140px;
+  background: url('../images/stoller_sprite.png') no-repeat -156px -140px;
 }
 
 .navigation .navigation_btn.next {
   right: 0;
-  background: url('../images/stoller_sprite.png?2') no-repeat -174px -140px;
+  background: url('../images/stoller_sprite.png') no-repeat -174px -140px;
 }
 
 @media screen and (min-width: 100px) {
@@ -1936,7 +1957,7 @@ footer .social li.youtube a {
     display: block;
     width: 13px;
     height: 19px;
-    background: url('../images/stoller_sprite.png?2') no-repeat -156px -82px;
+    background: url('../images/stoller_sprite.png') no-repeat -156px -82px;
     content: '';
   }
 }
@@ -2002,7 +2023,7 @@ body.culturas .sessao-galeria .sessao-galeria-text a:after {
   height: 30px;
   margin: 0 0 0 10px;
   vertical-align: middle;
-  background: url('../images/stoller_sprite.png?2') no-repeat -156px -50px;
+  background: url('../images/stoller_sprite.png') no-repeat -156px -50px;
   content: '';
 }
 
@@ -2388,12 +2409,12 @@ body.culturas .cult_sec_title .big {
 
 .sessao-galeria.grafico .slick-arrow.slick-prev {
   left: -10px;
-  background: url('../images/stoller_sprite.png?2') no-repeat -133px 0;
+  background: url('../images/stoller_sprite.png') no-repeat -133px 0;
 }
 
 .sessao-galeria.grafico .slick-arrow.slick-next {
   right: -10px;
-  background: url('../images/stoller_sprite.png?2') no-repeat -166px 0;
+  background: url('../images/stoller_sprite.png') no-repeat -166px 0;
 }
 
 .sessao-galeria.grafico .slick-arrow:hover {
@@ -2471,12 +2492,12 @@ body.culturas .cult_sec_title .big {
 
 .sessao-galeria.sessao-galeria-double .carousel-single-wrapper .slick-arrow.slick-prev {
   left: -10px;
-  background: url('../images/stoller_sprite.png?2') no-repeat -133px 0;
+  background: url('../images/stoller_sprite.png') no-repeat -133px 0;
 }
 
 .sessao-galeria.sessao-galeria-double .carousel-single-wrapper .slick-arrow.slick-next {
   right: -10px;
-  background: url('../images/stoller_sprite.png?2') no-repeat -166px 0;
+  background: url('../images/stoller_sprite.png') no-repeat -166px 0;
 }
 
 .sessao-galeria.sessao-galeria-double .carousel-single-wrapper .slick-arrow:hover {
@@ -2563,11 +2584,11 @@ body.culturas .cult_sec_title .big {
 }
 
 .cult_bg .sessao-galeria-double .carousel-single-wrapper .slick-arrow.slick-prev {
-  background: url('../images/stoller_sprite.png?2') no-repeat 0 -169px;
+  background: url('../images/stoller_sprite.png') no-repeat 0 -169px;
 }
 
 .cult_bg .sessao-galeria-double .carousel-single-wrapper .slick-arrow.slick-next {
-  background: url('../images/stoller_sprite.png?2') no-repeat -33px -169px;
+  background: url('../images/stoller_sprite.png') no-repeat -33px -169px;
 }
 
 .cana .sessao-galeria-double .carousel-single-wrapper h5 {
@@ -2667,7 +2688,7 @@ body.culturas .cult_sec_title .big {
     color: #c1d52e;
   }
   .sidebar nav li.green a:before {
-    background: url('../images/stoller_sprite.png?2') no-repeat 0 -60px;
+    background: url('../images/stoller_sprite.png') no-repeat 0 -60px;
   }
   .sidebar nav li.green a:hover,
   .sidebar nav li.green a.active {
@@ -2683,7 +2704,7 @@ body.culturas .cult_sec_title .big {
     color: #a5b626;
   }
   .sidebar nav li.green_m a:before {
-    background: url('../images/stoller_sprite.png?2') no-repeat 0 -96px;
+    background: url('../images/stoller_sprite.png') no-repeat 0 -96px;
   }
   .sidebar nav li.green_m a:hover,
   .sidebar nav li.green_m a.active {
@@ -2699,7 +2720,7 @@ body.culturas .cult_sec_title .big {
     color: #819011;
   }
   .sidebar nav li.green_d a:before {
-    background: url('../images/stoller_sprite.png?2') no-repeat 0 -132px;
+    background: url('../images/stoller_sprite.png') no-repeat 0 -132px;
   }
   .sidebar nav li.green_d a:hover,
   .sidebar nav li.green_d a.active {
@@ -2715,7 +2736,7 @@ body.culturas .cult_sec_title .big {
     color: #3a5795;
   }
   .sidebar nav li.facebook a:before {
-    background: url('../images/stoller_sprite.png?2') no-repeat -46px -60px;
+    background: url('../images/stoller_sprite.png') no-repeat -46px -60px;
   }
   .sidebar nav li.facebook a:hover,
   .sidebar nav li.facebook a.active {
@@ -2727,27 +2748,27 @@ body.culturas .cult_sec_title .big {
   .sidebar nav li.facebook a.active:before {
     left: -44px;
   }
-  .sidebar nav li.twitter a {
+  .sidebar nav li.linkedin a {
     color: #55acee;
   }
-  .sidebar nav li.twitter a:before {
-    background: url('../images/stoller_sprite.png?2') no-repeat -46px -96px;
+  .sidebar nav li.linkedin a:before {
+    background: url('../images/stoller_sprite.png') no-repeat -46px -96px;
   }
-  .sidebar nav li.twitter a:hover,
-  .sidebar nav li.twitter a.active {
+  .sidebar nav li.linkedin a:hover,
+  .sidebar nav li.linkedin a.active {
     padding-left: 20px;
     color: #ffffff;
     background: #55acee;
   }
-  .sidebar nav li.twitter a:hover:before,
-  .sidebar nav li.twitter a.active:before {
+  .sidebar nav li.linkedin a:hover:before,
+  .sidebar nav li.linkedin a.active:before {
     left: -44px;
   }
   .sidebar nav li.youtube a {
     color: #cc181e;
   }
   .sidebar nav li.youtube a:before {
-    background: url('../images/stoller_sprite.png?2') no-repeat -46px -132px;
+    background: url('../images/stoller_sprite.png') no-repeat -46px -132px;
   }
   .sidebar nav li.youtube a:hover,
   .sidebar nav li.youtube a.active {
@@ -2866,7 +2887,7 @@ body.culturas .cult_sec_title .big {
     height: 30px;
     margin: 0 0 0 10px;
     vertical-align: middle;
-    background: url('../images/stoller_sprite.png?2') no-repeat -156px -50px;
+    background: url('../images/stoller_sprite.png') no-repeat -156px -50px;
     content: '';
   }
   .content.posts .post .post_content .post_leia:after {
@@ -2980,6 +3001,23 @@ body.culturas .cult_sec_title .big {
   .content.posts .depoimentos_form .select_box:after {
     top: 20px !important;
   }
+  .content.posts .filtros_form {
+    padding: 10px;
+    margin-bottom: 40px;
+    background: #cccccc;
+  }
+  .content.posts .filtros_form h3 {
+    font-size: 3em;
+    font-weight: 400;
+    color: #666666;
+  }
+  .content.posts .filtros_form .select_box:after {
+    top: 20px !important;
+  }
+  .content.posts .filtros_form .grid_item {
+    padding-bottom: 0;
+    margin-bottom: 0 !important;
+  }
 }
 
 @media screen and (min-width: 850px) {
@@ -3040,6 +3078,81 @@ body.culturas .cult_sec_title .big {
   .content.posts .depoimentos_form {
     padding: 15px 10px 15px 20px;
   }
+  .content.posts .filtros_form {
+    padding: 15px 20px 25px;
+    margin-top: 30px;
+  }
+  .content.posts .filtros_form .grid_item_right aside {
+    float: right;
+  }
+}
+
+#localizacao #localizacao-mapa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+#localizacao .nav {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+#localizacao .nav li {
+  display: block;
+  max-width: 392px;
+  margin: 0 0 50px;
+}
+
+#localizacao .nav li:last-child {
+  margin-bottom: 0;
+}
+
+#localizacao .nav li:before {
+  display: block;
+  width: 100%;
+  height: 20px;
+  background: #c1d52e;
+  content: '';
+}
+
+#localizacao .nav li a {
+  position: relative;
+  display: block;
+  padding: 25px 30px;
+  padding-right: 90px;
+  font-size: 1.8em;
+  font-weight: 400;
+  color: #ffffff;
+  background: #666666;
+  -webkit-transition: all 0.2s;
+     -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+       -o-transition: all 0.2s;
+          transition: all 0.2s;
+}
+
+#localizacao .nav li a:after {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  display: block;
+  width: 31px;
+  height: 46px;
+  background: url('../images/stoller_sprite.png') no-repeat -166px 0;
+  content: '';
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#localizacao .nav li a.active,
+#localizacao .nav li a:hover {
+  background: #333333;
 }
 
 .video_box {
