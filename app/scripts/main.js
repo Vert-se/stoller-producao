@@ -625,6 +625,46 @@ $(function(){
         })();
     }
 
+    if($('#localizacao-mapa').length) {
+
+        window.initMap = function() {
+
+            var map,
+                $links = $('#map-navigator a');
+            var setCenter = function(e) {
+                var $el = $(this),
+                    center = {lat: +$el.data('lat'), lng: +$el.data('lng') - 0.02};
+                e.preventDefault();
+                $links.removeClass('active');
+                $el.addClass('active');
+                map.setCenter(center);
+            };
+            $links.on('click', setCenter);
+            // var  = new google.maps.LatLng(-33.8665433, 151.1956316);
+            // Create a map object and specify the DOM element for display.
+            map = new google.maps.Map(document.getElementById('localizacao-mapa'), {
+                scrollwheel: true,
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 14
+            });
+
+            $links.each(function() {
+                var $el = $(this),
+                    myLatlng = new google.maps.LatLng($el.data('lat'), $el.data('lng')),
+                    marker = new google.maps.Marker({
+                        position: myLatlng
+                    });
+                if($el.hasClass('active')) $el.trigger('click');
+                marker.setMap(map);
+            });
+        };
+
+        var script = document.createElement('script');
+        script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyAQaA1D_HflSCzQCrxS9u3mh_NzzCC2PNs&callback=initMap";
+        document.body.appendChild(script);
+
+    }
+
 
     if(window.Culturas && $('.sessao-galeria').length) {
         (function() {
