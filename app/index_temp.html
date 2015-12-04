@@ -132,25 +132,38 @@
       <section class="area area_full area_nav" id="inicio" data-title="Início">
         <section class="banner_gallery">
           <section class="banner_item full_slide video">
+
             <video autoplay="true" loop="true">
-              <source src="videos/home.mp4" type="video/mp4">
+              <source src="videos/stoller-V4.mp4" type="video/mp4">
+<!-- 
               <source src="videos/home.webm" type="video/webm">
               <source src="videos/home.ogv" type="video/ogg">
+-->  
             </video>
+            <!-- <section class="inner inner_small"> -->
+              <h2 class="title_green mbn ttn force_middle">
+                <span class="db mini white light" data-sr-old="scale up 20% wait 0.5s over 0.75s">Veja como explorar</span>
+                <span class="sbig" data-sr-old="scale up 20% wait 0.9s over 0.75s">TODO O POTENCIAL<br />GENÉTICO DAS PLANTAS.</span>
+              </h2>              
+            <!-- </section> -->
           </section>
-          <section class="banner_item">
-            123
+          <section class="banner_item banner_item_images">
+            <img src="images/banner-home/azul.jpg" class="azul" alt="">
+            <img src="images/banner-home/texto.png" class="texto" alt="">
+            <img src="images/banner-home/amarelo.png" class="amarelo" alt="">
+            <img src="images/banner-home/branco.png" class="branco" alt="">
+            <img src="images/banner-home/foguete.png" class="foguete" alt="">
+            <img src="images/banner-home/milho.png" class="milho" alt="">
+            <a href="landing-01.html" class="link_topo"></a>
           </section>
         </section>
         <a href="" class="seta_down transp posa" rel="scroll" data-target="necessidade"></a>
       </section>
 
+
+
       <section class="area area_full area_light degrade area_nav" id="necessidade" data-title="Cultura">
-        <section class="inner inner_small">
-          <h2 class="title_green mbn ttn">
-            <span class="db grey light">Selecione</span> A SUA CULTURA
-          </h2>
-          <p>Clique na alternativa que corresponde à sua plantação para mais informações.</p>
+        <section class="inner inner_small home_galeria" data-sr-old="scale up 20% over 0.75s">
         </section>
 
         <a href="" class="seta_down grey posa" rel="scroll" data-target="produtos"></a>
@@ -159,7 +172,7 @@
 
       <section class="area area_full area_light image image_b area_nav" style="background-image: url('images/home-especialista_bg.png');" id="produtos" data-title="especialistas no campo">
 
-        <section class="inner inner_small">
+        <section class="inner inner_small" data-sr-old="enter bottom wait 0.5s over 0.75s">
           <h2 class="title_green ttn">
             <span class="db grey light">Especialistas</span> NO CAMPO
           </h2>
@@ -167,13 +180,13 @@
 
         <section class="inner inner_micro">
           
-          <span class="badge_home">Palavra do produtor</span>
+          <span class="badge_home" data-sr-old="enter left wait 0.75s over 0.75s">Palavra do produtor</span>
 
-          <aside class="video_box">
-            <iframe width="683" height="385" src="https://www.youtube.com/embed/v4voVtFRO10" frameborder="0" allowfullscreen></iframe>
+          <aside class="video_box" data-sr-old="enter right over 0.75s">
+            <iframe width="683" height="385" src="https://www.youtube.com/embed/6bnJdBOqV_A" frameborder="0" allowfullscreen></iframe>
           </aside>
 
-          <a href="especialista-stoller.html" class="btn btn_med btn_green_y seta btn_right">
+          <a href="especialista-stoller.html" class="btn btn_med btn_green_y seta btn_right" data-sr-old="enter left  over 0.75s">
             <strong>Fale com um<br>
             especialista Stoller</strong>
           </a>
@@ -188,7 +201,7 @@
         
         <section class="inner inner_small grid grid_3">
 
-          <aside class="grid_item border">
+          <aside class="grid_item border" data-sr-old="scale up 20% wait 0.25s">
             <p>
               “Utilizei Stoller em um ano bastante difícil por conta da seca, e mesmo assim obtivemos uma produção 15% superior ao padrão da fazenda.”
             </p>
@@ -199,7 +212,7 @@
             </p>
           </aside>
 
-          <aside class="grid_item border">
+          <aside class="grid_item border" data-sr-old="scale up 20% wait 0.5s">
             <p>
               “Trabalho com café há mais de 20 anos e encontro tudo que é preciso com Stoller: diminuição de custos, produtividade e qualidade.”
             </p>
@@ -210,7 +223,7 @@
             </p>
           </aside>
 
-          <aside class="grid_item">
+          <aside class="grid_item" data-sr-old="scale up 20% wait 0.75s">
             <p>
               “Ao usar Stoller, observei uma melhor aparência nas árvores, maior ramificação e brotações mais uniformes.”
             </p>
@@ -317,8 +330,7 @@
 
           <nav class="social">
             <ul>
-              <!--<li class="facebook"><a href="https://facebook.com/" rel="external" title="Stoller no Facebook">Stoller no Facebook</a></li>
-              --><li class="linkedin"><a href="https://www.linkedin.com/company/stoller-do-brasil-ltda." rel="external" title="Stoller no Linkedin">Linkedin</a></li>
+              <li class="facebook"><a href="https://facebook.com/" rel="external" title="Stoller no Facebook">Stoller no Facebook</a></li>
               <li class="youtube"><a href="https://www.youtube.com/user/StollerBrasil" rel="external" title="Stoller no Youtube">Stoller no Youtube</a></li>
             </ul>
           </nav>
@@ -339,11 +351,53 @@
     <script src="scripts/jquery-ui.min.js"></script>
 
     <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/scrollReveal.js"></script>
     <script src="scripts/culturas.js"></script>
     <script src="scripts/necessidades.js"></script>
-	  <script src="scripts/main.js"></script>
-<script src="scripts/main2.js"></script>
     <script src="scripts/necessidades-builder.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/main2.js"></script>
+
+  <script>
+
+    $(function(){
+
+      window.setTimeout(function() {
+          delay(function() { $('.banner_item_images .link_topo').addClass('active'); }, 0);
+          delay(function() { $('.banner_item_images .azul').addClass('active'); }, 0);
+          delay(function() { $('.banner_item_images .amarelo').addClass('active'); }, 350);
+          delay(function() { $('.banner_item_images .branco').addClass('active'); }, 700);
+          delay(function() { $('.banner_item_images .milho').addClass('active'); }, 1700);
+          delay(function() { $('.banner_item_images .foguete').addClass('active'); }, 2050);
+          delay(function() { $('.banner_item_images .texto').addClass('active'); }, 2400);
+          // delay(function() { $('.bike').addClass('visible'); }, 1200);
+          // delay(function() { $('.logo-wrapper').addClass('visible'); }, 1500);
+          // delay(function() { $('.bottom-wrapper').addClass('visible'); }, 1700);
+          // delay(function() { $('.presente').addClass('visible'); }, 2500);
+          // delay(function() { $('.menu div').eq(0).addClass('visible'); }, 2200);
+          // delay(function() { $('.menu div').eq(1).addClass('visible'); }, 2400);
+          // delay(function() { $('.menu div').eq(2).addClass('visible'); }, 2600);
+          // delay(function() { $('.e-commerce').addClass('visible'); }, 2900);
+      }, 7500);
+
+      var delay = function(cb, ms) {
+          window.setTimeout(cb, ms);
+      };
+
+    });
+
+      (function($) {
+
+        'use strict';
+
+        window.sr= new scrollReveal({
+          reset: false,
+          move: '100px',
+          mobile: true
+        });
+
+      })();
+  </script>
 
 </body>
 </html>
