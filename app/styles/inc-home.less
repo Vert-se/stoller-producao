@@ -264,13 +264,16 @@
 
 .regiao_mapa{
 	position: relative;
-	padding: 20px 0;
+	padding: 0;
 
 	.regiao_mapa_fundo{
 		width: auto;
 		height: auto;
 
 		max-width: 100%;
+		margin: 0 auto 20px;
+
+		display: block;
 	}
 
 	.regiao_mapa_frente{
@@ -300,14 +303,19 @@
 
 // cultura-home-menu
 
-.cultura-home-step{
+#cultura-home-step{
+
+	position: absolute;
+
+	bottom: 50px;
+	left: 50%;
+	margin-left: -135px;
+
 	display: block;
 	width: 270px;
 	vertical-align: middle;
 	text-align: center;
 	height: 68px;
-
-	margin: 0 auto 20px;
 
 	position: relative;
 
@@ -462,22 +470,24 @@
 	#necessidade{
 		.grid_3{
 			.grid_item{
+				width: 49%;
 				span{
 					&:before{
 
-			          top: -20px;
-			          background-size: 200px auto;
+			          top: -15px;
+			          background-size: 95px auto;
 			        }
 				}
 			}
 		}
 		.grid_4{
 			.grid_item{
+				width: 49%;
 				span{
 					&:before{
 
 			          top: -15px;
-			          background-size: 120px auto;
+			          background-size: 95px auto;
 			        }
 				}
 			}

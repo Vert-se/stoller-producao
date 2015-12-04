@@ -3495,13 +3495,15 @@ body.culturas .cult_sec_title .cult_color {
 
 .regiao_mapa {
   position: relative;
-  padding: 20px 0;
+  padding: 0;
 }
 
 .regiao_mapa .regiao_mapa_fundo {
+  display: block;
   width: auto;
   height: auto;
   max-width: 100%;
+  margin: 0 auto 20px;
 }
 
 .regiao_mapa .regiao_mapa_frente {
@@ -3528,17 +3530,20 @@ body.culturas .cult_sec_title .cult_color {
   fill: #cccccc;
 }
 
-.cultura-home-step {
+#cultura-home-step {
+  position: absolute;
   position: relative;
+  bottom: 50px;
+  left: 50%;
   display: block;
   width: 270px;
   height: 68px;
-  margin: 0 auto 20px;
+  margin-left: -135px;
   text-align: center;
   vertical-align: middle;
 }
 
-.cultura-home-step:before {
+#cultura-home-step:before {
   position: absolute;
   top: 33px;
   left: 45px;
@@ -3550,7 +3555,7 @@ body.culturas .cult_sec_title .cult_color {
   content: '';
 }
 
-.cultura-home-step span {
+#cultura-home-step span {
   position: relative;
   z-index: 2;
   display: inline-block;
@@ -3571,15 +3576,15 @@ body.culturas .cult_sec_title .cult_color {
           transition: all 0.2s;
 }
 
-.cultura-home-step span:first-child {
+#cultura-home-step span:first-child {
   margin-left: 0;
 }
 
-.cultura-home-step span:last-child {
+#cultura-home-step span:last-child {
   margin-right: 0;
 }
 
-.cultura-home-step span.active {
+#cultura-home-step span.active {
   transform: scale(1);
 }
 
@@ -3683,13 +3688,19 @@ body.culturas .cult_sec_title .cult_color {
 }
 
 @media screen and (max-width: 849px) {
+  #necessidade .grid_3 .grid_item {
+    width: 49%;
+  }
   #necessidade .grid_3 .grid_item span:before {
-    top: -20px;
-    background-size: 200px auto;
+    top: -15px;
+    background-size: 95px auto;
+  }
+  #necessidade .grid_4 .grid_item {
+    width: 49%;
   }
   #necessidade .grid_4 .grid_item span:before {
     top: -15px;
-    background-size: 120px auto;
+    background-size: 95px auto;
   }
 }
 
