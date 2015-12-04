@@ -2437,6 +2437,7 @@ body.culturas .cult_text_intro h1 {
 body.culturas .cult_sec_title {
   font-size: 3.6em;
   font-weight: 300;
+  color: #666666;
 }
 
 body.culturas .cult_sec_title strong {
@@ -2448,6 +2449,7 @@ body.culturas .cult_sec_title strong {
 
 body.culturas .cult_sec_title .bb {
   display: inline-block;
+  color: #999999;
   border-bottom: 1px solid #999999;
 }
 
@@ -2462,6 +2464,10 @@ body.culturas .cult_sec_title .med {
 
 body.culturas .cult_sec_title .big {
   font-size: 1.6em;
+}
+
+body.culturas .cult_sec_title .cult_color {
+  line-height: 90%;
 }
 
 @media screen and (min-width: 100px) {
@@ -3481,6 +3487,11 @@ body.culturas .cult_sec_title .big {
 
 .home_galeria .home_galeria_item .inner {
   width: 100% !important;
+}
+
+body.especialista-stoller #especialistas {
+  display: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .loading {
