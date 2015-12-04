@@ -3493,6 +3493,12 @@ body.culturas .cult_sec_title .cult_color {
   padding-bottom: 30px !important;
 }
 
+#necessidade .grid_btn {
+  position: relative;
+  top: -50px;
+  padding-top: 0 !important;
+}
+
 #necessidade .grid_4 .grid_item img {
   position: relative;
   z-index: 3;
