@@ -701,4 +701,4 @@ window.Culturas = {
             }
         ]
     }
-}
+};

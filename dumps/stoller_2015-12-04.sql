@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.38)
 # Database: stoller
-# Generation Time: 2015-12-04 16:27:54 +0000
+# Generation Time: 2015-12-04 21:27:06 +0000
 # ************************************************************
 
 
@@ -53,6 +53,22 @@ VALUES
 
 /*!40000 ALTER TABLE `especialistas` ENABLE KEYS */;
 UNLOCK TABLES;
+
+
+# Dump of table newsletter
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `newsletter`;
+
+CREATE TABLE `newsletter` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 
 # Dump of table posts

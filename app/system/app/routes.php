@@ -81,6 +81,48 @@ use Carbon\Carbon;
     }
 });*/
 
+// Upload Depoinmentos
+Route::get('/upload-depoimentos', function()
+{
+    $file = public_path() . '/files/STOLLER_Supervisor.xlsx';
+    if (file_exists($file)) {
+        
+        try {
+            $inputFileType = PHPExcel_IOFactory::identify($file);
+            $objReader = PHPExcel_IOFactory::createReader($inputFileType);
+            $objPHPExcel = $objReader->load($file);
+
+            
+            //  Get worksheet dimensions
+            $sheet = $objPHPExcel->getSheet(0);
+            $highestRow = $sheet->getHighestRow(); 
+            $highestColumn = $sheet->getHighestColumn();
+            
+            for ($row = 9; $row <= $highestRow; $row++){ 
+                //  Read a row of data into an array
+                $rowData = $sheet->rangeToArray('A' . $row . ':' . 'J' . $row , NULL, true, FALSE);
+                $data = [
+                    'titulo' => $rowData[0][3],
+                    'descricao' => $rowData[0][9],
+                    'autor' => $rowData[0][5],
+                    'controle' => $rowData[0][6],
+                    'stoller' => $rowData[0][7],
+                    'incremento' => $rowData[0][8],
+                    'pais' => $rowData[0][0],
+                    'cidade' => $rowData[0][2],
+                    'estado' => $rowData[0][1],
+                    'tipo' => 'depoimento',
+                    'criado_em' => Carbon::createFromFormat('Y', (string)$rowData[0][4])->format('Y-m-d H:i:s')
+                ];
+
+                Post::create($data);
+            }
+        } catch(Exception $e) {
+            echo('Error loading file"'.pathinfo($file,PATHINFO_BASENAME).'": '.$e->getMessage());
+        }
+    }
+});
+
 // Fetch Posts
 Route::get('/posts', function()
 {
@@ -138,4 +180,20 @@ Route::get('/especialistas/estados', function()
 Route::get('/especialistas/cidades/{uf}', function($uf)
 {
     return Specialist::cities($uf);
+});
+
+// Get Specialist Cities
+Route::post('/newsletter', function()
+{
+    $rules = Newsletter::$rules;
+    $validator = Validator::make($data = Input::all(), $rules);
+
+    if ($validator->fails())
+    {
+        return ['error' => $validator->messages()->first()];
+    }
+
+    $newsletter = Newsletter::create($data);
+
+    return ['success' => 'Cadastro salvo com sucesso!'];
 });

@@ -592,6 +592,17 @@ $(function(){
             $btn.on('click', fetchSpecialists);
         })();
     }
+
+    /* NEWSLETTER */
+    $('form.newsletter').on('submit', function(e) {
+        $alert = $('.form-message');
+        $alert.prop('class', 'form-message').html('');
+        e.preventDefault();
+        $.post(site.baseEndpoint + '/newsletter', $(this).serialize(), function(resp) {
+            if(resp.error) { $alert.addClass('error').html(resp.error); }
+            if(resp.success) { $alert.addClass('success').html(resp.success); }
+        });
+    });
     
     // Posts aggregation
     if($('#posts-wrapper').length) {

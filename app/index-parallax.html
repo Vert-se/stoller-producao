@@ -676,26 +676,29 @@
         var doc = $(document),
         body = $('body'),
         $inner = $wrapper.find('section').first(),
+        initTop = parseInt($inner.css('top'), 10),
         viewPortH = doc.height(),
         outerHeight = $wrapper.height(),
         scrollMax,
         scrollTop,
-        bottom,
-        updateBanner = function() {
+        bottom;
+        if(isNaN(initTop)) initTop = 0;
+        var updateBanner = function() {
           // scrollMax = doc.height() - body.height();
           scrollTop = $('body').scrollTop();
           // console.log(outerHeight - scrollTop);
-          console.log(viewPortH, scrollTop,  $wrapper.offset().top);
+          // console.log(viewPortH, scrollTop,  $wrapper.offset().top);
           if(outerHeight - scrollTop > 0 || viewPortH > scrollTop -  $wrapper.offset().top) {
 
           }
-          $inner.css('top', scrollTop / ammount);
+          $inner.css('top', initTop + scrollTop / ammount);
         };
-
+        console.log(initTop);
         doc.on('scroll', updateBanner);
         updateBanner();
       };
 
+      $('#necessidade section').first().css({ top: -200 });
       parallax($('#inicio'), 2);
       parallax($('#necessidade'), 3.5);
 
