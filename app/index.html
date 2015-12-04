@@ -141,8 +141,8 @@
             </video>
             <!-- <section class="inner inner_small"> -->
               <h2 class="title_green mbn ttn force_middle">
-                <span class="db mini white light">Veja como explorar</span>
-                <span class="sbig">TODO O POTENCIAL<br />GENÉTICO DAS PLANTAS.</span>
+                <span class="db mini white light" data-sr="scale up 20% wait 0.5s over 0.75s">Veja como explorar</span>
+                <span class="sbig" data-sr="scale up 20% wait 0.9s over 0.75s">TODO O POTENCIAL<br />GENÉTICO DAS PLANTAS.</span>
               </h2>              
             <!-- </section> -->
           </section>
@@ -160,7 +160,7 @@
       </section>
 
       <section class="area area_full area_light degrade area_nav" id="necessidade" data-title="Cultura">
-        <section class="inner inner_small home_galeria">
+        <section class="inner inner_small home_galeria" data-sr="scale up 20% over 0.75s">
           
           <section class="inner inner_small home_galeria_item">
             <h2 class="title_green mbn ttn">
@@ -206,7 +206,7 @@
 
       <section class="area area_full area_light image image_b area_nav" style="background-image: url('images/home-especialista_bg.png');" id="produtos" data-title="especialistas no campo">
 
-        <section class="inner inner_small">
+        <section class="inner inner_small" data-sr="enter bottom wait 0.5s over 0.75s">
           <h2 class="title_green ttn">
             <span class="db grey light">Especialistas</span> NO CAMPO
           </h2>
@@ -214,13 +214,13 @@
 
         <section class="inner inner_micro">
           
-          <span class="badge_home">Palavra do produtor</span>
+          <span class="badge_home" data-sr="enter left wait 0.75s over 0.75s">Palavra do produtor</span>
 
-          <aside class="video_box">
+          <aside class="video_box" data-sr="enter right over 0.75s">
             <iframe width="683" height="385" src="https://www.youtube.com/embed/v4voVtFRO10" frameborder="0" allowfullscreen></iframe>
           </aside>
 
-          <a href="especialista-stoller.html" class="btn btn_med btn_green_y seta btn_right">
+          <a href="especialista-stoller.html" class="btn btn_med btn_green_y seta btn_right" data-sr="enter left  over 0.75s">
             <strong>Fale com um<br>
             especialista Stoller</strong>
           </a>
@@ -235,7 +235,7 @@
         
         <section class="inner inner_small grid grid_3">
 
-          <aside class="grid_item border">
+          <aside class="grid_item border" data-sr="scale up 20% wait 0.25s">
             <p>
               “Utilizei Stoller em um ano bastante difícil por conta da seca, e mesmo assim obtivemos uma produção 15% superior ao padrão da fazenda.”
             </p>
@@ -246,7 +246,7 @@
             </p>
           </aside>
 
-          <aside class="grid_item border">
+          <aside class="grid_item border" data-sr="scale up 20% wait 0.5s">
             <p>
               “Trabalho com café há mais de 20 anos e encontro tudo que é preciso com Stoller: diminuição de custos, produtividade e qualidade.”
             </p>
@@ -257,7 +257,7 @@
             </p>
           </aside>
 
-          <aside class="grid_item">
+          <aside class="grid_item" data-sr="scale up 20% wait 0.75s">
             <p>
               “Ao usar Stoller, observei uma melhor aparência nas árvores, maior ramificação e brotações mais uniformes.”
             </p>
@@ -386,6 +386,7 @@
     <script src="scripts/jquery-ui.min.js"></script>
 
     <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/scrollReveal.js"></script>
     <script src="scripts/culturas.js"></script>
 	<script src="scripts/main.js"></script>
 
@@ -431,6 +432,18 @@
       };
 
     });
+
+      (function($) {
+
+        'use strict';
+
+        window.sr= new scrollReveal({
+          reset: false,
+          move: '100px',
+          mobile: true
+        });
+
+      })();
   </script>
 
 </body>
