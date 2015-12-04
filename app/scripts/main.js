@@ -1,4 +1,4 @@
-const site = site || {};
+window.site = window.site || {};
 
 site.baseEndpoint = 'system/public';
 
