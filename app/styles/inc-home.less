@@ -310,29 +310,72 @@
 			}
 		}
 	}
+
+	.grid_3{
+		.grid_item{
+			img{
+				position: relative;
+				z-index: 3;
+			}
+			span{
+				color: @grey;
+				position: relative;
+				&:before{
+		          display: block;
+		          content: '';
+		          position: absolute;
+		          z-index: 1;
+		          background: url('../images/culturas-reflexo.png');
+		          background-size: 70% auto;
+		          background-repeat: no-repeat;
+		          background-position: 50% 0;
+
+		          width: 100%;
+		          height: 66px;
+
+		          left: 0;
+		          top: -16px;
+		        }
+			}
+			&.ns{
+				span{
+					&:before{
+						display: none;
+					}
+				}
+			}
+			a{
+				.trans();
+				transform: scale(1);
+				&:hover{
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+
 }
 @media screen and(max-width:849px) {
 
 	#necessidade{
+		.grid_3{
+			.grid_item{
+				span{
+					&:before{
+
+			          top: -20px;
+			          background-size: 200px auto;
+			        }
+				}
+			}
+		}
 		.grid_4{
 			.grid_item{
 				span{
 					&:before{
-			          // display: block;
-			          // content: '';
-			          // position: absolute;
-			          // z-index: 1;
-			          // background: url('../images/culturas-reflexo.png');
-			          // background-size: 70% auto;
-			          // background-repeat: no-repeat;
-			          // background-position: 50% 0;
 
-			          // width: 100%;
-			          // height: 66px;
-
-			          // left: 0;
-			          top: -38px;
-			          transform: scale(0.3);
+			          top: -15px;
+			          background-size: 120px auto;
 			        }
 				}
 			}
