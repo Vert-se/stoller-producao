@@ -153,6 +153,7 @@
             <img src="images/banner-home/branco.png" class="branco" alt="">
             <img src="images/banner-home/foguete.png" class="foguete" alt="">
             <img src="images/banner-home/milho.png" class="milho" alt="">
+            <a href="landing-01.html" class="link_topo"></a>
           </section>
         </section>
         <a href="" class="seta_down transp posa" rel="scroll" data-target="necessidade"></a>
@@ -408,12 +409,13 @@
       });
 
       window.setTimeout(function() {
-          delay(function() { $('.amarelo').addClass('active'); }, 0);
-          delay(function() { $('.branco').addClass('active'); }, 400);
-          delay(function() { $('.azul').addClass('active'); }, 1200);
-          delay(function() { $('.milho').addClass('active'); }, 1400);
-          delay(function() { $('.foguete').addClass('active'); }, 1800);
-          delay(function() { $('.texto').addClass('active'); }, 2400);
+          delay(function() { $('.banner_item_images .link_topo').addClass('active'); }, 0);
+          delay(function() { $('.banner_item_images .amarelo').addClass('active'); }, 0);
+          delay(function() { $('.banner_item_images .branco').addClass('active'); }, 400);
+          delay(function() { $('.banner_item_images .azul').addClass('active'); }, 1200);
+          delay(function() { $('.banner_item_images .milho').addClass('active'); }, 1400);
+          delay(function() { $('.banner_item_images .foguete').addClass('active'); }, 1800);
+          delay(function() { $('.banner_item_images .texto').addClass('active'); }, 2400);
           // delay(function() { $('.bike').addClass('visible'); }, 1200);
           // delay(function() { $('.logo-wrapper').addClass('visible'); }, 1500);
           // delay(function() { $('.bottom-wrapper').addClass('visible'); }, 1700);

@@ -1567,6 +1567,7 @@ footer .social li.youtube a {
   position: absolute;
   bottom: 20px;
   left: 50%;
+  z-index: 5;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -3449,6 +3450,20 @@ body.culturas .cult_sec_title .big {
 .banner_gallery .banner_item_images .texto.active {
   top: 110px;
   opacity: 1;
+}
+
+.banner_gallery .banner_item_images .link_topo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.banner_gallery .banner_item_images .link_topo.active {
+  display: block;
 }
 
 .home_galeria .home_galeria_item {
