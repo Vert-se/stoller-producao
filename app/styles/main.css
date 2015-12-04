@@ -3331,23 +3331,24 @@ body.culturas .cult_sec_title .big {
 
 .banner_gallery .banner_item_images .azul {
   position: absolute;
-  bottom: 0;
+  top: 100%;
   left: 50%;
   z-index: 1;
-  min-width: 75%;
+  min-width: 100%;
   min-height: 100%;
-  opacity: 0;
+  opacity: 0.5;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  -webkit-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-     -moz-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-      -ms-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-       -o-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-          transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
+  -webkit-transition: all 0.5s cubic-bezier(0.1, 0.63, 0.5, 0.97);
+     -moz-transition: all 0.5s cubic-bezier(0.1, 0.63, 0.5, 0.97);
+      -ms-transition: all 0.5s cubic-bezier(0.1, 0.63, 0.5, 0.97);
+       -o-transition: all 0.5s cubic-bezier(0.1, 0.63, 0.5, 0.97);
+          transition: all 0.5s cubic-bezier(0.1, 0.63, 0.5, 0.97);
 }
 
 .banner_gallery .banner_item_images .azul.active {
+  top: 0;
   opacity: 1;
 }
 
@@ -3358,12 +3359,12 @@ body.culturas .cult_sec_title .big {
   z-index: 2;
   min-width: 75%;
   min-height: 100%;
-  opacity: 0;
-  -webkit-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-     -moz-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-      -ms-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-       -o-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-          transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
+  opacity: 0.5;
+  -webkit-transition: all 0.75s cubic-bezier(0.23, 0.67, 0.37, 0.95);
+     -moz-transition: all 0.75s cubic-bezier(0.23, 0.67, 0.37, 0.95);
+      -ms-transition: all 0.75s cubic-bezier(0.23, 0.67, 0.37, 0.95);
+       -o-transition: all 0.75s cubic-bezier(0.23, 0.67, 0.37, 0.95);
+          transition: all 0.75s cubic-bezier(0.23, 0.67, 0.37, 0.95);
 }
 
 .banner_gallery .banner_item_images .amarelo.active {
@@ -3378,12 +3379,12 @@ body.culturas .cult_sec_title .big {
   z-index: 3;
   min-width: 70%;
   min-height: 100%;
-  opacity: 0;
-  -webkit-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-     -moz-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-      -ms-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-       -o-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-          transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
+  opacity: 0.5;
+  -webkit-transition: all 0.75s cubic-bezier(0.23, 0.67, 0.37, 0.95);
+     -moz-transition: all 0.75s cubic-bezier(0.23, 0.67, 0.37, 0.95);
+      -ms-transition: all 0.75s cubic-bezier(0.23, 0.67, 0.37, 0.95);
+       -o-transition: all 0.75s cubic-bezier(0.23, 0.67, 0.37, 0.95);
+          transition: all 0.75s cubic-bezier(0.23, 0.67, 0.37, 0.95);
 }
 
 .banner_gallery .banner_item_images .branco.active {
@@ -3393,63 +3394,66 @@ body.culturas .cult_sec_title .big {
 
 .banner_gallery .banner_item_images .foguete {
   position: absolute;
-  bottom: 7%;
+  bottom: 5%;
   left: 60%;
   z-index: 3;
   max-height: 60%;
   opacity: 0;
-  -webkit-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-     -moz-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-      -ms-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-       -o-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-          transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
+  transform: scale(0.8);
+  -webkit-transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
+     -moz-transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
+      -ms-transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
+       -o-transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
+          transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
 }
 
 .banner_gallery .banner_item_images .foguete.active {
   bottom: 10%;
   opacity: 1;
+  transform: scale(1);
 }
 
 .banner_gallery .banner_item_images .milho {
   position: absolute;
   right: 60%;
-  bottom: 7%;
+  bottom: 5%;
   z-index: 3;
   max-height: 60%;
   opacity: 0;
-  -webkit-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-     -moz-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-      -ms-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-       -o-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-          transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
+  transform: scale(0.8);
+  -webkit-transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
+     -moz-transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
+      -ms-transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
+       -o-transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
+          transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
 }
 
 .banner_gallery .banner_item_images .milho.active {
   bottom: 10%;
   opacity: 1;
+  transform: scale(1);
 }
 
 .banner_gallery .banner_item_images .texto {
   position: absolute;
   top: 83px;
   left: 48.5%;
-  z-index: 1;
+  z-index: 3;
   width: auto;
   max-width: 90%;
   opacity: 0;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  -webkit-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-     -moz-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-      -ms-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-       -o-transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
-          transition: all 1.3s cubic-bezier(0.17, 0.21, 0.46, 1);
+  transform: scale(0.8) translateX(-60%);
+  -webkit-transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
+     -moz-transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
+      -ms-transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
+       -o-transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
+          transition: all 0.5s cubic-bezier(0.06, 0.95, 0.7, 1.29);
 }
 
 .banner_gallery .banner_item_images .texto.active {
   top: 110px;
   opacity: 1;
+  transform: scale(1) translateX(-50%);
 }
 
 .banner_gallery .banner_item_images .link_topo {
