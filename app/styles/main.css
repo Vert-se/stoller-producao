@@ -3493,12 +3493,47 @@ body.culturas .cult_sec_title .cult_color {
   width: 100% !important;
 }
 
+.regiao_mapa {
+  position: relative;
+  padding: 20px 0;
+}
+
+.regiao_mapa .regiao_mapa_fundo {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.regiao_mapa .regiao_mapa_frente {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 2;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.regiao_mapa .regiao_mapa_frente .st0 {
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+     -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+       -o-transition: all 0.2s;
+          transition: all 0.2s;
+  fill: transparent;
+}
+
+.regiao_mapa .regiao_mapa_frente .st0:hover {
+  fill: #cccccc;
+}
+
 .cultura-home-step {
   position: relative;
   display: block;
   width: 270px;
   height: 68px;
-  margin: 20px auto;
+  margin: 0 auto 20px;
   text-align: center;
   vertical-align: middle;
 }
@@ -3549,13 +3584,21 @@ body.culturas .cult_sec_title .cult_color {
 }
 
 #necessidade {
-  padding-bottom: 30px !important;
+  padding-bottom: 20px !important;
 }
 
 #necessidade .grid_btn {
   position: relative;
   top: -50px;
   padding-top: 0 !important;
+}
+
+#necessidade .voltar_seta {
+  display: block !important;
+}
+
+#necessidade .voltar_seta.mapa {
+  left: 50px !important;
 }
 
 #necessidade .grid_4 .grid_item img {

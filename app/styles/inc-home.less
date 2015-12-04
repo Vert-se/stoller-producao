@@ -260,6 +260,43 @@
 
 
 
+// regiao_mapa
+
+.regiao_mapa{
+	position: relative;
+	padding: 20px 0;
+
+	.regiao_mapa_fundo{
+		width: auto;
+		height: auto;
+
+		max-width: 100%;
+	}
+
+	.regiao_mapa_frente{
+		width: auto;
+		height: auto;
+
+		max-width: 100%;
+
+		position: absolute;
+		left: 0;
+		top: 20px;
+		z-index: 2;
+		.st0{
+			fill: transparent;
+			.trans();
+			cursor: pointer;
+			// &.sp{
+			// 	fill:black;
+			// }
+			&:hover{
+				fill: @grey_l; 
+			}
+		}
+	}
+}
+
 
 // cultura-home-menu
 
@@ -270,7 +307,7 @@
 	text-align: center;
 	height: 68px;
 
-	margin: 20px auto;
+	margin: 0 auto 20px;
 
 	position: relative;
 
@@ -323,13 +360,21 @@
 
 
 #necessidade{
-	padding-bottom: 30px !important;
+	padding-bottom: 20px !important;
+
 	.grid_btn{
 	    padding-top: 0 !important;
 	    position: relative;
 	    top: -50px;
 	}
 
+
+.voltar_seta{
+	display: block !important;
+	&.mapa{
+		left: 50px !important;
+	}
+}
 	
 	.grid_4{
 		.grid_item{
