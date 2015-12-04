@@ -100,8 +100,30 @@ main{
 	font-size: 7.2em;
 	margin-bottom: 20px;
 	text-transform: uppercase;
+
+	&.force_middle{
+		position: absolute;
+		z-index: 2;
+		left: 50%;
+		top: 50%;
+		width: 90%;
+
+		max-width: 977px;
+
+		-webkit-transform: translate(-50%,-40%);
+		-ms-transform: translate(-50%,-40%);
+		transform: translate(-50%,-40%);
+
+	}
+
 	.big{
 		font-size: 1.3em;
+	}
+	.sbig{
+		font-size: 1.1em;
+		line-height: 100%;
+		display: block;
+		margin-top: 10px;
 	}
 	.light{
 		font-weight: 300;

@@ -131,14 +131,28 @@
       <section class="area area_full area_nav" id="inicio" data-title="Início">
         <section class="banner_gallery">
           <section class="banner_item full_slide video">
+
             <video autoplay="true" loop="true">
-              <source src="videos/home.mp4" type="video/mp4">
+              <source src="videos/stoller-V4.mp4" type="video/mp4">
+<!-- 
               <source src="videos/home.webm" type="video/webm">
               <source src="videos/home.ogv" type="video/ogg">
+-->  
             </video>
+            <!-- <section class="inner inner_small"> -->
+              <h2 class="title_green mbn ttn force_middle">
+                <span class="db mini white light">Veja como explorar</span>
+                <span class="sbig">TODO O POTENCIAL<br />GENÉTICO DAS PLANTAS.</span>
+              </h2>              
+            <!-- </section> -->
           </section>
-          <section class="banner_item">
-            123
+          <section class="banner_item banner_item_images">
+            <img src="images/banner-home/azul.jpg" class="azul" alt="">
+            <img src="images/banner-home/texto.png" class="texto" alt="">
+            <img src="images/banner-home/amarelo.png" class="amarelo" alt="">
+            <img src="images/banner-home/branco.png" class="branco" alt="">
+            <img src="images/banner-home/foguete.png" class="foguete" alt="">
+            <img src="images/banner-home/milho.png" class="milho" alt="">
           </section>
         </section>
         <a href="" class="seta_down transp posa" rel="scroll" data-target="necessidade"></a>
@@ -392,6 +406,27 @@
       }).on('afterChange', function(e, slick) {
           // that.update_boltar_voltar_seta(slick.currentSlide);
       });
+
+      window.setTimeout(function() {
+          delay(function() { $('.amarelo').addClass('active'); }, 0);
+          delay(function() { $('.branco').addClass('active'); }, 400);
+          delay(function() { $('.azul').addClass('active'); }, 1200);
+          delay(function() { $('.milho').addClass('active'); }, 1400);
+          delay(function() { $('.foguete').addClass('active'); }, 1800);
+          delay(function() { $('.texto').addClass('active'); }, 2400);
+          // delay(function() { $('.bike').addClass('visible'); }, 1200);
+          // delay(function() { $('.logo-wrapper').addClass('visible'); }, 1500);
+          // delay(function() { $('.bottom-wrapper').addClass('visible'); }, 1700);
+          // delay(function() { $('.presente').addClass('visible'); }, 2500);
+          // delay(function() { $('.menu div').eq(0).addClass('visible'); }, 2200);
+          // delay(function() { $('.menu div').eq(1).addClass('visible'); }, 2400);
+          // delay(function() { $('.menu div').eq(2).addClass('visible'); }, 2600);
+          // delay(function() { $('.e-commerce').addClass('visible'); }, 2900);
+      }, 7500);
+
+      var delay = function(cb, ms) {
+          window.setTimeout(cb, ms);
+      };
 
     });
   </script>

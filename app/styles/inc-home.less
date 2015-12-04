@@ -46,12 +46,126 @@
 		width: 100%;
 	}
 
-	.slick-list{
-		height: 100%;
-		.slick-track{
-			height: 100%;
+	.banner_item_images{
+		position: absolute;
+		z-index: 3;
+		left: 0;
+		top: 0;
+		overflow: hidden;
+
+		.azul{
+			position: absolute;
+			z-index: 1;
+			left: 50%;
+
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+			// -webkit-transform: translate(-50%,-50%);
+			// -ms-transform: translate(-50%,-50%);
+			// transform: translate(-50%,-50%);
+
+			bottom: 0;
+			opacity: 0;
+			min-height: 100%;
+			min-width: 75%;
+
+			.trans(all 1.3s cubic-bezier(0.17, .21, .46, 1));
+
+			&.active{
+				opacity: 1;
+			}
 		}
+
+		.amarelo{
+			position: absolute;
+			z-index: 2;
+			.trans(all 1.3s cubic-bezier(0.17, .21, .46, 1));
+
+			min-width: 75%;
+			min-height: 100%;
+			top: 0;
+			opacity: 0;
+			left: 100%;
+			&.active{
+				opacity: 1;
+				left: 25%;
+			}
+		}
+
+		.branco{
+			position: absolute;
+			z-index: 3;
+			.trans(all 1.3s cubic-bezier(0.17, .21, .46, 1));
+
+			min-width: 70%;
+			min-height: 100%;
+			top: 0;
+			opacity: 0;
+			right: 100%;
+			&.active{
+				opacity: 1;
+				right: 30%;
+			}
+		}
+
+
+		.foguete{
+			position: absolute;
+			z-index: 3;
+			.trans(all 1.3s cubic-bezier(0.17, .21, .46, 1));
+			max-height: 60%;
+			left: 60%;
+			bottom: 7%;
+			opacity: 0;
+			&.active{
+				bottom: 10%;
+				opacity: 1;
+			}
+
+		}
+		.milho{
+			position: absolute;
+			z-index: 3;
+			.trans(all 1.3s cubic-bezier(0.17, .21, .46, 1));
+			max-height: 60%;
+			right: 60%;
+			bottom: 7%;
+			opacity: 0;
+			&.active{
+				bottom: 10%;
+				opacity: 1;
+			}
+		}
+
+		.texto{
+			position: absolute;
+			z-index: 1;
+			left: 48.5%;
+
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+			// -webkit-transform: translate(-50%,-50%);
+			// -ms-transform: translate(-50%,-50%);
+			// transform: translate(-50%,-50%);
+
+			top: 83px;
+			opacity: 0;
+			width: auto;
+			max-width: 90%;
+
+			.trans(all 1.3s cubic-bezier(0.17, .21, .46, 1));
+
+			&.active{
+				opacity: 1;
+				top: 110px;
+			}
+		}
+
+
 	}
+
 }
 
 
