@@ -145,11 +145,44 @@
       </section>
 
       <section class="area area_full area_light degrade area_nav" id="necessidade" data-title="Cultura">
-        <section class="inner inner_small">
-          <h2 class="title_green mbn ttn">
-            <span class="db grey light">Selecione</span> A SUA CULTURA
-          </h2>
-          <p>Clique na alternativa que corresponde à sua plantação para mais informações.</p>
+        <section class="inner inner_small home_galeria">
+          
+          <section class="inner inner_small home_galeria_item">
+            <h2 class="title_green mbn ttn">
+              <span class="db grey light">Selecione</span> A SUA CULTURA 1
+            </h2>
+            <p>Clique na alternativa que corresponde à sua plantação para mais informações.</p>
+           <section class="inner inner_micro">
+            123
+           </section>
+
+          </section>
+
+          <section class="inner inner_small home_galeria_item">
+            <h2 class="title_green mbn ttn">
+              <span class="db grey light">Selecione</span> A SUA CULTURA 2
+            </h2>
+            <p>Clique na alternativa que corresponde à sua plantação para mais informações.</p>
+           <section class="inner inner_micro">
+            123
+           </section>
+
+          </section>
+
+
+
+          <section class="inner inner_small home_galeria_item">
+            <h2 class="title_green mbn ttn">
+              <span class="db grey light">Selecione</span> A SUA CULTURA 3
+            </h2>
+            <p>Clique na alternativa que corresponde à sua plantação para mais informações.</p>
+           <section class="inner inner_micro">
+            123
+           </section>
+
+          </section>
+
+
         </section>
 
         <a href="" class="seta_down grey posa" rel="scroll" data-target="produtos"></a>
@@ -340,6 +373,28 @@
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="scripts/culturas.js"></script>
 	<script src="scripts/main.js"></script>
+
+  <script>
+    $(function(){
+
+      $('.home_galeria').slick({
+        dots: false,
+        draggable: false,
+        arrows: false,
+        touchMove: false,
+        swipe: false,
+        accessible: false,
+        slide: '.home_galeria_item',
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }).on('afterChange', function(e, slick) {
+          // that.update_boltar_voltar_seta(slick.currentSlide);
+      });
+
+    });
+  </script>
 
 </body>
 </html>

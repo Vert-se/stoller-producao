@@ -1122,6 +1122,10 @@ footer .social li.youtube a {
   .area.image.image_t {
     background-position: 50% 0;
   }
+  .area.image.image_expand {
+    background-position: 50% 0;
+    background-size: 130% auto;
+  }
   .area.area_mini {
     padding-bottom: 60px;
   }
@@ -1356,7 +1360,10 @@ footer .social li.youtube a {
     border-right: 0;
   }
   .grid.grid_4 .grid_item {
-    width: 24.8%;
+    width: 24.7%;
+  }
+  .grid.grid_4 .grid_item:nth-child(4n+4) {
+    border-right: 0;
   }
 }
 
@@ -3205,6 +3212,15 @@ body.culturas .cult_sec_title .big {
 
 .banner_gallery .slick-list .slick-track {
   height: 100%;
+}
+
+.home_galeria .home_galeria_item {
+  height: 100%;
+  outline: 0;
+}
+
+.home_galeria .home_galeria_item .inner {
+  width: 100% !important;
 }
 
 .loading {
