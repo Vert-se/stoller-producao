@@ -510,7 +510,7 @@ $(function(){
         var $wrapper = $('#posts-wrapper'),
             type = $wrapper.data('type') || null,
             data = data || { tipo: type },
-            method = method || 'append'
+            method = method || 'html',
             endpoint = endpoint || '/posts',
             catsUrl = {
                 depoimento: 'depoimentos.html',
@@ -528,6 +528,70 @@ $(function(){
             $wrapper[method](output);
         });
     };
+
+    var fetchSpecialists = function() {
+        var data = {}, selected = false, 
+            $wrapper = $('#especialistas'), empty,
+            $inner = $('#especialistas-wrapper');
+        $('#specialist-options select').each(function() {
+            var name = $(this).attr('name'), val = $(this).val();
+            data[name] = val;
+            if(val) selected = true;
+        });
+
+        if(!selected) return;
+
+        $.get(site.baseEndpoint + '/especialistas', data, function(resp) {
+            console.log(resp);
+            var output = '';
+            resp.forEach(function(item, i) {
+                output += tmpl('post-template', item);
+            });
+            empty = $inner.html() == '';
+            $inner.html(output);
+            if(empty) {
+                window.setTimeout(function() {
+                    $wrapper.slideDown(400);
+                }, 0);
+            }
+        });
+    };
+
+    /* SELECT STATE */
+    if($('body').hasClass('especialista-stoller')) {
+
+        (function() {
+            var $selectCidade = $('#especialista_cidade'),
+                $selectUf = $('#especialista_estado'),
+                $btn = $('#btn-filtro-especialista'),
+                options = '';
+
+            var popCities = function() {
+                var uf = $(this).val(), options = '';
+                if(!uf) return;
+                $selectCidade.val('');
+                $.get(site.baseEndpoint + '/especialistas/cidades/'+uf, function(data){
+                    options += "<option value=''>Escolha uma cidade...</option>";
+                    for(var i in data) {
+                        options += "<option value='"+data[i]+"'>"+data[i]+"</option>";
+                    }
+                    $selectCidade.html(options);
+                });
+            };
+
+            $.get(site.baseEndpoint + '/especialistas/estados', function(data){
+                options += "<option value=''>Escolha um estado...</option>";
+                for(var i in data) {
+                    options += "<option value='"+data[i]+"'>"+i+"</option>";
+                }
+                $selectUf.html(options);                
+            });
+
+            $selectUf.on('change', popCities);
+
+            $btn.on('click', fetchSpecialists);
+        })();
+    }
     
     // Posts aggregation
     if($('#posts-wrapper').length) {
@@ -542,7 +606,7 @@ $(function(){
             if(!id) return;
 
             $.get(site.baseEndpoint + '/posts/' + id, function(resp) {
-                $wrapper.append(tmpl('post-template', resp));
+                $wrapper.html(tmpl('post-template', resp));
             });
         })();
     }

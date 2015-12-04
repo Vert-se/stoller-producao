@@ -3243,3 +3243,8 @@ body.culturas .cult_sec_title .big {
 .loading.green_d {
   background-image: url('../images/loading-green_d.gif');
 }
+
+
+#especialistas {
+  display: none;
+}

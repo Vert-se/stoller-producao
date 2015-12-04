@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 
   </head>
-  <body>
+  <body class="especialista-stoller">
 
     <header>
 
@@ -128,7 +128,7 @@
     <!-- <main> -->
 
 
-      <section class="area area_top area_full area_dark image" style="background-image: url('images/especialista-stoller_bg.jpg');">
+      <section class="area area_top area_full area_dark image image_expand" style="background-image: url('images/especialista-stoller_bg.jpg'); background-size: 130% auto; background-position: 50%; 0">
         <section class="inner inner_small">
           <h1 class="title_green"><span class="white light mini">Fale com</span> O Especialista Stoller</h1>
           
@@ -138,39 +138,12 @@
 
           <form action="" method="post">
 
-            <fieldset class="grid grid_3 grid_form">
+            <fieldset id="specialist-options" class="grid grid_3 grid_form">
               
               <label for="especialista_estado" class="grid_item grid_item_form">
                 <span class="title_field">Estado</span>
                 <aside class="select_box">
-                  <select name="especialista[estado]" id="especialista_estado">
-                    <option value="AC" selected="selected">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
+                  <select name="estado" id="especialista_estado">
                   </select>
                 </aside>
               </label>
@@ -178,29 +151,13 @@
               <label for="especialista_cidade" class="grid_item grid_item_form">
                 <span class="title_field">Cidade</span>
                 <aside class="select_box">
-                  <select name="especialista[cidade]" id="especialista_cidade">
-                    <option value="">Escolha a cidade</option>
-                    <option value="4391">Alto Alegre</option>
-                    <option value="4392">Amajari</option>
-                    <option value="4393">Boa Vista</option>
-                    <option value="4394">Bonfim</option>
-                    <option value="4395">Cantá</option>
-                    <option value="4396">Caracaraí</option>
-                    <option value="4397">Caroebe</option>
-                    <option value="4398">Iracema</option>
-                    <option value="4399">Mucajaí</option>
-                    <option value="4400">Normandia</option>
-                    <option value="4401">Pacaraima</option>
-                    <option value="4402">Rorainópolis</option>
-                    <option value="4403">São João da Baliza</option>
-                    <option value="4404">São Luís do Anauá</option>
-                    <option value="4405">Uiramutã</option>
+                  <select name="cidade" id="especialista_cidade">
                   </select>
                 </aside>
               </label>
 
               <aside class="grid_item grid_item_form grid_pt">
-                <button type="submit" class="botton_submit botton_submit_left">Consultar</button>
+                <button id="btn-filtro-especialista" type="button" class="botton_submit botton_submit_left">Consultar</button>
               </aside>
 
               <hr>
@@ -210,30 +167,7 @@
 
           <section id="especialistas" class="grid grid_3">
             <p><strong>Resultados</strong></p>
-            <aside class="grid_item grid_especialistas">
-              <p><strong>Contato 1</strong></p>
-              <p>
-                Rua Heitor Penteado,<br />
-                1420 Vila Madalena - SP
-              </p>
-              <p><strong>11 9999 9999</strong></p>
-            </aside>
-            <aside class="grid_item grid_especialistas">
-              <p><strong>Contato 2</strong></p>
-              <p>
-                Rua Heitor Penteado,<br />
-                1420 Vila Madalena - SP
-              </p>
-              <p><strong>11 9999 9999</strong></p>
-            </aside>
-            <aside class="grid_item grid_especialistas">
-              <p><strong>Contato 3</strong></p>
-              <p>
-                Rua Heitor Penteado,<br />
-                1420 Vila Madalena - SP
-              </p>
-              <p><strong>11 9999 9999</strong></p>
-            </aside>
+            <div id="especialistas-wrapper"></div>
             
           </section>
 
@@ -373,7 +307,16 @@
 
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="scripts/culturas.js"></script>
-	<script src="scripts/main.js"></script>
+    <script type="text/html" id="post-template">
+      <aside class="grid_item grid_especialistas">
+        <p><strong>{{=nome}}</strong></p>
+        <p>
+          {{=endereco}}
+        </p>
+        <p><strong>{{=telefone}}</strong></p>
+      </aside>
+    </script>
+	  <script src="scripts/main.js"></script>
 
 </body>
 </html>

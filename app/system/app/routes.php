@@ -119,3 +119,23 @@ Route::get('/depoimentos/estados', function()
 {
     return Post::states();
 });
+
+// Get Specialist
+Route::get('/especialistas', function()
+{
+    $estado = Input::get('estado');
+    $cidade = Input::get('cidade');
+    return Specialist::filter($estado, $cidade);
+});
+
+// Get Specialist States
+Route::get('/especialistas/estados', function()
+{
+    return Specialist::states();
+});
+
+// Get Specialist Cities
+Route::get('/especialistas/cidades/{uf}', function($uf)
+{
+    return Specialist::cities($uf);
+});
