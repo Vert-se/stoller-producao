@@ -1,0 +1,197 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+header .mininav {
+    display: block;
+}
+
+header .mininav.stoller_id_nav {
+    position: relative;
+    z-index: 5;
+    display: inline-block;
+    float: left;
+}
+
+header .mininav.stoller_id {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0;
+}
+
+header .mininav.stoller_id a {
+    display: block;
+    width: 78%;
+    height: 93%;
+    overflow: hidden;
+    text-indent: -3000px;
+    background: url('../images/stoller_sprite.png') no-repeat 0 0;
+    background-size: 400%;
+}
+
+@media screen and (min-width: 850px) {
+    header .menu-open-ico {
+        display: none;
+    }
+    header .stoller_id_nav ul {
+        position: absolute;
+        top: 83px;
+        left: -20px;
+        display: none;
+        width: 200px;
+        font-size: 1.4em;
+        text-align: left;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    header .stoller_id_nav ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+    header .stoller_id_nav ul li:last-child {
+        border-bottom: 0;
+    }
+    header .stoller_id_nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 20px 5px 7px 20px;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+    header .stoller_id_nav ul li a:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    header .stoller_id_nav:hover ul {
+        display: block;
+        visibility: visible;
+    }
+    header .menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        padding: 0 100px;
+        padding-bottom: 0;
+    }
+    header .menu > ul > li {
+        position: relative;
+        float: left;
+        width: 19.9%;
+        min-height: 83px;
+        margin: 0 !important;
+        vertical-align: top;
+        border-left: 1px solid rgba(0, 0, 0, 0.4);
+    }
+    header .menu > ul > li > a {
+        display: block;
+        padding: 31px 19% 10px;
+        text-align: left;
+    }
+    header .menu > ul > li > a.one_line:before {
+        display: block;
+        content: '.';
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    header .menu > ul > li ul {
+        position: absolute;
+        top: 83px;
+        left: 0;
+        display: none;
+        width: 100%;
+        text-align: left;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    header .menu > ul > li ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+    header .menu > ul > li ul li:last-child {
+        border-bottom: 0;
+    }
+    header .menu > ul > li ul li a {
+        display: block;
+        width: 100%;
+        padding: 16px 5px 7px 19%;
+    }
+    header .menu > ul > li:hover ul {
+        display: block;
+    }
+    header form {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        display: block;
+        width: auto;
+        margin-bottom: 0;
+    }
+    header form .input_busca {
+        display: none;
+    }
+    header form .lupa {
+        display: block;
+        width: 100px;
+        height: 83px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    header form .lupa:before {
+        position: relative;
+        top: 25px;
+        display: block;
+        width: 31px;
+        height: 31px;
+        margin: 0 auto;
+        background: url('../images/stoller_sprite.png') no-repeat -50px 0;
+        content: '';
+    }
+    header.busca_active {
+        background: #000000;
+    }
+    header.busca_active .menu {
+        display: none;
+    }
+    header.busca_active form {
+        width: 100%;
+        padding-left: 100px;
+    }
+    header.busca_active form .lupa {
+        float: left;
+        width: 70px;
+    }
+    header.busca_active form .input_busca {
+        position: relative;
+        top: 22px;
+        display: inline-block;
+        width: 80%;
+    }
+    header.busca_active form .close {
+        position: relative;
+        top: 28px;
+        display: inline-block;
+        width: 19px;
+        height: 19px;
+        margin-left: 15px;
+        background: url('../images/stoller_sprite.png') no-repeat -50px -39px;
+    }
+}
+
+@media screen and (min-height: 580px) {
+    .banner_gallery .banner_item_images .azul.active {
+        top: -120px;
+        opacity: 1;
+    }
+}
