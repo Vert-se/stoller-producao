@@ -37,6 +37,23 @@
 
     <script src="bower_components/modernizr/modernizr.js"></script>
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <style>
+      #inicio {
+        position: relative;
+        overflow: hidden;
+      }
+
+      #inicio>section {
+        z-index: 3;
+        position: absolute;
+      }
+
+      #cultura-home-step {
+        position: absolute;
+        top: 73%;
+        z-index: 0;
+      }
+    </style>
 
 </head>
 
@@ -183,11 +200,13 @@
             </section>
           </section>
 
-        </section>
-        <section id="cultura-home-step">
-          <span id="cultura-home-step-1" class="active">1</span>
-          <span id="cultura-home-step-2">2</span>
-          <span id="cultura-home-step-3">3</span>
+
+          <section id="cultura-home-step">
+            <span id="cultura-home-step-1" class="active">1</span>
+            <span id="cultura-home-step-2">2</span>
+            <span id="cultura-home-step-3">3</span>
+          </section>
+
         </section>
         <!-- / GALERIA -->
 
@@ -353,8 +372,9 @@
                     <br />NOVIDADES</p>
 
                 <form action="" class="newsletter">
-                    <input type="text" class="input_newsletter" name="nome" placeholder="Nome">
-                    <input type="text" class="input_newsletter" name="email" placeholder="E-mail">
+                    <input type="text" class="input_newsletter" required name="nome" placeholder="Nome">
+                    <input type="text" class="input_newsletter" required name="email" placeholder="E-mail">
+                    <div class="form-message"></div>
                     <button type="submit" class="botton_newsletter">Enviar</button>
                 </form>
 
@@ -567,8 +587,41 @@
                 move: '100px',
                 mobile: true
             });
+        })(jQuery);
 
-        })();
+
+
+        // Parallax
+        var parallax = function($wrapper, ammount) {
+          ammount = ammount || 3
+          var doc = $(document),
+          body = $('body'),
+          $inner = $wrapper.find('section').first(),
+          initTop = parseInt($inner.css('top'), 10),
+          viewPortH = doc.height(),
+          outerHeight = $wrapper.height(),
+          scrollMax,
+          scrollTop,
+          bottom;
+          if(isNaN(initTop)) initTop = 0;
+          var updateBanner = function() {
+            // scrollMax = doc.height() - body.height();
+            scrollTop = $('body').scrollTop();
+            // console.log(outerHeight - scrollTop);
+            // console.log(viewPortH, scrollTop,  $wrapper.offset().top);
+            /*if(outerHeight - scrollTop > 0 || viewPortH > scrollTop -  $wrapper.offset().top) {
+
+            }*/
+            $inner.css('top', initTop + scrollTop / ammount);
+          };
+          console.log(initTop);
+          doc.on('scroll', updateBanner);
+          updateBanner();
+        };
+
+        $('#necessidade section').first().css({ top: -260 });
+        parallax($('#inicio'), 2);
+        parallax($('#necessidade'), 3.5);
 
     </script>
 
