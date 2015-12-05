@@ -57,9 +57,9 @@ class Post extends Eloquent {
 	    } else {
 	    	$esp = Post::where('tipo', 'especialista')->orderBy('criado_em', 'DESC')->limit(20)->get();
 	    	$pro = Post::where('tipo', 'produtor')->orderBy('criado_em', 'DESC')->limit(20)->get();
-	    	$dep = Post::where('tipo', 'depoimento')->orderBy('criado_em', 'DESC')->limit(20)->get();
+	    	// $dep = Post::where('tipo', 'depoimento')->orderBy('criado_em', 'DESC')->limit(20)->get();
 
-	        $posts = $esp->merge($pro)->merge($dep)->shuffle();
+	        $posts = $esp->merge($pro)->shuffle();
 	    }
 
 	    return $posts;

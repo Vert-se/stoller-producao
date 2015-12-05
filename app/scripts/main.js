@@ -316,6 +316,7 @@ var createDoubleCarousel = function($wrapper, carr, cultureName) {
             infinite: false,
             accessibility: false,
             speed: 300,
+            fade: true,
             slidesToShow: 1,
             slidesToScroll: 1,
         });
@@ -346,6 +347,7 @@ var createChartsCarousel = function($wrapper, carr, cultureName) {
         infinite: false,
         accessibility: false,
         speed: 300,
+        fade: true,
         slidesToShow: 1,
         slidesToScroll: 1,
     });

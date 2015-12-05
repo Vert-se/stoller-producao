@@ -3235,7 +3235,7 @@ body.culturas .cult_sec_title .cult_color {
     background: #a5b626;
   }
   .content.posts .depoimentos_form .grid_item {
-    margin-bottom: 0 !important;
+    margin-bottom: 10px !important;
   }
   .content.posts .depoimentos_form h3 {
     font-size: 3em;
@@ -3808,6 +3808,53 @@ body.culturas .cult_sec_title .cult_color {
     top: -15px;
     background-size: 120px auto;
   }
+}
+
+/* HOME CARROSSEL */
+
+.home_galeria {
+  position: relative;
+  height: 810px;
+}
+
+.home_galeria_item {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+#necessidade #btn-voltar-necessidades {
+  display: none!important;
+  cursor: pointer;
+}
+
+#necessidade #btn-voltar-necessidades.visible {
+  display: block!important;
+}
+
+/* FORMULÁRIO */
+
+.form-message {
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.form-message.success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.form-message.error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.newsletter .form-message {
+  float: left;
 }
 
 body.especialista-stoller #especialistas {

@@ -10,7 +10,7 @@ window.Culturas = {
                     { html: '<p class="sub-title"><strong>60 dias após emergência</strong></p>' },
                     { html: '<p class="sub-title"><strong>de 60 a 90 dias após emergência</strong></p>' },
                     { html: '<p class="sub-title"><strong>de 90 a 120 dias após emergência</strong></p>' },
-                    { html: '<p class="sub-title"><strong>lorem ipsum</strong></p>' },
+                    { html: '<p class="sub-title"><strong></strong></p>' },
                     { html: '<p class="sub-title"><strong>Sistema Integrado Stoller (SIS)</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida do algodão. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
                 ]
             },
@@ -572,7 +572,7 @@ window.Culturas = {
                 type: 'animacao',
                 steps: [
                     { html: '<p class="sub-title"><strong>semente</strong></p>' },
-                    { html: '<p class="sub-title"><strong>loren ipsum</strong></p>' },
+                    { html: '<p class="sub-title"><strong>V4/V5</strong></p>' },
                     { html: '<p class="sub-title"><strong>r1/r2</strong></p>' },
                     { html: '<p class="sub-title"><strong>r1/r3</strong></p>' },
                     { html: '<p class="sub-title"><strong>r5.1</strong></p>' },
@@ -701,4 +701,4 @@ window.Culturas = {
             }
         ]
     }
-};
+}

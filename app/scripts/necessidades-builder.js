@@ -12,7 +12,7 @@ $.extend(Necbuilder.prototype, {
 
     mapClass: 'map',
 
-    nextTarget: {},
+    targets: {},
 
     info: {},
 
@@ -21,7 +21,7 @@ $.extend(Necbuilder.prototype, {
     step: 1,
 
     forward: function(n) {
-        if(this.step > 4) return;
+        if(this.step > 4) return this.isAnimating = false;
         if((''+n)[0] !== '7' || n.length > 1 || this.step != 1) {
             this.step++;    
         }
@@ -29,18 +29,29 @@ $.extend(Necbuilder.prototype, {
     },
 
     backward: function(n, horti) {
-        if(this.step == 1 && !horti) return;
+        if(this.step == 1 && !horti) return this.isAnimating = false;
         if(this.step > 1 || !horti) this.step--;
         this.transitionSlides(n, false);
     },
 
     transitionSlides: function(n, dir) {
+        // if(this.targets.dir === dir) this.targets.actual = this.targets.next;
         // Show Map
+        if(n) {
+            this.targets.actual = this.targets.next;
+            this.targets.next = n;
+            this.targets.dir = dir;
+        } else { 
+            n = n || this.targets[dir == this.targets.dir ? 'next' : 'actual'];
+            if(dir !== this.targets.dir) {
+                var next = this.targets.actual;
+                    this.targets.actual = this.targets.next;
+                    this.targets.next = next;
+            }
+        }
         if(this.step === this.mapStep) {
-            this.nextTarget[dir ? 'front' : 'back'] = n;
             return this.render(this.mapClass, dir);
         }
-        n = n || this.nextTarget[dir ? 'front' : 'back'];
         this.render(n, dir);
     },
 
@@ -72,13 +83,15 @@ $.extend(Necbuilder.prototype, {
             $to = $('#' + this.prefix + cname),
             fromDir = front ? '-100%' : '100%',
             toDir = front ? '100%' : '-100%';
-        this.isAnimating = true;
 
         $from.animate({ left: fromDir }, 400);
         $to.css({ display: 'block', left: toDir }).animate({ left: 0 }, 400, function() {
-            that.isAnimating = false;
             $from.css({ display: 'none' });
             that.updatebackBtn(front, cname);
+            window.setTimeout(function() {
+                that.isAnimating = false;    
+            }, 50);
+            
         });
     },
 
@@ -106,31 +119,36 @@ $.extend(Necbuilder.prototype, {
 
             this.$dumpHtml += tmpl(node.type + '-template', data);
         }, this);
-
+        
         this.$wrapper.append(this.$dumpHtml);
 
         window.setTimeout(function() {
 
             that.$slides = $('.home_galeria_item');
 
-            that.$wrapper.find('a').on('click', function(e) {
+            that.$wrapper.find('a').not('.btn-solucao').on('click', function(e) {
                 e.preventDefault();
                 if(that.isAnimating) return;
+                that.isAnimating = true;
                 var $el = $(this),
                     target = $el.data('target');
-                if(!target) return;
+                if(!target) return that.isAnimating = false;
                 that.forward(target);
             });
 
             that.$btnVoltar.on('click', function() {
-                if(that.isAnimating) return;
-                $from = $('.home_galeria_item:visible');
-                var id = $from.data('id');
-                if(!id) return that.backward(target, id);
-                id += '';
-                var target = id.replace(/-[^-]+$/, '');
-                if(id == target) target = that.homeClass;
-                that.backward(target, id == 7);
+                window.setTimeout(function() {
+                    if(that.isAnimating) return;
+                    that.isAnimating = true;
+                    $from = $('.home_galeria_item:visible');
+                    var id = $from.data('id');
+                    if(!id) return that.backward(target, id);
+                    id += '';
+                    var target = id.replace(/-[^-]+$/, '');
+                    if(id == target) target = that.homeClass;
+                    that.backward(target, id == 7);
+                }, 0);
+
             });
 
             that.$mapBtn.on('click', function() {
@@ -141,7 +159,7 @@ $.extend(Necbuilder.prototype, {
             that.init();
         }, 0);
         
-
+        
     },
 
     init: function() {

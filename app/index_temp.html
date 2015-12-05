@@ -2,8 +2,11 @@
 <!--[if lt IE 7]>      <html lang="pt-br" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="pt-br" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="pt-br" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="pt-br" class="no-js"> <!--<![endif]-->
-  <head>
+<!--[if gt IE 8]><!-->
+<html lang="pt-br" class="no-js">
+<!--<![endif]-->
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Stoller</title>
@@ -34,54 +37,6 @@
  
     <script src="bower_components/modernizr/modernizr.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css"/>
-    
-    <!-- PARA APLICAR NO CSS -->
-    <style type="text/css">
-      /* HOME CARROSSEL */
-      .home_galeria {
-          height: 810px;
-          position: relative;
-      }
-
-      .home_galeria_item {
-          position: absolute;
-          top: 0;
-          display: none;
-      }
-
-      #necessidade #btn-voltar-necessidades {
-          cursor: pointer;
-          display: none!important;
-      }
-
-      #necessidade #btn-voltar-necessidades.visible {
-          display: block!important;
-      }
-
-      /* FORMULÁRIO */
-      .form-message {
-          padding: 12px 15px;
-          margin-bottom: 20px;
-          border: 1px solid transparent;
-          border-radius: 4px;
-      }
-
-      .form-message.success {
-          color: #3c763d;
-          background-color: #dff0d8;
-          border-color: #d6e9c6;
-      }
-
-      .form-message.error {
-          color: #a94442;
-          background-color: #f2dede;
-          border-color: #ebccd1;
-      }
-
-      .newsletter .form-message {
-          float: left;
-      }
-    </style>
 
   </head>
   <body>
@@ -190,8 +145,8 @@
             </video>
             <!-- <section class="inner inner_small"> -->
               <h2 class="title_green mbn ttn force_middle">
-                <span class="db mini white light" data-sr-old="scale up 20% wait 0.5s over 0.75s">Veja como explorar</span>
-                <span class="sbig" data-sr-old="scale up 20% wait 0.9s over 0.75s">TODO O POTENCIAL<br />GENÉTICO DAS PLANTAS.</span>
+                <span class="db mini white light" data-sr="scale up 20% wait 0.5s over 0.75s">Veja como explorar</span>
+                <span class="sbig" data-sr="scale up 20% wait 0.9s over 0.75s">TODO O POTENCIAL<br />GENÉTICO DAS PLANTAS.</span>
               </h2>              
             <!-- </section> -->
           </section>
@@ -217,7 +172,7 @@
 
 
         <!-- GALERIA -->
-        <section class="inner inner_small home_galeria" data-sr-old="scale up 20% over 0.75s">
+        <section class="inner inner_small home_galeria" data-sr="scale up 20% over 0.75s">
           
           <!-- MAPA -->
           <section id="slide-nec-map" class="inner inner_small home_galeria_item">
@@ -251,93 +206,91 @@
       </section>
 
 
-      <section class="area area_full area_light image image_b area_nav" style="background-image: url('images/home-especialista_bg.png');" id="produtos" data-title="especialistas no campo">
+    <section class="area area_full area_light image image_b area_nav" style="background-image: url('images/home-especialista_bg.png');" id="produtos" data-title="especialistas no campo">
 
-        <section class="inner inner_small" data-sr-old="enter bottom wait 0.5s over 0.75s">
-          <h2 class="title_green ttn">
+        <section class="inner inner_small" data-sr="enter bottom wait 0.5s over 0.75s">
+            <h2 class="title_green ttn">
             <span class="db grey light">Especialistas</span> NO CAMPO
           </h2>
         </section>
 
         <section class="inner inner_micro">
-          
-          <span class="badge_home" data-sr-old="enter left wait 0.75s over 0.75s">Palavra do produtor</span>
 
-          <aside class="video_box" data-sr-old="enter right over 0.75s">
-            <iframe width="683" height="385" src="https://www.youtube.com/embed/6bnJdBOqV_A" frameborder="0" allowfullscreen></iframe>
-          </aside>
+            <span class="badge_home" data-sr="enter left wait 0.75s over 0.75s">Palavra do produtor</span>
 
-          <a href="especialista-stoller.html" class="btn btn_med btn_green_y seta btn_right" data-sr-old="enter left  over 0.75s">
-            <strong>Fale com um<br>
+            <aside class="video_box" data-sr="enter right over 0.75s">
+                <iframe width="683" height="385" src="https://www.youtube.com/embed/6bnJdBOqV_A" frameborder="0" allowfullscreen></iframe>
+            </aside>
+
+            <a href="especialista-stoller.html" class="btn btn_med btn_green_y seta btn_right" data-sr="enter left  over 0.75s">
+                <strong>Fale com um<br>
             especialista Stoller</strong>
-          </a>
+            </a>
         </section>
 
-        <a href="" class="seta_down grey posa" rel="scroll" data-target="especialistas">
-          <span class="s_1"></span><span class="s_2"></span><span class="s_3"></span>
-        </a>
-      </section>
+        <a href="" class="seta_down grey posa" rel="scroll" data-target="especialistas"></a>
+    </section>
 
 
-      <section class="area area_full area_light image image_t area_nav" style="background-image: url('images/home-footer.jpg');" data-title="especialistas no campo" id="especialistas">
+    <section class="area area_full area_light image image_t area_nav" style="background-image: url('images/home-footer.jpg');" data-title="especialistas no campo" id="especialistas">
 
-        
+
         <section class="inner inner_small grid grid_3">
 
-          <aside class="grid_item border" data-sr-old="scale up 20% wait 0.25s">
-            <p>
-              “Utilizei Stoller em um ano bastante difícil por conta da seca, e mesmo assim obtivemos uma produção 15% superior ao padrão da fazenda.”
-            </p>
+            <aside class="grid_item border" data-sr="scale up 20% wait 0.25s">
+                <p>
+                    “Utilizei Stoller em um ano bastante difícil por conta da seca, e mesmo assim obtivemos uma produção 15% superior ao padrão da fazenda.”
+                </p>
 
-            <p>
-              <strong>LUIZ FERNANDO DE OLIVEIRA</strong><br />
-              (COQUEIRAL/MG)
-            </p>
-          </aside>
+                <p>
+                    <strong>LUIZ FERNANDO DE OLIVEIRA</strong>
+                    <br /> (COQUEIRAL/MG)
+                </p>
+            </aside>
 
-          <aside class="grid_item border" data-sr-old="scale up 20% wait 0.5s">
-            <p>
-              “Trabalho com café há mais de 20 anos e encontro tudo que é preciso com Stoller: diminuição de custos, produtividade e qualidade.”
-            </p>
+            <aside class="grid_item border" data-sr="scale up 20% wait 0.5s">
+                <p>
+                    “Trabalho com café há mais de 20 anos e encontro tudo que é preciso com Stoller: diminuição de custos, produtividade e qualidade.”
+                </p>
 
-            <p>
-              <strong>ALESSANDRO HERVAZ</strong><br />
-              (SÃO GONÇALO DO SAPUCAÍ/MG)
-            </p>
-          </aside>
+                <p>
+                    <strong>ALESSANDRO HERVAZ</strong>
+                    <br /> (SÃO GONÇALO DO SAPUCAÍ/MG)
+                </p>
+            </aside>
 
-          <aside class="grid_item" data-sr-old="scale up 20% wait 0.75s">
-            <p>
-              “Ao usar Stoller, observei uma melhor aparência nas árvores, maior ramificação e brotações mais uniformes.”
-            </p>
+            <aside class="grid_item" data-sr="scale up 20% wait 0.75s">
+                <p>
+                    “Ao usar Stoller, observei uma melhor aparência nas árvores, maior ramificação e brotações mais uniformes.”
+                </p>
 
-            <p>
-              <strong>DALTON BOLDRINI</strong><br />
-              (BEBEDOURO/SP)
-            </p>
-          </aside>
+                <p>
+                    <strong>DALTON BOLDRINI</strong>
+                    <br /> (BEBEDOURO/SP)
+                </p>
+            </aside>
 
 
         </section>
 
         <section class="box_especialista">
-          
-          <aside class="box_especialista_desc">
-            <h4>
+
+            <aside class="box_especialista_desc">
+                <h4>
               <span>Procure</span> o Especialista Stoller mais próximo
             </h4>
-            <p>
-              Uma forma rápida e prática de entrar<br />
-              em contato com a stoller</p>
-          </aside>
+                <p>
+                    Uma forma rápida e prática de entrar
+                    <br /> em contato com a stoller</p>
+            </aside>
 
-          <aside class="box_especialista_buscar">
-            <a href="especialista-stoller.html" title="Procure o Especialista Stoller mais próximo">buscar</a>
-          </aside>
+            <aside class="box_especialista_buscar">
+                <a href="especialista-stoller.html" title="Procure o Especialista Stoller mais próximo">buscar</a>
+            </aside>
 
         </section>
 
-      </section>
+    </section>
 
 
     <!-- </main> -->
@@ -347,85 +300,85 @@
     <!-- rodapé -->
 
     <footer>
-      
-      <section class="inner">
-        
-        <nav class="column column_1">
-          <ul class="list">
-            <li class="title"><a href="/" title="A Stoller">A Stoller</a></li>
-            <li><a href="a-stoller.html" title="A Stoller">A Stoller</a></li>
-            <li><a href="trabalhe-conosco.html" title="Trabalhe conosco">Trabalhe conosco</a></li>
-            <li><a href="fale-conosco.html" title="Fale conosco">Fale conosco</a></li>
-            <li><a href="localizacao.html" title="Localização">Localização</a></li>
-          </ul>
-          <ul class="list">
-            <li class="title">
-              <a href="index.html#necessidade" title="QUAL É A SUA NECESSIDADE?">QUAL É A SUA<br />NECESSIDADE?</a>
-            </li>
-          </ul>
-        </nav>
 
-        <nav class="column column_1">
-          <ul class="list">
-            <li class="title"><a href="solucoes.html" title="SOLUÇÕES">SOLUÇÕES</a></li>
-            <li><a href="solucoes-biologicos.html" title="Biológicos">Biológicos</a></li>
-            <li><a href="solucoes-nutricao.html" title="Nutrição">Nutrição</a></li>
-            <li><a href="solucoes-fisiologia.html" title="Fisiologia">Fisiologia</a></li>
-          </ul>
-          <ul class="list">
-            <li class="title"><a href="culturas.html" rel="return" class="return" title="CULTURAS">CULTURAS</a></li>
-            <li><a href="culturas-algodao.html" title="Algodão">Algodão</a></li>
-            <li><a href="culturas-arroz.html" title="Arroz">Arroz</a></li>
-            <li><a href="culturas-batata.html" title="Batata">Batata</a></li>
-            <li><a href="culturas-cafe.html" title="Café">Café</a></li>
-            <li><a href="culturas-cana.html" title="Cana">Cana</a></li>
-            <li><a href="culturas-citros.html" title="Citros">Citros</a></li>
-            <li><a href="culturas-feijao.html" title="Feijão">Feijão</a></li>
-            <li><a href="culturas-milho.html" title="Milho">Milho</a></li>
-            <li><a href="culturas-soja.html" title="Soja">Soja</a></li>
-            <li><a href="culturas-tomate.html" title="Tomate">Tomate</a></li>
-          </ul>
-        </nav>
+        <section class="inner">
 
-        <nav class="column column_1">
-          <ul class="list">
-            <li class="title"><a href="especialistas-no-campo.html" title="ESPECIALISTAS NO CAMPO">ESPECIALISTAS<br />NO CAMPO</a></li>
-            <li><a href="palavra-do-produtor.html" title="Palavra do produtor">Palavra do produtor</a></li>
-            <li><a href="palavra-do-especialista.html" title="Palavra do especialista">Palavra do especialista</a></li>
-            <li><a href="depoimentos.html" title="Depoimentos">Depoimentos</a></li>
-          </ul>
-          <ul class="list">
-            <li class="title">
-              <a href="especialista-stoller.html" title="ESPECIALISTA STOLLER">ESPECIALISTA<br /> STOLLER</a>
-            </li>
-          </ul>
-        </nav>
+            <nav class="column column_1">
+                <ul class="list">
+                    <li class="title"><a href="/" title="A Stoller">A Stoller</a></li>
+                    <li><a href="a-stoller.html" title="A Stoller">A Stoller</a></li>
+                    <li><a href="trabalhe-conosco.html" title="Trabalhe conosco">Trabalhe conosco</a></li>
+                    <li><a href="fale-conosco.html" title="Fale conosco">Fale conosco</a></li>
+                    <li><a href="localizacao.html" title="Localização">Localização</a></li>
+                </ul>
+                <ul class="list">
+                    <li class="title">
+                        <a href="index.html#necessidade" title="QUAL É A SUA NECESSIDADE?">QUAL É A SUA<br />NECESSIDADE?</a>
+                    </li>
+                </ul>
+            </nav>
 
-<aside class="column column_2">
-          
-          <p class="title">RECEBA<br />NOVIDADES</p>
-          
-          <form action="" class="newsletter">
-            <input type="text" class="input_newsletter" required name="nome" placeholder="Nome">
-            <input type="text" class="input_newsletter" required name="email" placeholder="E-mail">
-            <div class="form-message"></div>
-            <button type="submit" class="botton_newsletter">Enviar</button>
-          </form>
+            <nav class="column column_1">
+                <ul class="list">
+                    <li class="title"><a href="solucoes.html" title="SOLUÇÕES">SOLUÇÕES</a></li>
+                    <li><a href="solucoes-biologicos.html" title="Biológicos">Biológicos</a></li>
+                    <li><a href="solucoes-nutricao.html" title="Nutrição">Nutrição</a></li>
+                    <li><a href="solucoes-fisiologia.html" title="Fisiologia">Fisiologia</a></li>
+                </ul>
+                <ul class="list">
+                    <li class="title"><a href="culturas.html" rel="return" class="return" title="CULTURAS">CULTURAS</a></li>
+                    <li><a href="culturas-algodao.html" title="Algodão">Algodão</a></li>
+                    <li><a href="culturas-arroz.html" title="Arroz">Arroz</a></li>
+                    <li><a href="culturas-batata.html" title="Batata">Batata</a></li>
+                    <li><a href="culturas-cafe.html" title="Café">Café</a></li>
+                    <li><a href="culturas-cana.html" title="Cana">Cana</a></li>
+                    <li><a href="culturas-citros.html" title="Citros">Citros</a></li>
+                    <li><a href="culturas-feijao.html" title="Feijão">Feijão</a></li>
+                    <li><a href="culturas-milho.html" title="Milho">Milho</a></li>
+                    <li><a href="culturas-soja.html" title="Soja">Soja</a></li>
+                    <li><a href="culturas-tomate.html" title="Tomate">Tomate</a></li>
+                </ul>
+            </nav>
 
-          <nav class="social">
-            <ul>
-              <li class="facebook"><a href="https://facebook.com/" rel="external" title="Stoller no Facebook">Stoller no Facebook</a></li>
-              <li class="youtube"><a href="https://www.youtube.com/user/StollerBrasil" rel="external" title="Stoller no Youtube">Stoller no Youtube</a></li>
-            </ul>
-          </nav>
+            <nav class="column column_1">
+                <ul class="list">
+                    <li class="title"><a href="especialistas-no-campo.html" title="ESPECIALISTAS NO CAMPO">ESPECIALISTAS<br />NO CAMPO</a></li>
+                    <li><a href="palavra-do-produtor.html" title="Palavra do produtor">Palavra do produtor</a></li>
+                    <li><a href="palavra-do-especialista.html" title="Palavra do especialista">Palavra do especialista</a></li>
+                    <li><a href="depoimentos.html" title="Depoimentos">Depoimentos</a></li>
+                </ul>
+                <ul class="list">
+                    <li class="title">
+                        <a href="especialista-stoller.html" title="ESPECIALISTA STOLLER">ESPECIALISTA<br /> STOLLER</a>
+                    </li>
+                </ul>
+            </nav>
 
-        </aside>
+            <aside class="column column_2">
 
-      </section>
+                <p class="title">RECEBA
+                    <br />NOVIDADES</p>
 
-      <p class="copyright">
-        Stoller 2015 ® - <span>Todos os Direitos Reservados</span>
-      </p>
+                <form action="" class="newsletter">
+                    <input type="text" class="input_newsletter" name="nome" placeholder="Nome">
+                    <input type="text" class="input_newsletter" name="email" placeholder="E-mail">
+                    <button type="submit" class="botton_newsletter">Enviar</button>
+                </form>
+
+                <nav class="social">
+                    <ul>
+                        <li class="facebook"><a href="https://facebook.com/" rel="external" title="Stoller no Facebook">Stoller no Facebook</a></li>
+                        <li class="youtube"><a href="https://www.youtube.com/user/StollerBrasil" rel="external" title="Stoller no Youtube">Stoller no Youtube</a></li>
+                    </ul>
+                </nav>
+
+            </aside>
+
+        </section>
+
+        <p class="copyright">
+            Stoller 2015 ® - <span>Todos os Direitos Reservados</span>
+        </p>
 
     </footer>
 
@@ -548,21 +501,21 @@
             </section>
             <section class="grid grid_3 grid_center grid_btn">
               <article class="grid_item">
-                <a href="especialista-stoller.html" class="btn btn_med btn_green_y seta tal">
+                <a href="especialista-stoller.html" class="btn btn-solucao btn_med btn_green_y seta tal">
                   <strong>Fale com um<br>
                   especialista Stoller</strong>
                 </a>
               </article>
               {{ if(root[parentIndex].has_page) { }}
               <article class="grid_item">
-                <a href="culturas-{{=root[parentIndex].slug}}.html" class="btn btn_med btn_green_y seta tal">
+                <a href="culturas-{{=root[parentIndex].slug}}.html" class="btn btn-solucao btn_med btn_green_y seta tal">
                   <strong>Saiba mais<br>
                   sobre o {{=root[parentIndex].text}}</strong>
                 </a>
               </article>
               {{ } }}
               <article class="grid_item">
-                <a href="solucoes.html" class="btn btn_med btn_green_y seta tal">
+                <a href="solucoes.html" class="btn btn-solucao btn_med btn_green_y seta tal">
                   <strong>Conheças as demais<br>
                   soluções Stoller</strong>
                 </a>
@@ -579,46 +532,77 @@
     <script src="scripts/main2.js"></script>
     <script src="scripts/necessidades-builder.js"></script>
 
-  <script>
+    <script>
+        $(function() {
 
-    $(function(){
+            var homegal = $('a[rel=homegal], .regiao_mapa_frente .st0'),
+                homegal_voltar = $('#necessidade .voltar_seta');
 
-      window.setTimeout(function() {
-          delay(function() { $('.banner_item_images .link_topo').addClass('active'); }, 0);
-          delay(function() { $('.banner_item_images .azul').addClass('active'); }, 0);
-          delay(function() { $('.banner_item_images .amarelo').addClass('active'); }, 350);
-          delay(function() { $('.banner_item_images .branco').addClass('active'); }, 700);
-          delay(function() { $('.banner_item_images .milho').addClass('active'); }, 1700);
-          delay(function() { $('.banner_item_images .foguete').addClass('active'); }, 2050);
-          delay(function() { $('.banner_item_images .texto').addClass('active'); }, 2400);
-          // delay(function() { $('.bike').addClass('visible'); }, 1200);
-          // delay(function() { $('.logo-wrapper').addClass('visible'); }, 1500);
-          // delay(function() { $('.bottom-wrapper').addClass('visible'); }, 1700);
-          // delay(function() { $('.presente').addClass('visible'); }, 2500);
-          // delay(function() { $('.menu div').eq(0).addClass('visible'); }, 2200);
-          // delay(function() { $('.menu div').eq(1).addClass('visible'); }, 2400);
-          // delay(function() { $('.menu div').eq(2).addClass('visible'); }, 2600);
-          // delay(function() { $('.e-commerce').addClass('visible'); }, 2900);
-      }, 7500);
+            homegal.on('click', function(event) {
+                event.preventDefault();
+                $('.home_galeria').slick('slickNext');
+            });
 
-      var delay = function(cb, ms) {
-          window.setTimeout(cb, ms);
-      };
+            homegal_voltar.on('click', function(event) {
+                event.preventDefault();
+                $('.home_galeria').slick('slickPrev');
+            });
 
-    });
+            $('.home_galeria').slick({
+                dots: false,
+                swipe: false,
+                slide: '.home_galeria_item',
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                accessibility: false
+            });
 
-      (function($) {
+            window.setTimeout(function() {
+                delay(function() {
+                    $('.banner_item_images .link_topo').addClass('active');
+                }, 0);
+                delay(function() {
+                    $('.banner_item_images .azul').addClass('active');
+                }, 0);
+                delay(function() {
+                    $('.banner_item_images .amarelo').addClass('active');
+                }, 350);
+                delay(function() {
+                    $('.banner_item_images .branco').addClass('active');
+                }, 700);
+                delay(function() {
+                    $('.banner_item_images .milho').addClass('active');
+                }, 1700);
+                delay(function() {
+                    $('.banner_item_images .foguete').addClass('active');
+                }, 2050);
+                delay(function() {
+                    $('.banner_item_images .texto').addClass('active');
+                }, 2400);
+            }, 7500);
 
-        'use strict';
+            var delay = function(cb, ms) {
+                window.setTimeout(cb, ms);
+            };
 
-        window.sr= new scrollReveal({
-          reset: false,
-          move: '100px',
-          mobile: true
         });
 
-      })();
-  </script>
+        (function($) {
+
+            'use strict';
+
+            window.sr = new scrollReveal({
+                reset: false,
+                move: '100px',
+                mobile: true
+            });
+
+        })();
+
+    </script>
 
 </body>
 </html>
