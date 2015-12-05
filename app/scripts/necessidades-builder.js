@@ -28,7 +28,7 @@ $.extend(Necbuilder.prototype, {
         this.transitionSlides(n, true);
     },
 
-        backward: function(n, horti) {
+    backward: function(n, horti) {
         if(this.step == 1 && !horti) return;
         if(this.step > 1 || !horti) this.step--;
         this.transitionSlides(n, false);
