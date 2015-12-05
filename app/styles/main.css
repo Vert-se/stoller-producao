@@ -1798,6 +1798,7 @@ footer .social li.youtube a {
   .w100 input.input_text,
   .w100 textarea.input_text,
   .w100 .select_box {
+    margin-bottom: 10px !important;
     font-size: 1.9em !important;
     font-weight: 400;
     color: #999999;
