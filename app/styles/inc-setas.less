@@ -37,11 +37,6 @@
 		position: absolute;
 		left: 0;
 		background: url('../images/stoller_setas.png') no-repeat;
-
-		-webkit-animation: seta-animate 1s infinite; /* Safari 4+ */
-		-moz-animation:    seta-animate 1s infinite; /* Fx 5+ */
-		-o-animation:      seta-animate 1s infinite; /* Opera 12+ */
-		animation:         seta-animate 1s infinite; /* IE 10+, Fx 29+ */
 	}
 
 	.s_1{
@@ -49,17 +44,9 @@
 	}
 	.s_2{
 		top: 10px;
-		-webkit-animation-delay: 0.2s;
-		-moz-animation-delay: 0.2s;
-		-o-animation-delay: 0.2s;
-		animation-delay: 0.2s;
 	}
 	.s_3{
 		top: 20px;
-		-webkit-animation-delay: 0.4s;
-		-moz-animation-delay: 0.4s;
-		-o-animation-delay: 0.4s;
-		animation-delay: 0.4s;
 	}
 	&.posa{
 		position: absolute;
@@ -89,5 +76,28 @@
 			background-position: 0 0;
 		}
 		// .sprite(-130px -50px);
+	}
+
+	&:hover{
+		.s_1,.s_2,.s_3{
+			-webkit-animation: seta-animate 1s infinite; /* Safari 4+ */
+			-moz-animation:    seta-animate 1s infinite; /* Fx 5+ */
+			-o-animation:      seta-animate 1s infinite; /* Opera 12+ */
+			animation:         seta-animate 1s infinite; /* IE 10+, Fx 29+ */
+		}
+		.s_2{
+			top: 10px;
+			-webkit-animation-delay: 0.2s;
+			-moz-animation-delay: 0.2s;
+			-o-animation-delay: 0.2s;
+			animation-delay: 0.2s;
+		}
+		.s_3{
+			top: 20px;
+			-webkit-animation-delay: 0.4s;
+			-moz-animation-delay: 0.4s;
+			-o-animation-delay: 0.4s;
+			animation-delay: 0.4s;
+		}
 	}
 }
