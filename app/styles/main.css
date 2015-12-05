@@ -1629,10 +1629,6 @@ footer .social li.youtube a {
   width: 24px;
   height: 15px;
   background: url('../images/stoller_setas.png') no-repeat;
-  -webkit-animation: seta-animate 1s infinite;
-     -moz-animation: seta-animate 1s infinite;
-       -o-animation: seta-animate 1s infinite;
-          animation: seta-animate 1s infinite;
 }
 
 .seta_down .s_1 {
@@ -1641,18 +1637,10 @@ footer .social li.youtube a {
 
 .seta_down .s_2 {
   top: 10px;
-  -webkit-animation-delay: 0.2s;
-     -moz-animation-delay: 0.2s;
-       -o-animation-delay: 0.2s;
-          animation-delay: 0.2s;
 }
 
 .seta_down .s_3 {
   top: 20px;
-  -webkit-animation-delay: 0.4s;
-     -moz-animation-delay: 0.4s;
-       -o-animation-delay: 0.4s;
-          animation-delay: 0.4s;
 }
 
 .seta_down.posa {
@@ -1681,6 +1669,39 @@ footer .social li.youtube a {
 .seta_down.transp .s_2,
 .seta_down.transp .s_3 {
   background-position: 0 0;
+}
+
+.seta_down:hover .s_1,
+.seta_down:hover .s_2,
+.seta_down:hover .s_3 {
+  -webkit-animation: seta-animate 1s infinite;
+  /* Safari 4+ */
+
+     -moz-animation: seta-animate 1s infinite;
+  /* Fx 5+ */
+
+       -o-animation: seta-animate 1s infinite;
+  /* Opera 12+ */
+
+          animation: seta-animate 1s infinite;
+  /* IE 10+, Fx 29+ */
+
+}
+
+.seta_down:hover .s_2 {
+  top: 10px;
+  -webkit-animation-delay: 0.2s;
+     -moz-animation-delay: 0.2s;
+       -o-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.seta_down:hover .s_3 {
+  top: 20px;
+  -webkit-animation-delay: 0.4s;
+     -moz-animation-delay: 0.4s;
+       -o-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 @media screen and (min-width: 100px) {
