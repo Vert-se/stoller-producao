@@ -1563,12 +1563,96 @@ footer .social li.youtube a {
   background: #cccc33;
 }
 
+@-webkit-keyframes seta-animate {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@-moz-keyframes seta-animate {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@-o-keyframes seta-animate {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes seta-animate {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
 .seta_down {
+  position: relative;
   display: block;
   width: 24px;
   height: 35px;
   margin: 80px auto 0;
   clear: both;
+}
+
+.seta_down .s_1,
+.seta_down .s_2,
+.seta_down .s_3 {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 15px;
+  background: url('../images/stoller_setas.png') no-repeat;
+  -webkit-animation: seta-animate 1s infinite;
+     -moz-animation: seta-animate 1s infinite;
+       -o-animation: seta-animate 1s infinite;
+          animation: seta-animate 1s infinite;
+}
+
+.seta_down .s_1 {
+  top: 0;
+}
+
+.seta_down .s_2 {
+  top: 10px;
+  -webkit-animation-delay: 0.2s;
+     -moz-animation-delay: 0.2s;
+       -o-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.seta_down .s_3 {
+  top: 20px;
+  -webkit-animation-delay: 0.4s;
+     -moz-animation-delay: 0.4s;
+       -o-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .seta_down.posa {
@@ -1581,16 +1665,22 @@ footer .social li.youtube a {
           transform: translateX(-50%);
 }
 
-.seta_down.white {
-  background: url('../images/stoller_sprite.png') no-repeat -130px -124px;
+.seta_down.white .s_1,
+.seta_down.white .s_2,
+.seta_down.white .s_3 {
+  background-position: 0 -32px;
 }
 
-.seta_down.grey {
-  background: url('../images/stoller_sprite.png') no-repeat -130px -87px;
+.seta_down.grey .s_1,
+.seta_down.grey .s_2,
+.seta_down.grey .s_3 {
+  background-position: 0 -16px;
 }
 
-.seta_down.transp {
-  background: url('../images/stoller_sprite.png') no-repeat -130px -50px;
+.seta_down.transp .s_1,
+.seta_down.transp .s_2,
+.seta_down.transp .s_3 {
+  background-position: 0 0;
 }
 
 @media screen and (min-width: 100px) {
