@@ -196,7 +196,7 @@ header .mininav.stoller_id a {
 
 #cultura-home-step {
     position: absolute;
-    top: 79% !important;
+    top: 79%;
     z-index: 0; 
 }
 #necessidade .grid_3 .grid_item span {
