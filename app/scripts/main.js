@@ -410,6 +410,7 @@ $(function(){
     window.site = site;
     window.site.init();
 
+    var $formTrabalhe;
 
     // SCROLLER PROTOTYPE
     $.extend(Scroller.prototype, {
@@ -544,7 +545,6 @@ $(function(){
         if(!selected) return;
 
         $.get(site.baseEndpoint + '/especialistas', data, function(resp) {
-            console.log(resp);
             var output = '';
             resp.forEach(function(item, i) {
                 output += tmpl('post-template', item);
@@ -597,7 +597,7 @@ $(function(){
 
     /* NEWSLETTER */
     $('form.newsletter').on('submit', function(e) {
-        $alert = $('.form-message');
+        $alert = $('form.newsletter .form-message');
         $alert.prop('class', 'form-message').html('');
         e.preventDefault();
         $.post(site.baseEndpoint + '/newsletter', $(this).serialize(), function(resp) {
@@ -708,5 +708,82 @@ $(function(){
             });
 
         })();
+    }
+
+    var clearForm = function($form) {
+        $form.find('input, textarea, select').not('[type=radio]').each(function() {
+            $(this).val('');
+        });
+    };
+
+    var validateForm = function($form, scroll) {
+        var $wrapper = $form.parent(),
+            $alert = $wrapper.find('.form-message'),
+            $fields = $form.find('.required'), validated = true,
+            msg = 'Por favor preencha todos os campos em destaque.';
+        $alert.prop('class', 'form-message').html('');
+        $fields.removeClass('error');
+        $fields.each(function() {
+            var $field = $(this);
+            if(!$field.val()) {
+                $field.addClass('error');
+                validated = false;
+            }
+        });
+        if(!validated) {
+            $alert.addClass('error').html(msg);
+            if(scroll) $('html, body').animate({ scrollTop: $wrapper.offset().top }, 400);
+        }
+        return validated;
+    };
+
+
+    /* FORMULARIOS */
+    if($('#form-trabalhe').length) {
+        $formTrabalhe = $('#form-trabalhe');
+
+        $formTrabalhe.on('submit', function(e) {
+            e.preventDefault();
+            if(!validateForm($formTrabalhe), true) return;
+            clearForm($formTrabalhe);
+            alert('Cadastro enviado com sucesso.');
+        });
+    }
+
+
+    /* FALE CONOSCO */
+    if($('#form-fale').length) {
+        $formFale = $('#form-fale');
+
+        $formFale.on('submit', function(e) {
+            e.preventDefault();
+            if(!validateForm($formFale), true) return;
+            clearForm($formFale);
+            alert('Mensagem enviada com sucesso.');
+        });
+    }
+
+
+    /* DEPOIMENTO */
+    if($('#form-depoimento').length) {
+        $formFale = $('#form-depoimento');
+
+        $formFale.on('submit', function(e) {
+            e.preventDefault();
+            if(!validateForm($formFale), true) return;
+            clearForm($formFale);
+            alert('Depoimento enviado com sucesso.');
+        });
+    }
+
+    /* FALE ESPECIALISTA */
+    if($('#form-especialista').length) {
+        $formFale = $('#form-especialista');
+        $formFale.on('submit', function(e) {
+            e.preventDefault();
+            if(!validateForm($formFale)) return;
+            clearForm($formFale);
+            alert('Mensagem enviada com sucesso.');
+        });
     }
 });

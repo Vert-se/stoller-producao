@@ -138,7 +138,9 @@
             Envie seu currículo e, caso surja uma oportunidade compatível com seu perfil, entraremos em contato.
           </p>
 
-          <form action="" method="post" enctype="multipart/form-data">
+          <div id="form-trabalhe-message" class="form-message"></div>
+
+          <form action="" method="post" id="form-trabalhe" enctype="multipart/form-data">
 
             <fieldset class="grid grid_3 grid_form">
               
@@ -146,7 +148,7 @@
                 <p><strong>Objetivo</strong></p>
                 <span class="title_field">Área de interesse</span>
                 <aside class="select_box">
-                  <select name="trabalhe_conosco[area_interesse]" id="trabalhe_conosco_area_interesse">
+                  <select class="required" name="area_interesse" id="trabalhe_conosco_area_interesse">
                     <option value="" selected="selected">Área...</option>
                     <option value="Administração">Administração</option>
                     <option value="Agronomia">Agronomia</option>
@@ -168,7 +170,7 @@
                 <p class="not_mobile"><strong>&nbsp;</strong></p>
                 <span class="title_field">Nível de conhecimento</span>
                 <aside class="select_box">
-                  <select name="trabalhe_conosco[nivel]" id="trabalhe_conosco_nivel">
+                  <select class="required" class="required" name="nivel" id="trabalhe_conosco_nivel">
                     <option value="" selected="selected">Nível...</option>
                     <option value="Operacional">Operacional</option>
                     <option value="Técnico">Técnico</option>
@@ -184,7 +186,7 @@
                 <p><strong>Apenas para engenheiros agrônomos</strong></p>
                 <span class="title_field">Região de interesse</span>
                 <aside class="select_box">
-                  <select name="trabalhe_conosco[regiao_interesse_regiao1]" id="trabalhe_conosco_regiao_interesse_regiao1">
+                  <select class="required" name="regiao_interesse_regiao1" id="trabalhe_conosco_regiao_interesse_regiao1">
                     <option value="" selected="selected">Região...</option>
                     <option value="Norte">Norte</option>
                     <option value="Sul">Sul</option>
@@ -202,19 +204,19 @@
               
               <label for="" class="grid_item grid_item_form">
                 <span class="title_field">Nome completo</span>
-                <input type="text" name="trabalhe_conosco[nome]" id="trabalhe_conosco_nome" class="input_text form_type form_type_nome">
+                <input type="text" name="nome" id="trabalhe_conosco_nome" class="required input_text form_type form_type_nome">
 
               </label>
 
               <aside for="contato_cidade_id_uf" class="grid_item grid_item_form">
                 <span class="title_field">Sexo</span>
-                <input name="trabalhe_conosco[sexo]" type="radio" value="Masculino" id="trabalhe_conosco_sexo_Masculino">
+                <input name="sexo" checked="checked" type="radio" value="Masculino" id="trabalhe_conosco_sexo_Masculino">
                 <label for="trabalhe_conosco_sexo_Masculino" class="title_field_mini">Masculino</label>
-                <input name="trabalhe_conosco[sexo]" type="radio" value="Feminino" id="trabalhe_conosco_sexo_Feminino">
+                <input name="sexo" type="radio" value="Feminino" id="trabalhe_conosco_sexo_Feminino">
                 <label for="trabalhe_conosco_sexo_Feminino" class="title_field_mini">Feminino</label>
 
 <!--                 <aside class="select_box">
-                  <select name="contato[cidade_id][uf]" id="contato_cidade_id_uf">
+                  <select class="required" name="contato[cidade_id][uf]" id="contato_cidade_id_uf">
                     <option value="AC" selected="selected">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -251,7 +253,7 @@
 
                 <aside class="select_box select_box_mini">
 
-                  <select name="trabalhe_conosco[nascimento][day]" id="trabalhe_conosco_nascimento_day">
+                  <select class="required" name="nascimento[day]" id="trabalhe_conosco_nascimento_day">
                     <option value="" selected="selected"></option>
                     <option value="1">01</option>
                     <option value="2">02</option>
@@ -289,7 +291,7 @@
                 </aside>
                 <aside class="select_box select_box_mini">
 
-                  <select name="trabalhe_conosco[nascimento][month]" id="trabalhe_conosco_nascimento_month">
+                  <select class="required" name="nascimento[month]" id="trabalhe_conosco_nascimento_month">
                     <option value="" selected="selected"></option>
                     <option value="1">01</option>
                     <option value="2">02</option>
@@ -310,7 +312,7 @@
 
                 <aside class="select_box select_box_mini">
 
-                  <select name="trabalhe_conosco[nascimento][year]" id="trabalhe_conosco_nascimento_year">
+                  <select class="required" name="nascimento[year]" id="trabalhe_conosco_nascimento_year">
                     <option value="" selected="selected"></option>
                     <option value="2015">2015</option>
                     <option value="2014">2014</option>
@@ -392,7 +394,7 @@
                   
                 </aside>
                 <!-- <aside class="select_box">
-                  <select name="contato[cidade_id][cidade]" id="contato_cidade_id_cidade">
+                  <select class="required" name="contato[cidade_id][cidade]" id="contato_cidade_id_cidade">
                     <option value="" selected="selected">Escolha a cidade</option>
                     <option value="1">Acrelândia</option>
                     <option value="2">Assis Brasil</option>
@@ -432,14 +434,15 @@
               
               <label for="trabalhe_conosco_cep" class="grid_item grid_item_form">
                 <span class="title_field">CEP</span>
-                <input type="text" name="trabalhe_conosco[cep]" id="trabalhe_conosco_cep" class="input_text form_type form_type_cep">
+                <input type="text" name="cep" id="trabalhe_conosco_cep" class="required input_text form_type form_type_cep">
               </label>
 
               <label for="trabalhe_conosco_cidade_id_uf" class="grid_item grid_item_form">
                 <span class="title_field">Estado</span>
                 <aside class="select_box">
-                  <select name="trabalhe_conosco[cidade_id][uf]" id="trabalhe_conosco_cidade_id_uf">
-                    <option value="AC" selected="selected">Acre</option>
+                  <select class="required" name="estado" id="trabalhe_conosco_cidade_id_uf">
+                    <option value="" selected="selected">Selecione...</option>
+                    <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
                     <option value="AM">Amazonas</option>
@@ -473,7 +476,7 @@
               <label for="trabalhe_conosco_cidade_id_cidade" class="grid_item grid_item_form">
                 <span class="title_field">Cidade</span>
                 <aside class="select_box">
-                  <select name="trabalhe_conosco[cidade_id][cidade]" id="trabalhe_conosco_cidade_id_cidade">
+                  <select class="required" name="cidade" id="trabalhe_conosco_cidade_id_cidade">
                     <option value="">Escolha a cidade</option>
                     <option value="4391">Alto Alegre</option>
                     <option value="4392">Amajari</option>
@@ -496,18 +499,18 @@
               
               <label for="trabalhe_conosco_endereco" class="grid_item grid_item_form">
                 <span class="title_field">Endereço</span>
-                <input type="text" name="trabalhe_conosco[endereco]" id="trabalhe_conosco_endereco" class="input_text form_type form_type_endereco">
+                <input type="text" name="endereco" id="trabalhe_conosco_endereco" class="required input_text form_type form_type_endereco">
               </label>
 
               <label for="trabalhe_conosco_numero" class="grid_item grid_item_form">
                 <span class="title_field">Número</span>
-                <input type="text" name="trabalhe_conosco[numero]" id="trabalhe_conosco_numero" class="input_text form_type form_type_numero">
+                <input type="text" name="numero" id="trabalhe_conosco_numero" class="required input_text form_type form_type_numero">
               </label>
 
 
               <label for="trabalhe_conosco_complemento" class="grid_item grid_item_form">
                 <span class="title_field">Complemento</span>
-                <input type="text" name="trabalhe_conosco[complemento]" id="trabalhe_conosco_complemento" class="input_text form_type form_type_complemento">
+                <input type="text" name="complemento" id="trabalhe_conosco_complemento" class="input_text form_type form_type_complemento">
               </label>
 
             </fieldset>
@@ -517,7 +520,7 @@
               <aside class="grid_item grid_item_form">
                 <aside class="file_box" style="float: left; width: 210px;">
                   <button type="button" class="botton_submit botton_file">Anexar<br />Curriculum</button>
-                  <input type="file" onchange="document.getElementById('file-text').value = this.value;">
+                  <input type="file" name="file" onchange="document.getElementById('file-text').value = this.value;">
                   <input type="text" id="file-text" readonly="readonly">  
                 </aside>
 

@@ -221,111 +221,116 @@
 
             </section>
             <!-- / FETCH -->
+            
+            <div class="form-wrapper">
 
-            <form action="" method="post" class="depoimentos_form w100">
+              <div id="form-depoimento-message" class="form-message"></div>
+              
+              <form id="form-depoimento" action="" method="post" class="depoimentos_form w100">
 
-              <h3>Compartilhe seu depoimento</h3>
+                <h3>Compartilhe seu depoimento</h3>
 
-              <fieldset class="grid grid_2 grid_form">
-                
-                <label for="depoimentos_cultura" class="grid_item grid_item_form">
-                  <aside class="select_box">
-                    <select name="depoimentos[cultura]" id="depoimentos_cultura">
-                      <option value="" selected="selected">Cultura</option>
-                      <option value="Algodão">Algodão</option>
-                      <option value="Arroz">Arroz</option>
-                      <option value="Batata">Batata</option>
-                      <option value="Cana">Cana</option>
-                      <option value="Café">Café</option>
-                      <option value="Citros">Citros</option>
-                      <option value="Feijão">Feijão</option>
-                      <option value="Milho">Milho</option>
-                      <option value="Soja">Soja</option>
-                      <option value="Tomate">Tomate</option>
-                    </select>
+                <fieldset class="grid grid_2 grid_form">
+                  
+                  <label for="depoimentos_cultura" class="grid_item grid_item_form">
+                    <aside class="select_box">
+                      <select name="cultura" class="required" id="depoimentos_cultura">
+                        <option value="" selected="selected">Cultura</option>
+                        <option value="Algodão">Algodão</option>
+                        <option value="Arroz">Arroz</option>
+                        <option value="Batata">Batata</option>
+                        <option value="Cana">Cana</option>
+                        <option value="Café">Café</option>
+                        <option value="Citros">Citros</option>
+                        <option value="Feijão">Feijão</option>
+                        <option value="Milho">Milho</option>
+                        <option value="Soja">Soja</option>
+                        <option value="Tomate">Tomate</option>
+                      </select>
+                    </aside>
+                  </label>
+
+                  <label for="depoimentos_regiao" class="grid_item grid_item_form">
+                    <aside class="select_box">
+                      <select name="regiao" class="required" id="depoimentos_regiao">
+                        <option value="" selected="selected">Região</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                      </select>
+                    </aside>
+                  </label>
+
+                  <label for="depoimentos_nome" class="grid_item grid_item_form">
+                    <input type="text" placeholder="Nome" name="nome" id="depoimentos_nome" class="required input_text form_type form_type_nome">
+                  </label>
+
+                  <label for="depoimentos_email" class="grid_item grid_item_form">
+                    <input type="text" placeholder="E-mail" name="email" id="depoimentos_email" class="required input_text form_type form_type_email">
+                  </label>
+
+                </fieldset>
+
+                <fieldset class="grid grid_3 grid_form">
+                  
+                  <label for="depoimentos_area_de_controle" class="grid_item grid_item_form">
+                    <input type="text" placeholder="Área de Controle" name="area_de_controle" id="depoimentos_area_de_controle" class="required input_text form_type form_type_nome">
+                  </label>
+
+                  <label for="depoimentos_area_tratada" class="grid_item grid_item_form">
+                    <input type="text" placeholder="Área tratada com Stoller" name="area_tratada" id="depoimentos_area_tratada" class="required input_text form_type form_type_email">
+                  </label>
+
+
+                  <label for="depoimentos_incremento" class="grid_item grid_item_form">
+                    <input type="text" placeholder="Incremento obtido" name="incremento" id="depoimentos_incremento" class="required input_text form_type form_type_email">
+                  </label>
+                </fieldset>
+
+                <fieldset class="grid grid_1 grid_form">
+
+                  <label for="depoimentos_mensagem" class="grid_item grid_item_form">
+                    <textarea name="mensagem" id="depoimentos_mensagem" class="required input_text form_type form_type_mensagem"></textarea>
+                  </label>
+
+                </fieldset>
+
+                <fieldset class="grid grid_2 grid_form">
+                  <label for="depoimentos_aceite" class="grid_item grid_item_form">
+                  <input type="checkbox" class="checkbox_mini" name="aceite" id="depoimentos_aceite" />
+                  <span class="title_field">Li e aceito os termos e condições</span>
+                </label>
+                  <aside class="grid_item grid_item_form">
+                    <button type="submit" class="botton_submit">Enviar</button>
                   </aside>
-                </label>
+                </fieldset>
 
-                <label for="depoimentos_regiao" class="grid_item grid_item_form">
-                  <aside class="select_box">
-                    <select name="depoimentos[regiao]" id="depoimentos_regiao">
-                      <option value="" selected="selected">Região</option>
-                      <option value="AC">Acre</option>
-                      <option value="AL">Alagoas</option>
-                      <option value="AP">Amapá</option>
-                      <option value="AM">Amazonas</option>
-                      <option value="BA">Bahia</option>
-                      <option value="CE">Ceará</option>
-                      <option value="DF">Distrito Federal</option>
-                      <option value="ES">Espírito Santo</option>
-                      <option value="GO">Goiás</option>
-                      <option value="MA">Maranhão</option>
-                      <option value="MG">Minas Gerais</option>
-                      <option value="MS">Mato Grosso do Sul</option>
-                      <option value="MT">Mato Grosso</option>
-                      <option value="PA">Pará</option>
-                      <option value="PB">Paraíba</option>
-                      <option value="PR">Paraná</option>
-                      <option value="PE">Pernambuco</option>
-                      <option value="PI">Piauí</option>
-                      <option value="RJ">Rio de Janeiro</option>
-                      <option value="RN">Rio Grande do Norte</option>
-                      <option value="RS">Rio Grande do Sul</option>
-                      <option value="RO">Rondônia</option>
-                      <option value="RR">Roraima</option>
-                      <option value="SP">São Paulo</option>
-                      <option value="SC">Santa Catarina</option>
-                      <option value="SE">Sergipe</option>
-                      <option value="TO">Tocantins</option>
-                    </select>
-                  </aside>
-                </label>
-
-                <label for="depoimentos_nome" class="grid_item grid_item_form">
-                  <input type="text" placeholder="Nome" name="depoimentos[nome]" id="depoimentos_nome" class="input_text form_type form_type_nome">
-                </label>
-
-                <label for="depoimentos_email" class="grid_item grid_item_form">
-                  <input type="text" placeholder="E-mail" name="depoimentos[email]" id="depoimentos_email" class="input_text form_type form_type_email">
-                </label>
-
-              </fieldset>
-
-              <fieldset class="grid grid_3 grid_form">
-                
-                <label for="depoimentos_area_de_controle" class="grid_item grid_item_form">
-                  <input type="text" placeholder="Área de Controle" name="depoimentos[area_de_controle]" id="depoimentos_area_de_controle" class="input_text form_type form_type_nome">
-                </label>
-
-                <label for="depoimentos_area_tratada" class="grid_item grid_item_form">
-                  <input type="text" placeholder="Área tratada com Stoller" name="depoimentos[area_tratada]" id="depoimentos_area_tratada" class="input_text form_type form_type_email">
-                </label>
-
-
-                <label for="depoimentos_incremento" class="grid_item grid_item_form">
-                  <input type="text" placeholder="Incremento obtido" name="depoimentos[incremento]" id="depoimentos_incremento" class="input_text form_type form_type_email">
-                </label>
-              </fieldset>
-
-              <fieldset class="grid grid_1 grid_form">
-
-                <label for="depoimentos_mensagem" class="grid_item grid_item_form">
-                  <textarea name="depoimentos[mensagem]" id="depoimentos_mensagem" class="input_text form_type form_type_mensagem"></textarea>
-                </label>
-
-              </fieldset>
-
-              <fieldset class="grid grid_2 grid_form">
-                <label for="depoimentos_aceite" class="grid_item grid_item_form">
-                <input type="checkbox" class="checkbox_mini" name="depoimentos[aceite]" id="depoimentos_aceite" />
-                <span class="title_field">Li e aceito os termos e condições</span>
-              </label>
-                <aside class="grid_item grid_item_form">
-                  <button type="submit" class="botton_submit">Enviar</button>
-                </aside>
-              </fieldset>
-
-            </form>
+              </form>
+            </div>
 
           </section>
 

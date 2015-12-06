@@ -1795,6 +1795,11 @@ footer .social li.youtube a {
 }
 
 @media screen and (min-width: 100px) {
+  #form-depoimento .grid_form input.input_text,
+  #form-depoimento .grid_form textarea.input_text,
+  #form-depoimento .grid_form .select_box {
+    background: #ffffff;
+  }
   .w100 input.input_text,
   .w100 textarea.input_text,
   .w100 .select_box {
@@ -1802,7 +1807,6 @@ footer .social li.youtube a {
     font-size: 1.9em !important;
     font-weight: 400;
     color: #999999;
-    background: #ffffff !important;
   }
   .w100 input.input_text select,
   .w100 textarea.input_text select,
@@ -3840,6 +3844,7 @@ body.culturas .cult_sec_title .cult_color {
 .form-message {
   padding: 12px 15px;
   margin-bottom: 20px;
+  font-size: 14px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -3858,6 +3863,11 @@ body.culturas .cult_sec_title .cult_color {
 
 .newsletter .form-message {
   float: left;
+}
+
+#form-especialista .form-message {
+  float: left;
+  margin-top: 10px;
 }
 
 body.especialista-stoller #especialistas {
@@ -3884,6 +3894,27 @@ body.especialista-stoller #especialistas {
 
 .loading.green_d {
   background-image: url('../images/loading-green_d.gif');
+}
+
+input,
+select,
+textarea {
+  border: 1px solid transparent;
+}
+
+input.error,
+select.error,
+textarea.error {
+  background-color: #C59F9F!important;
+  border: 1px solid #b00;
+}
+
+#form-depoimento input.error,
+#form-depoimento select.error,
+#form-depoimento textarea.error {
+  color: #000!important;
+  background-color: #C59F9F!important;
+  border: 1px solid #b00;
 }
 
 @media screen and (min-height: 680px) {

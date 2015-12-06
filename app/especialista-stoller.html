@@ -170,37 +170,41 @@
             
           </section>
 
-          <form action="" method="post">
+          <div class="form-wrapper">
+            
+              <form id="form-especialista"  action="" method="post">
 
-            <fieldset class="grid grid_3 grid_form">
+              <fieldset class="grid grid_3 grid_form">
 
-              <hr>
+                <hr>
 
-              <p><strong>Se preferir, a Stoller entra em contato com você.</strong></p>
+                <p><strong>Se preferir, a Stoller entra em contato com você.</strong></p>
 
-              <label for="especialista_nome" class="grid_item grid_item_form">
-                <span class="title_field">Nome</span>
-                <input type="text" name="especialista[nome]" id="especialista_nome" class="input_text form_type form_type_nome">
-              </label>
+                <label for="especialista_nome" class="grid_item grid_item_form">
+                  <span class="title_field">Nome</span>
+                  <input type="text" name="especialista[nome]" id="especialista_nome" class="required input_text form_type form_type_nome">
+                </label>
 
-              <label for="especialista_email" class="grid_item grid_item_form">
-                <span class="title_field">E-mail</span>
-                <input type="text" name="especialista[email]" id="especialista_email" class="input_text form_type form_type_email">
-              </label>
+                <label for="especialista_email" class="grid_item grid_item_form">
+                  <span class="title_field">E-mail</span>
+                  <input type="text" name="especialista[email]" id="especialista_email" class="required input_text form_type form_type_email">
+                </label>
 
-              <label for="especialista_telefone" class="grid_item grid_item_form">
-                <span class="title_field">Telefone</span>
-                <input type="text" name="especialista[telefone]" id="especialista_telefone" class="input_text form_type form_type_telefone">
-              </label>
+                <label for="especialista_telefone" class="grid_item grid_item_form">
+                  <span class="title_field">Telefone</span>
+                  <input type="text" name="especialista[telefone]" id="especialista_telefone" class="required input_text form_type form_type_telefone">
+                </label>
 
+                </fieldset>
+
+              <fieldset class="grid grid_1 grid_form">
+                <aside class="grid_item grid_item_form">
+                  <div id="form-especialista-message" class="form-message"></div>
+                  <button type="submit" class="botton_submit botton_submit_sr">Enviar</button>
+                </aside>
               </fieldset>
-
-            <fieldset class="grid grid_1 grid_form">
-              <aside class="grid_item grid_item_form">
-                <button type="submit" class="botton_submit botton_submit_sr">Enviar</button>
-              </aside>
-            </fieldset>
-          </form>
+            </form>
+          </div>
 
 
 

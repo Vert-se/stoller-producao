@@ -138,31 +138,33 @@
             Temos uma equipe sempre pronta para ouvi-lo e tirar as suas mais diversas dúvidas.
           </p>
 
-          <form action="" method="post">
+          <div id="form-fale-message" class="form-message"></div>
+
+          <form id="form-fale" action="" method="post">
 
             <fieldset class="grid grid_3 grid_form">
               <p><strong>Dados Pessoais</strong></p>
               
               <label for="contato_nome" class="grid_item grid_item_form">
                 <span class="title_field">Nome</span>
-                <input type="text" name="contato[nome]" id="contato_nome" class="input_text form_type form_type_nome">
+                <input type="text" name="nome" id="contato_nome" class="required input_text form_type form_type_nome">
               </label>
 
               <label for="contato_email" class="grid_item grid_item_form">
                 <span class="title_field">E-mail</span>
-                <input type="text" name="contato[email]" id="contato_email" class="input_text form_type form_type_email">
+                <input type="text" name="email" id="contato_email" class="required input_text form_type form_type_email">
               </label>
 
               <label for="contato_telefone" class="grid_item grid_item_form">
                 <span class="title_field">Telefone</span>
-                <input type="text" name="contato[telefone]" id="contato_telefone" class="input_text form_type form_type_telefone">
+                <input type="text" name="telefone" id="contato_telefone" class="required input_text form_type form_type_telefone">
               </label>
 
 
               <label for="" class="grid_item grid_item_form">
                 <span class="title_field">Como conheceu a Stoller</span>
                 <aside class="select_box">
-                  <select name="contato[conheceu]" id="contato_conheceu">
+                  <select name="conheceu" class="required" id="contato_conheceu">
                     <option value="" selected="selected">Selecione ...</option>
                     <option value="Indicação">Indicação</option>
                     <option value="Google">Google</option>
@@ -178,7 +180,7 @@
               <label for="contato_cidade_id_uf" class="grid_item grid_item_form">
                 <span class="title_field">Estado</span>
                 <aside class="select_box">
-                  <select name="contato[cidade_id][uf]" id="contato_cidade_id_uf">
+                  <select name="estado" class="required" id="contato_cidade_id_uf">
                     <option value="AC" selected="selected">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -214,7 +216,7 @@
                 <span class="title_field">Cidade</span>
 
                 <aside class="select_box">
-                  <select name="contato[cidade_id][cidade]" id="contato_cidade_id_cidade">
+                  <select name="cidade" class="required" id="contato_cidade_id_cidade">
                     <option value="" selected="selected">Escolha a cidade</option>
                     <option value="1">Acrelândia</option>
                     <option value="2">Assis Brasil</option>
@@ -255,7 +257,7 @@
               <label for="contato_departamento" class="grid_item grid_item_form">
                 <span class="title_field">Qual departamento você quer falar ?</span>
                 <aside class="select_box">
-                  <select name="contato[departamento]" id="contato_departamento">
+                  <select name="departamento" class="required" id="contato_departamento">
                     <option value="" selected="selected">Selecione ...</option>
                     <option value="1">Departamento 1</option>
                     <option value="2">Departamento 2</option>
@@ -266,7 +268,7 @@
 
               <label for="contato_assunto" class="grid_item grid_item_form">
                 <span class="title_field">Assunto</span>
-                <input type="text" name="contato[assunto]" id="contato_assunto" class="input_text form_type form_type_nome">
+                <input type="text" name="assunto" id="contato_assunto" class="required input_text form_type form_type_nome">
               </label>
 
             </fieldset>
@@ -275,18 +277,18 @@
 
               <label for="contato_mensagem" class="grid_item grid_item_form">
                 <span class="title_field">Mensagem</span>
-                <textarea name="contato[mensagem]" id="contato_mensagem" class="input_text form_type form_type_mensagem"></textarea>
+                <textarea name="mensagem" id="contato_mensagem" class="required input_text form_type form_type_mensagem"></textarea>
               </label>
 
             </fieldset>
 
             <fieldset class="grid grid_4 grid_form">
               <label for="contato_novidades" class="grid_item grid_item_form">
-                <input type="checkbox" name="contato[novidades]" id="contato_novidades" />
+                <input type="checkbox" name="novidades" id="contato_novidades" />
                 <span class="title_field_mini">Deseja receber<br />novidades da Stoller?</span>
               </label>
               <label for="contato_copia" class="grid_item grid_item_form">
-                <input type="checkbox" name="contato[copia]" id="contato_copia" />
+                <input type="checkbox" name="copia" id="contato_copia" />
                 <span class="title_field_mini">Deseja receber<br />uma cópia desta mensagem? </span>
               </label>
 
