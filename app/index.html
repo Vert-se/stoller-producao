@@ -50,14 +50,18 @@
 
       #necessidade {
         position: relative;
-        height: 180%;
+        height: 150%;
         overflow: hidden;
       }
 
       #cultura-home-step {
         position: absolute;
-        top: 90%;
+        top: 75%;
         z-index: 0;
+      }
+
+      .home_galeria .home_galeria_item .inner.regiao_mapa {
+        width: 60%!important;
       }
     </style>
 
@@ -175,7 +179,7 @@
                 <!-- </section> -->
             </section>
             <section class="banner_item banner_item_images">
-                <img src="images/banner-home/full.jpg" class="azul" alt=""> 
+                <img src="images/banner-home/full.jpg?1" class="azul" alt=""> 
                 <a href="landing-01.html" class="link_topo"></a>
             </section>
         </section>
@@ -611,18 +615,21 @@
           bottom;
           if(isNaN(initTop)) initTop = 0;
           var updateBanner = function() {
-            scrollTop = $('body').scrollTop();
+            scrollTop = $(document).scrollTop();
             viewPortH = body.height();
+            // console.log('wrapperHeight', wrapperHeight, 'viewPortH', viewPortH, 'scrollTop', scrollTop, '$el top', wrapperTop);
             // console.log('onScreen', (scrollTop + viewPortH > wrapperTop) && (scrollTop < wrapperTop + wrapperHeight));
-            if((scrollTop + viewPortH > wrapperTop) && (scrollTop < wrapperTop + wrapperHeight)) {
+            /*if((scrollTop + viewPortH > wrapperTop) && (scrollTop < wrapperTop + wrapperHeight)) {
               $inner.css('top', initTop + scrollTop / ammount);
-            }
+            }*/
+            $inner.css('top', initTop + scrollTop / ammount);
           };
           doc.on('scroll', updateBanner);
           updateBanner();
         };
 
-        $('#necessidade section').first().css({ top: -140 });
+        $necc = $('#necessidade section');
+        $necc.first().css({ top: -(20 * $necc.height() / 100) });
         parallax($('#inicio'), 2);
         parallax($('#necessidade'), 3.5);
 
