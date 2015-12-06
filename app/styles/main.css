@@ -2993,6 +2993,9 @@ body.culturas .cult_sec_title .cult_color {
   .sidebar nav li.facebook a.active:before {
     left: -44px;
   }
+  .sidebar nav li.linkedin {
+    display: none;
+  }
   .sidebar nav li.linkedin a {
     color: #55acee;
   }
