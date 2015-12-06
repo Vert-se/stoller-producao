@@ -3764,7 +3764,6 @@ body.culturas .cult_sec_title .cult_color {
 #necessidade .grid_3 .grid_item span {
   position: relative;
   color: #666666;
-  text-transform: uppercase;
 }
 
 #necessidade .grid_3 .grid_item span:before {

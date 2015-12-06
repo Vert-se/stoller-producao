@@ -119,7 +119,7 @@ $.extend(Necbuilder.prototype, {
 
             this.$dumpHtml += tmpl(node.type + '-template', data);
         }, this);
-        
+
         this.$wrapper.append(this.$dumpHtml);
 
         window.setTimeout(function() {
@@ -132,6 +132,9 @@ $.extend(Necbuilder.prototype, {
                 that.isAnimating = true;
                 var $el = $(this),
                     target = $el.data('target');
+                // Cache value
+                that.info[$(this).data('type')] = $(this).data('value');
+
                 if(!target) return that.isAnimating = false;
                 that.forward(target);
             });
@@ -152,7 +155,8 @@ $.extend(Necbuilder.prototype, {
             });
 
             that.$mapBtn.on('click', function() {
-                that.info.estado = $(this).data('uf');
+                that.info.estado = $(this).data('value');
+                that.cookAndSendGA();
                 that.forward();
             });
 
@@ -164,6 +168,13 @@ $.extend(Necbuilder.prototype, {
 
     init: function() {
         $('#' + this.prefix + this.homeClass).show();
+    },
+
+    cookAndSendGA: function() {
+        var data = [], msg;
+        for(var i in this.info) data.push(this.info[i]);
+        msg = data.join('-');
+        // ga('send', 'event', msg, 'click');
     }
 
 });
