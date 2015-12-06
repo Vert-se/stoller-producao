@@ -189,6 +189,37 @@ header .mininav.stoller_id a {
     }
 }
 
+.title_green.mbn {
+    margin-bottom: 0 !important;
+    margin-top: 90px;
+}
+
+#cultura-home-step {
+    position: absolute;
+    top: 79% !important;
+    z-index: 0; 
+}
+#necessidade .grid_3 .grid_item span {
+    position: relative;
+    color: #666666;
+    font-size: 1.4em;
+    text-transform: inherit;
+}
+
+.btn.btn_med {
+    padding: 10px;
+    font-size: 1.4em;
+}
+
+.title_green {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 4.2em;
+  font-weight: 700;
+  color: #c1d52e;
+  text-transform: uppercase;
+}
+
 @media screen and (min-height: 580px) {
     .banner_gallery .banner_item_images .azul.active {
         top: -120px;
