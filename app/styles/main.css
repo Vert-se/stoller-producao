@@ -1264,6 +1264,12 @@ footer .social li.youtube a {
   }
 }
 
+@media screen and (max-width: 849px) {
+  .area.image.image_expand {
+    background-size: auto 100%;
+  }
+}
+
 .grid {
   width: 100%;
 }
@@ -2881,6 +2887,18 @@ body.culturas .cult_sec_title .cult_color {
   }
   .sessao-galeria.sessao-galeria-double .carousel-single-wrapper:nth-child(even) {
     float: right;
+  }
+}
+
+@media screen and (max-width: 849px) {
+  .scroll-wrapper {
+    bottom: 0;
+  }
+  body.culturas .sessao-galeria .empty {
+    margin-bottom: 170px;
+  }
+  body.culturas .sessao-galeria .sessao-galeria-text {
+    position: relative;
   }
 }
 
