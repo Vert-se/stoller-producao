@@ -1,0 +1,158 @@
+@media screen and(min-width:100px){
+	.sidebar{
+		display: inline-block;
+		width: 100%;
+		max-width: 200px;
+		h2{
+			color: @grey_sl;
+			font-size: 2.8em;
+			font-weight: 400;
+			display: block;
+
+			margin-bottom: 20px;
+		}
+		nav{
+			margin: 0 0 30px;
+			li{
+				height: 35px;
+				margin-bottom: 1px;
+				a{
+					line-height: 35px;
+					font-size: 1.5em;
+					display: block;
+					background: @light;
+					padding-left: 52px;
+					font-weight: 400;
+
+					position: relative;
+
+					.trans();
+
+					overflow: hidden;
+
+					&:before{
+						display: block;
+						content: '';
+
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 44px;
+						height: 35px;
+						.trans();
+					}
+				}
+				&.green{
+					a{
+						color: @green;
+						&:before{
+							.sprite(0 -60px);
+						}
+						&:hover,
+						&.active{
+							background: @green;
+							color: @light;
+							padding-left: 20px;
+							&:before{
+								left: -44px;
+							}
+						}
+					}
+				}
+				&.green_m{
+					a{
+						color: @green_m;
+						&:before{
+							.sprite(0 -96px);
+						}
+						&:hover,
+						&.active{
+							background: @green_m;
+							color: @light;
+							padding-left: 20px;
+							&:before{
+								left: -44px;
+							}
+						}
+					}
+				}
+				&.green_d{
+					a{
+						color: @green_d;
+						&:before{
+							.sprite(0 -132px);
+						}
+						&:hover,
+						&.active{
+							background: @green_d;
+							color: @light;
+							padding-left: 20px;
+							&:before{
+								left: -44px;
+							}
+						}
+					}
+				}
+
+				&.facebook{
+					a{
+						color: #3a5795;
+						&:before{
+							.sprite(-46px -60px);
+						}
+						&:hover,
+						&.active{
+							background: #3a5795;
+							color: @light;
+							padding-left: 20px;
+							&:before{
+								left: -44px;
+							}
+						}
+					}
+				}
+				&.linkedin{
+					display: none;
+					a{
+						color: #55acee;
+						&:before{
+							.sprite(-46px -96px);
+						}
+						&:hover,
+						&.active{
+							background: #55acee;
+							color: @light;
+							padding-left: 20px;
+							&:before{
+								left: -44px;
+							}
+						}
+					}
+				}
+				&.youtube{
+					a{
+						color: #cc181e;
+						&:before{
+							.sprite(-46px -132px);
+						}
+						&:hover,
+						&.active{
+							background: #cc181e;
+							color: @light;
+							padding-left: 20px;
+							&:before{
+								left: -44px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and(min-width:850px){
+	.sidebar{
+		float: right;
+	}
+}

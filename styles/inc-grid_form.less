@@ -1,0 +1,245 @@
+@media screen and(min-width:100px){
+	#form-depoimento .grid_form input.input_text,
+	#form-depoimento .grid_form textarea.input_text,
+	#form-depoimento .grid_form .select_box, {
+		background: @light;
+	}
+	.w100{
+		input.input_text,
+		textarea.input_text,
+		.select_box{
+			color: @grey_sl;
+			font-size: 1.9em !important;
+			font-weight: 400;
+			margin-bottom: 10px !important;
+			select{
+				font-size: 1.05em !important;
+				color: @grey_sl;
+				font-family: inherit !important;
+			}
+		}
+		.title_field{
+			color: @light;
+		}
+		.botton_submit{
+			margin-right: 3% !important;
+		}
+	}
+	.filtros_form{
+		input.input_text,
+		textarea.input_text,
+		.select_box{
+			background: @light !important;
+			font-size: 1.9em !important;
+			color: @grey_sl;
+			font-weight: 400;
+			select{
+				font-size: 1.05em !important;
+				color: @grey_sl;
+				font-family: inherit !important;
+			}
+		}
+		.title_field{
+			color: @light;
+		}
+		.botton_submit{
+			margin-right: 3% !important;
+		}
+	}
+	.grid_form{
+		input.input_text,
+		textarea.input_text{
+			width: 100%;
+			border-radius: 5px;
+			background: rgba(255,255,255,0.5);
+			padding: 15px;
+			margin-bottom: 21px;
+			font-size: 1.4em;
+		}
+		textarea.input_text{
+			height: 200px;
+		}
+		.file_box{
+			position: relative;
+			width: auto;
+			input[type=file]{
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 50px;
+				width: 116px;
+				z-index: 3;
+				outline: none;
+				cursor: pointer;
+
+				opacity: 0;
+				filter: alpha(opacity=0);
+			}
+			#file-text{
+				display: block;
+				width: 100%;
+				background-color: transparent;
+				color: @light;
+				padding: 10px 0;
+
+				font-size: 1.4em;
+			}
+		}
+		.select_box{
+			position: relative;
+			width: 100%;
+			border-radius: 5px;
+			background: rgba(255,255,255,0.5);
+			margin-bottom: 21px;
+			&.select_box_mini{
+				width: 27%;
+				margin-right: 3%;
+				display: inline-block;
+			}
+			&:after{
+				position: absolute;
+				z-index: 1;
+
+				display: block;
+				content: '';
+
+				width: 12px;
+				height: 13px;
+
+				.sprite(-156px -103px);
+
+				right: 15px;
+				top: 15px;
+			}
+			select{
+				position: relative;
+				z-index: 2;
+				padding: 15px;
+				background-color: transparent;
+				-webkit-appearance: none;
+				width: 100%;
+				outline: none;
+			}
+		}
+		span.title_field{
+			font-size: 1.8em !important;
+			display: block;
+			margin-bottom: 5px;
+		}
+		span.title_field_mini{
+			float: left;
+			width: auto !important;
+			padding-left: 10px;
+		}
+		input[type=checkbox]{
+			display: inline-block;
+			float: left;
+			cursor: pointer;
+			-webkit-appearance: none;
+			height: 30px;
+			width: 30px;
+			background: rgba(255,255,255,0.5);
+			border-radius: 5px;
+
+			outline: none;
+			.trans();
+
+			&.checkbox_mini{
+				height: 20px;
+				width: 20px;
+				margin-right: 10px;
+			}
+
+			&:checked{
+				background: rgba(255,255,255,1);
+			}
+		}
+		input[type=radio]{
+			display: inline-block;
+			float: left;
+			cursor: pointer;
+			-webkit-appearance: none;
+			height: 20px;
+			width: 20px;
+			background: rgba(255,255,255,0.5);
+			border-radius: 100%;
+			margin-top: 10px;
+
+			outline: none;
+			.trans();
+
+			&:checked{
+				background: rgba(255,255,255,1);
+			}
+		}
+		label.title_field_mini{
+			float: left;
+			width: auto !important;
+			padding-left: 5px;
+			font-size: 1.4em !important;
+			line-height: 40px;
+			margin-right: 20px;
+		}
+		.botton_submit{
+			float: right;
+			margin-right: 0;
+			font-size: 1.8em;
+			background-color: transparent;
+			color: @light;
+
+			.seta_2;
+			&.botton_file{
+				text-align: left;
+				float: left;
+				&:after{
+					margin-top: -20px;
+				}
+			}
+		}
+
+		hr{
+			height: 1px;
+			width: 100%;
+			background: rgba(255,255,255,0.5);
+			display: block;
+			margin-bottom: 5px;
+		}
+	}	
+}
+
+@media screen and(min-width:850px){
+
+	.w100{
+		input.input_text,
+		.select_box{
+			width: 97% !important;
+		}
+		textarea.input_text{
+			width: 98.5% !important;
+		}
+	}
+	.grid_form{
+		input.input_text,
+		.select_box{
+			width: 90%;
+			margin-bottom: 0;
+		}
+		textarea.input_text{
+			width: 96%;
+			margin-bottom: 0;
+		}
+		.botton_submit{
+			margin-right: 15%;
+			&.botton_submit_left{
+				margin-top: 35px;
+				float: left;
+			}
+			&.botton_submit_sr{
+				margin-right: 4%;
+			}
+		}
+		hr{
+			width: 96%;
+		}
+	}	
+}
