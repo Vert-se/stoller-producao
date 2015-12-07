@@ -410,7 +410,6 @@ $(function(){
     window.site = site;
     window.site.init();
 
-    var $formTrabalhe;
 
     // SCROLLER PROTOTYPE
     $.extend(Scroller.prototype, {
@@ -559,38 +558,62 @@ $(function(){
         });
     };
 
+
+
+    var popCities = function($city, uf, endpoint) {
+        var options = '';
+        endpoint = endpoint || '/cidades/';
+        if(!uf) return;
+        $city.val('');
+        $.get(site.baseEndpoint + endpoint + uf, function(data){
+            options += "<option value=''>Escolha uma cidade...</option>";
+            for(var i in data) {
+                options += "<option value='"+data[i]+"'>"+data[i]+"</option>";
+            }
+            $city.html(options);
+        });
+    };
+
+    var popStates = function($uf, $city, endpointState, endpointCity) {
+        var options = '';
+        endpointState = endpointState || '/estados';
+        $.get(site.baseEndpoint + endpointState, function(data){
+            options += "<option value=''>Escolha um estado...</option>";
+            for(var i in data) {
+                options += "<option value='"+data[i]+"'>"+i+"</option>";
+            }
+            $uf.html(options);                
+        });
+
+        $uf.on('change', function(e) {
+            popCities($city, $(this).val(), endpointCity);
+        });
+    };
+
+    // MASCARAS DE FORMULÁRIO
+    if(jQuery.fn.mask) {
+        $('[name=telefone]').mask("(99) 9999-9999?9").focusout(function(){
+            var phone, element;
+            element = $(this);
+            element.unmask();
+            phone = element.val().replace(/\D/g, '');
+            if(phone.length > 10) {
+                element.mask("(99) 99999-999?9");
+            } else {
+                element.mask("(99) 9999-9999?9");
+            }
+        }).trigger('focusout');
+    }
+
     /* SELECT STATE */
     if($('body').hasClass('especialista-stoller')) {
 
         (function() {
             var $selectCidade = $('#especialista_cidade'),
                 $selectUf = $('#especialista_estado'),
-                $btn = $('#btn-filtro-especialista'),
-                options = '';
+                $btn = $('#btn-filtro-especialista');
 
-            var popCities = function() {
-                var uf = $(this).val(), options = '';
-                if(!uf) return;
-                $selectCidade.val('');
-                $.get(site.baseEndpoint + '/especialistas/cidades/'+uf, function(data){
-                    options += "<option value=''>Escolha uma cidade...</option>";
-                    for(var i in data) {
-                        options += "<option value='"+data[i]+"'>"+data[i]+"</option>";
-                    }
-                    $selectCidade.html(options);
-                });
-            };
-
-            $.get(site.baseEndpoint + '/especialistas/estados', function(data){
-                options += "<option value=''>Escolha um estado...</option>";
-                for(var i in data) {
-                    options += "<option value='"+data[i]+"'>"+i+"</option>";
-                }
-                $selectUf.html(options);                
-            });
-
-            $selectUf.on('change', popCities);
-
+            popStates($selectUf, $selectCidade, '/especialistas/estados', '/especialistas/cidades/');
             $btn.on('click', fetchSpecialists);
         })();
     }
@@ -726,25 +749,31 @@ $(function(){
         $fields.each(function() {
             var $field = $(this);
             if(!$field.val()) {
+                console.log($field.attr('name'));
                 $field.addClass('error');
                 validated = false;
             }
         });
         if(!validated) {
             $alert.addClass('error').html(msg);
+            console.log(scroll);
             if(scroll) $('html, body').animate({ scrollTop: $wrapper.offset().top }, 400);
         }
         return validated;
     };
 
 
-    /* FORMULARIOS */
+    /* TRABALHE CONOSCO */
     if($('#form-trabalhe').length) {
-        $formTrabalhe = $('#form-trabalhe');
+        var $formTrabalhe = $('#form-trabalhe'),
+            $selectUf = $('#trabalhe_conosco_cidade_id_uf'),
+            $selectCidade = $('#trabalhe_conosco_cidade_id_cidade');
+
+        popStates($selectUf, $selectCidade);
 
         $formTrabalhe.on('submit', function(e) {
             e.preventDefault();
-            if(!validateForm($formTrabalhe), true) return;
+            if(!validateForm($formTrabalhe, true)) return;
             clearForm($formTrabalhe);
             alert('Cadastro enviado com sucesso.');
         });
@@ -753,37 +782,74 @@ $(function(){
 
     /* FALE CONOSCO */
     if($('#form-fale').length) {
-        $formFale = $('#form-fale');
+        var $formFale = $('#form-fale'),
+            $selectUf = $('#contato_cidade_id_uf'),
+            $selectCidade = $('#contato_cidade_id_cidade'),
+            $alert = $formFale.parent().find('.form-message');
+
+        popStates($selectUf, $selectCidade);
 
         $formFale.on('submit', function(e) {
             e.preventDefault();
-            if(!validateForm($formFale), true) return;
-            clearForm($formFale);
-            alert('Mensagem enviada com sucesso.');
+            if(!validateForm($formFale, true)) return;
+
+            $alert.prop('class', 'form-message').html('');
+
+            $.post(site.baseEndpoint + '/contato', $formFale.serialize(), function(resp) {
+                if(resp.error) { $alert.addClass('error').html(resp.error); }
+                if(resp.success) {
+                    // $alert.addClass('success').html(resp.success);
+                    clearForm($formFale);
+                    alert('Mensagem enviada com sucesso.');
+                }
+            });
         });
     }
 
 
     /* DEPOIMENTO */
     if($('#form-depoimento').length) {
-        $formFale = $('#form-depoimento');
+        var $formFale = $('#form-depoimento'),
+            $alert = $formFale.parent().find('.form-message');
 
         $formFale.on('submit', function(e) {
             e.preventDefault();
-            if(!validateForm($formFale), true) return;
-            clearForm($formFale);
-            alert('Depoimento enviado com sucesso.');
+            if(!validateForm($formFale, true)) return;
+
+            $alert.prop('class', 'form-message').html('');
+
+            $.post(site.baseEndpoint + '/depoimento', $formFale.serialize(), function(resp) {
+                if(resp.error) { $alert.addClass('error').html(resp.error); }
+                if(resp.success) {
+                    // $alert.addClass('success').html(resp.success);
+                    clearForm($formFale);
+                    alert('Depoimento enviado com sucesso.');
+                }
+            });
         });
     }
 
     /* FALE ESPECIALISTA */
     if($('#form-especialista').length) {
-        $formFale = $('#form-especialista');
+        var $formFale = $('#form-especialista'),
+            $alert = $formFale.parent().find('.form-message');
+
+
+
         $formFale.on('submit', function(e) {
             e.preventDefault();
             if(!validateForm($formFale)) return;
-            clearForm($formFale);
-            alert('Mensagem enviada com sucesso.');
+
+            $alert.prop('class', 'form-message').html('');
+
+            $.post(site.baseEndpoint + '/prospeccao', $formFale.serialize(), function(resp) {
+                if(resp.error) { $alert.addClass('error').html(resp.error); }
+                if(resp.success) {
+                    // $alert.addClass('success').html(resp.success);
+                    clearForm($formFale);
+                    alert('Mensagem enviada com sucesso.');
+                }
+            });
         });
     }
 });

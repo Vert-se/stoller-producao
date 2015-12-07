@@ -182,7 +182,7 @@ Route::get('/especialistas/cidades/{uf}', function($uf)
     return Specialist::cities($uf);
 });
 
-// Get Specialist Cities
+// Store newsletter
 Route::post('/newsletter', function()
 {
     $rules = Newsletter::$rules;
@@ -196,4 +196,72 @@ Route::post('/newsletter', function()
     $newsletter = Newsletter::create($data);
 
     return ['success' => 'Cadastro salvo com sucesso!'];
+});
+
+// Store fale com um especialista
+Route::post('/prospeccao', function()
+{
+    $rules = Prospeccao::$rules;
+    $validator = Validator::make($data = Input::all(), $rules);
+
+    if ($validator->fails())
+    {
+        return ['error' => $validator->messages()->first()];
+    }
+
+    $prospeccao = Prospeccao::create($data);
+
+    return ['success' => 'Cadastro salvo com sucesso!'];
+});
+
+// Fale Conosto
+Route::post('/contato', function()
+{
+    $rules = Contato::$rules;
+    $validator = Validator::make($data = Input::all(), $rules);
+
+    if ($validator->fails())
+    {
+        return ['error' => $validator->messages()->first()];
+    }
+
+    $contato = Contato::create($data);
+
+    return ['success' => 'Mensagem enviada com sucesso!'];
+});
+
+// Depoimento
+Route::post('/depoimento', function()
+{
+    $rules = Depoimento::$rules;
+    $validator = Validator::make($data = Input::all(), $rules);
+
+    if ($validator->fails())
+    {
+        return ['error' => $validator->messages()->first()];
+    }
+
+    $depoimento = Depoimento::create($data);
+
+    return ['success' => 'Depoimento salvo com sucesso!'];
+});
+
+
+
+
+
+
+
+// GENERAL ENDPOINTS
+// States
+Route::get('estados/', function() {
+    return DB::table('states')->lists('uf', 'estado');
+});
+
+// Cities
+Route::get('cidades/{uf}', function($uf) {
+    return DB::table('cities')
+        ->join('states', 'states.id', '=', 'cities.state_id')
+        ->where('uf', $uf)
+        ->lists('cidade');
 });
