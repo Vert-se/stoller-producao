@@ -50,7 +50,7 @@
 
       #necessidade {
         position: relative;
-        height: 180%;
+        /*height: 180%;*/
         overflow: hidden;
       }
 
@@ -555,38 +555,10 @@
     <script src="scripts/necessidades-builder.js?1"></script>
 
     <script>
-        $(function() {
 
-
-            window.setTimeout(function() {
-                delay(function() {
-                    $('.banner_item_images .link_topo').addClass('active');
-                }, 0);
-                delay(function() {
-                    $('.banner_item_images .azul').addClass('active');
-                }, 0);
-                delay(function() {
-                    $('.banner_item_images .amarelo').addClass('active');
-                }, 350);
-                delay(function() {
-                    $('.banner_item_images .branco').addClass('active');
-                }, 700);
-                delay(function() {
-                    $('.banner_item_images .milho').addClass('active');
-                }, 1700);
-                delay(function() {
-                    $('.banner_item_images .foguete').addClass('active');
-                }, 2050);
-                delay(function() {
-                    $('.banner_item_images .texto').addClass('active');
-                }, 2400);
-            }, 7500);
-
-            var delay = function(cb, ms) {
-                window.setTimeout(cb, ms);
-            };
-
-        });
+        var delay = function(cb, ms) {
+            window.setTimeout(cb, ms);
+        };
 
         (function($) {
 
@@ -628,10 +600,42 @@
           updateBanner();
         };
 
-        $necc = $('#necessidade section');
-        $necc.first().css({ top: -(20 * $necc.height() / 100) });
-        parallax($('#inicio'), 2);
-        parallax($('#necessidade'), 3.5);
+        if($(document).width() > 850 ) {
+
+            /* PARALLAX */
+            $necc = $('#necessidade section');
+            $('#necessidade').css({ height: '180%'})
+            $necc.first().css({ top: -(20 * $necc.height() / 100) });
+            parallax($('#inicio'), 2);
+            parallax($('#necessidade'), 3.5);  
+
+
+            window.setTimeout(function() {
+                delay(function() {
+                    $('.banner_item_images .link_topo').addClass('active');
+                }, 0);
+                delay(function() {
+                    $('.banner_item_images .azul').addClass('active');
+                }, 0);
+                delay(function() {
+                    $('.banner_item_images .amarelo').addClass('active');
+                }, 350);
+                delay(function() {
+                    $('.banner_item_images .branco').addClass('active');
+                }, 700);
+                delay(function() {
+                    $('.banner_item_images .milho').addClass('active');
+                }, 1700);
+                delay(function() {
+                    $('.banner_item_images .foguete').addClass('active');
+                }, 2050);
+                delay(function() {
+                    $('.banner_item_images .texto').addClass('active');
+                }, 2400);
+            }, 7500);
+
+        }
+
 
     </script>
 

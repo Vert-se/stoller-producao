@@ -3807,13 +3807,94 @@ body.culturas .cult_sec_title .cult_color {
 }
 
 @media screen and (max-width: 849px) {
+  #inicio {
+    min-height: 81%;
+  }
+  .banner_item.video {
+    display: none;
+  }
+  .banner_gallery .banner_item_images {
+    background-color: #9fbb67;
+  }
+  .banner_gallery .banner_item_images .link_topo {
+    display: block;
+  }
+  .banner_gallery .banner_item_images .azul {
+    top: -10px;
+    width: 194%;
+    min-height: auto;
+    opacity: 1;
+  }
+  #necessidade .voltar_seta {
+    position: absolute;
+    top: 34%;
+    left: 20px;
+    z-index: 12;
+    display: block;
+    width: 31px;
+    height: 46px;
+    overflow: hidden;
+    text-indent: -3000px;
+    background: url('../images/stoller_sprite.png') no-repeat -133px 0;
+    -webkit-transform: translateY(-50%);
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateY(-50%);
+        -ms-transform: translateX(-100%);
+            transform: translateY(-50%);
+    transform: translateX(-100%);
+    -webkit-transition: all 0.2s;
+       -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+         -o-transition: all 0.2s;
+            transition: all 0.2s;
+  }
+  #necessidade .voltar_seta:hover {
+    opacity: 0.7;
+  }
+  #necessidade h2 {
+    margin-top: 30px;
+  }
+  #necessidade .home_galeria {
+    height: 1140px;
+  }
+  #necessidade #cultura-home-step {
+    top: 88%;
+  }
+  #necessidade .regiao_mapa {
+    width: 110%!important;
+    margin-top: 70px;
+  }
+  #necessidade .grid_3 .grid_item {
+    width: 49%;
+  }
   #necessidade .grid_3 .grid_item span:before {
     top: -20px;
     background-size: 200px auto;
   }
+  #necessidade .grid_3 .btn-solucao {
+    margin-top: 20px;
+  }
+  #necessidade .grid_4 .grid_item {
+    width: 49%;
+  }
   #necessidade .grid_4 .grid_item span:before {
     top: -15px;
     background-size: 120px auto;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  #inicio {
+    height: 71%;
+    min-height: 71%;
+  }
+  #necessidade .home_galeria {
+    height: 970px;
+  }
+  .banner_gallery .banner_item_images .azul {
+    top: -10px;
+    width: 210%;
+    opacity: 1;
   }
 }
 
