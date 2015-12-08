@@ -151,8 +151,8 @@ window.Culturas = {
                     { html: '<p class="sub-title"><strong>PERÍODO VEGETATIVO</strong></p>' },
                     { html: '<p class="sub-title"><strong>INÍCIO DA TUBÊRIZAÇÃO</strong></p>' },
                     { html: '<p class="sub-title"><strong>ENCHIMENTO DE TUBÉRCULOS</strong></p>' },
-                    { html: '<p class="sub-title"><strong></strong></p>' },
-                    { html: '<p class="sub-title"><strong>FINAL DO CICLO</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida da batata. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
+                    { html: '<p class="sub-title"><strong>FINAL DO CICLO</strong></p>' },
+                    { html: '<p class="sub-title"><strong>SISTEMA INTEGRADO STOLLER (SIS)</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida da batata. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
                 ]
             },
             {
@@ -200,7 +200,7 @@ window.Culturas = {
                     { html: '<p class="sub-title"><strong>crescimento dos colmos</strong></p>' },
                     { html: '<p class="sub-title"><strong>definição da população final de colmos</strong></p>' },
                     { html: '<p class="sub-title"><strong>cana planta/cana soca - maturação dos colmos</strong></p>' },
-                    { html: '<p class="sub-title"><strong>Sistema Integrado Stoller (SIS)</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida da cana. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
+                    { html: '<p class="sub-title"><strong>Sistema Integrado Stoller (SIS)</strong><br />O Sistema Integrado Stoller é uma solução completa com produtos específicos para cada fase do ciclo de vida da cana. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
                 ]
             },
             {
@@ -557,7 +557,7 @@ window.Culturas = {
                             { name: 'POTÁSSIO', description: 'Clorose nas pontas e margens das folhas mais velhas, seguida por secamento e dilaceração do tecido. A planta fica susceptível ao tombamento. Redução no crescimento do sistema radicular e na produção.'},
                             { name: 'MAGNÉSIO', description: 'As folhas mais velhas amarelecem nas margens e entre as nervuras, dando aspectos de estrias. Pode acarretar posterior necrose das regiões cloróticas.'},
                             { name: 'CÁLCIO', description: 'Nas folhas superiores aparecem sucessivamente: fino amarelecimento dos bordos, secamento, necrose e dilaceração das margens. Além disso, ocorrem ondulações no limbo foliar no sentido longitudinal.'},
-                            { name: 'ENXOFRE', description: 'redução do porte e área foliar. Folhas cloróticas com manchas esbranquiçadas na base e um gradiente roxo que se inicia no meio do limbo e se desenvolve para a região da bainha. importante: para cada 10 parte de N, o milho necessita de uma parte de S.'},
+                            { name: 'ENXOFRE', description: 'Redução do porte e área foliar. Folhas cloróticas com manchas esbranquiçadas na base e um gradiente roxo que se inicia no meio do limbo e se desenvolve para a região da bainha. importante: para cada 10 parte de N, o milho necessita de uma parte de S.'},
                         ]
                     },
                 ]
