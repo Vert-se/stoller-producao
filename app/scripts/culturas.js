@@ -146,13 +146,13 @@ window.Culturas = {
             {
                 type: 'animacao',
                 steps: [
-                    { html: '<p class="sub-title"><strong>EMERGÊNCIA</strong></p>' },
+                    { html: '<p class="sub-title"><strong>PLANTIO</strong></p>' },
                     { html: '<p class="sub-title"><strong>EMERGÊNCIA</strong></p>' },
                     { html: '<p class="sub-title"><strong>PERÍODO VEGETATIVO</strong></p>' },
                     { html: '<p class="sub-title"><strong>INÍCIO DA TUBÊRIZAÇÃO</strong></p>' },
                     { html: '<p class="sub-title"><strong>ENCHIMENTO DE TUBÉRCULOS</strong></p>' },
-                    { html: '<p class="sub-title"><strong>SENESCÊNCIA</strong></p>' },
-                    { html: '<p class="sub-title"><strong>Sistema Integrado Stoller (SIS)</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida da batata. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
+                    { html: '<p class="sub-title"><strong></strong></p>' },
+                    { html: '<p class="sub-title"><strong>FINAL DO CICLO</strong><br />O Sistema Integrado Stoller  é uma solução completa com produtos específicos para cada fase do ciclo de vida da batata. A aplicação do SIS contribui para a  proteção e para o fortalecimento das plantas.</p><p><a href="especialista-stoller.html">Procure o Especialista<br />Stoller mais próximo</a></p>' },
                 ]
             },
             {
