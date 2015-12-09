@@ -105,6 +105,8 @@ window.Culturas = {
                             { name: 'V2', description: 'Colar formado na segunda folha do colmo principal.'},
                             { name: 'V3', description: 'Colar formado na terceira folha do colmo principal.'},
                             { name: 'V4', description: 'Colar formado na quarta folha do colmo principal. Neste estádio também se inicia o perfilhamento da cultura, que pode durar cerca de quatro a seis semanas, dependendo da época de semeadura e cultivar, finalizando por volta de V7.'},
+							{ name: 'V5 VN', description: 'Colar formado na quarta folha do colmo principal. Neste estádio também se inicia o perfilhamento da cultura, que pode durar cerca de quatro a seis semanas, dependendo da época de semeadura e cultivar, finalizando por volta de V7.'},
+							{ name: 'GREEN RING', description: 'Green Ring: neste estádio o arroz apresenta de 8 a 9 folhas no colmo principal.'},
                         ]
                     }
                 ]
