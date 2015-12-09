@@ -123,6 +123,7 @@ window.Culturas = {
                             { name: 'BORO', description: 'Plantas com crescimento reduzido. Folhas novas e brotos, em caso mais severo de deficiência, mostram-se esbranquiçados e podem morrer.'},
                             { name: 'FERRO', description: 'Folhas novas apresentam clorose internerval, podendo progredir e tornar a folha totalmente amarelada.'},
                             { name: 'COBRE', description: 'Folhas novas com coloração verde-azulada, desenvolvendo uma clorose junto às pontas que desce pelos lados da nervura principal. Estas folhas enrolam-se e as pontas sofrem necrose. Inibição do crescimento da planta.'},
+							{ name: 'MOLIBDÊNIO', description: 'A manifestação de sintoma visual de deficiência de molibdênio é pouco frequente. No entanto, baixos níveis do nutriente nos tecidos afetam o aproveitamento do nitrogênio pela cultura..'},
                         ]
                     },
                     {
@@ -283,25 +284,25 @@ window.Culturas = {
                         type: 'florescimento',
                         name: 'Florescimento',
                         steps: [
-                            { name: 'R1', description: 'Gemas axilares Gemas axilares visivelmente ainda não diferenciadas para gemas reprodutivas (florais).'},
-                            { name: 'R2', description: 'Botões florais Botões florais visualmente perceptíveis, evidenciando a diferenciação das gemas vegetativas em reprodutivas.'},
-                            { name: 'R3', description: 'Botões Florais Botões florais em contínuo desenvolvimento e crescimento. Posteriormente o crescimento deles será restringido, normalmente por um período de estresse hídrico.'},
-                            { name: 'R4', description: 'Pré-florada Botões florais retomando o desenvolvimento e crescimento, normalmente após um período de estresse hídrico seguido de chuva ou irrigação.'},
-                            { name: 'R5', description: 'Pré-florada Botões florais em tamanho máximo, na iminência de abrirem-se em flores.'},
-                            { name: 'R6', description: 'Florada Plena floração (antese). '},
-                            { name: 'R7', description: 'Pós-florada Fase final do Florescimento, onde identificamos pétalas já caídas e/ou secas, onde o ovário em desenvolvimento e crescimento conduz, após antese, ao início da Frutificação. Este é, portanto, o estádio em que a transição entre o Florescimento e a Frutificação torna-se mais evidente.'},
+                            { name: 'R1', description: '<strong>Gemas axilares</strong><br/>Gemas axilares visivelmente ainda não diferenciadas para gemas reprodutivas (florais).'},
+                            { name: 'R2', description: '<strong>Botões florais</strong><br/>Botões florais visualmente perceptíveis, evidenciando a diferenciação das gemas vegetativas em reprodutivas.'},
+                            { name: 'R3', description: '<strong>Botões Florais</strong><br/>Botões florais em contínuo desenvolvimento e crescimento. Posteriormente o crescimento deles será restringido, normalmente por um período de estresse hídrico.'},
+                            { name: 'R4', description: '<strong>Pré-florada</strong><br/>Botões florais retomando o desenvolvimento e crescimento, normalmente após um período de estresse hídrico seguido de chuva ou irrigação.'},
+                            { name: 'R5', description: '<strong>Pré-florada</strong><br/>Botões florais em tamanho máximo, na iminência de abrirem-se em flores.'},
+                            { name: 'R6', description: '<strong>Florada</strong><br/>Plena floração (antese). '},
+                            { name: 'R7', description: '<strong>Pós-florada</strong><br/>Fase final do Florescimento, onde identificamos pétalas já caídas e/ou secas, onde o ovário em desenvolvimento e crescimento conduz, após antese, ao início da Frutificação. Este é, portanto, o estádio em que a transição entre o Florescimento e a Frutificação torna-se mais evidente.'},
                         ]
                     },
                     {
                         type: 'frutificacao',
                         name: 'Frutificação',
                         steps: [
-                            { name: 'F1', description: '“Chumbinho” Início da Frutificação, estádio no qual os frutos possuem uma baixa taxa de crescimento, geralmente compreendendo um período de 5 a 6 semanas após a antese.'},
-                            { name: 'F2', description: 'Expansão dos frutos Frutos em rápida expansão, período no qual os lóculos dos frutos são formados até atingirem seu tamanho máximo, aproximadamente 16 semanas após a antese. Será no interior desses lóculos que as sementes serão formadas. O interior do fruto mostra-se aquoso.'},
-                            { name: 'F3', description: 'Granação Frutos ainda verdes com seu tamanho definido e em fase de plena granação. A fase inicial da granação acontece ao longo do período final do estádio F2. O interior do mostra-se mais denso (“massa branca”).'},
-                            { name: 'F4', description: 'Maturação Início da maturação, com os frutos apresentando uma coloração verde-clara e verde-amarelada. Nesta fase, nota-se também um discreto aumento no tamanho dos frutos.'},
-                            { name: 'F5', description: 'Maturação Frutos na fase intermediária da maturação. Nota-se uma nítida e gradativa redução do número de frutos verdes.'},
-                            { name: 'F6', description: 'Maturação Final da maturação, quando os frutos apresentam toda a casca com coloração avermelhada*, com as sementes formadas e estando prontos para serem colhidos, 30 a 35 semanas após a antese.'},
+                            { name: 'F1', description: '<strong>“Chumbinho”</strong><br/>Início da Frutificação, estádio no qual os frutos possuem uma baixa taxa de crescimento, geralmente compreendendo um período de 5 a 6 semanas após a antese.'},
+                            { name: 'F2', description: '<strong>Expansão dos frutos</strong><br/>Frutos em rápida expansão, período no qual os lóculos dos frutos são formados até atingirem seu tamanho máximo, aproximadamente 16 semanas após a antese. Será no interior desses lóculos que as sementes serão formadas. O interior do fruto mostra-se aquoso.'},
+                            { name: 'F3', description: '<strong>Granação</strong><br/>Frutos ainda verdes com seu tamanho definido e em fase de plena granação. A fase inicial da granação acontece ao longo do período final do estádio F2. O interior do mostra-se mais denso (“massa branca”).'},
+                            { name: 'F4', description: '<strong>Maturação</strong><br/>Início da maturação, com os frutos apresentando uma coloração verde-clara e verde-amarelada. Nesta fase, nota-se também um discreto aumento no tamanho dos frutos.'},
+                            { name: 'F5', description: '<strong>Maturação</strong><br/>Frutos na fase intermediária da maturação. Nota-se uma nítida e gradativa redução do número de frutos verdes.'},
+                            { name: 'F6', description: '<strong>Maturação</strong><br/>Final da maturação, quando os frutos apresentam toda a casca com coloração avermelhada*, com as sementes formadas e estando prontos para serem colhidos, 30 a 35 semanas após a antese.'},
                         ]
                     }
                 ]
