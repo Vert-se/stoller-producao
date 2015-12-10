@@ -227,6 +227,12 @@ Route::post('/contato', function()
 
     $contato = Contato::create($data);
 
+    $title = 'Nova mensagem recebida';
+
+    $html = View::make('emails.contato', $contato)->render();
+
+    MailManager::send($title, $html);
+
     return ['success' => 'Mensagem enviada com sucesso!'];
 });
 
@@ -245,6 +251,43 @@ Route::post('/depoimento', function()
 
     return ['success' => 'Depoimento salvo com sucesso!'];
 });
+
+// Curriculo
+Route::post('/curriculo', function()
+{
+    $rules = Curriculo::$rules;
+    $validator = Validator::make($data = Input::all(), $rules);
+
+    if ($validator->fails())
+    {
+        return ['error' => $validator->messages()->first()];
+    }
+
+    $curriculo = Curriculo::create($data);
+
+    $title = 'Novo currículo recebido';
+
+    $html = View::make('emails.curriculo', $curriculo)->render();
+
+    MailManager::send($title, $html);
+
+    return ['success' => 'Curriculo salvo com sucesso!'];
+});
+
+
+Route::get('/test-mail', function() {
+    $id = 3;
+    $contato = Curriculo::find($id);
+
+    $title = 'Nova mensagem recebida';
+
+    $html = View::make('emails.curriculo', $contato)->render();
+
+    MailManager::send($title, $html);
+
+    return 'ok';
+});
+
 
 
 

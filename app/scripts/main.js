@@ -592,6 +592,23 @@ $(function(){
 
     // MASCARAS DE FORMULÁRIO
     if(jQuery.fn.mask) {
+        $('[name=cep]').mask('99999-999');
+        $('[name=telefone]').mask("(99) 9999-9999?9").focusout(function(){
+            var phone, element;
+            element = $(this);
+            element.unmask();
+            phone = element.val().replace(/\D/g, '');
+            if(phone.length > 10) {
+                element.mask("(99) 99999-999?9");
+            } else {
+                element.mask("(99) 9999-9999?9");
+            }
+        }).trigger('focusout');
+    };
+
+    // MASCARAS DE FORMULÁRIO
+    if(jQuery.fn.mask) {
+        $('[name=cep]').mask('99999-999');
         $('[name=telefone]').mask("(99) 9999-9999?9").focusout(function(){
             var phone, element;
             element = $(this);
@@ -739,6 +756,17 @@ $(function(){
         });
     };
 
+    var showError = function($wrapper, msg, $alert, scroll) {
+        $alert.addClass('error').html(msg);
+        if(scroll) $('html, body').animate({ scrollTop: $wrapper.offset().top }, 400);
+    };
+
+    var showSuccessMsg = function($body, $msg, scroll) {
+        $body.hide();
+        $msg.show();
+        if(scroll) $('html, body').animate({ scrollTop: 0 }, 0);
+    };
+
     var validateForm = function($form, scroll) {
         var $wrapper = $form.parent(),
             $alert = $wrapper.find('.form-message'),
@@ -755,9 +783,7 @@ $(function(){
             }
         });
         if(!validated) {
-            $alert.addClass('error').html(msg);
-            console.log(scroll);
-            if(scroll) $('html, body').animate({ scrollTop: $wrapper.offset().top }, 400);
+            if(scroll) showError($wrapper, msg, $alert, scroll);
         }
         return validated;
     };
@@ -767,15 +793,28 @@ $(function(){
     if($('#form-trabalhe').length) {
         var $formTrabalhe = $('#form-trabalhe'),
             $selectUf = $('#trabalhe_conosco_cidade_id_uf'),
-            $selectCidade = $('#trabalhe_conosco_cidade_id_cidade');
+            $selectCidade = $('#trabalhe_conosco_cidade_id_cidade'),
+            $alert = $formTrabalhe.parent().find('.form-message'),
+            $formBody = $('#form-body'),
+            $sucessoMsg = $('#sucesso-resp');
 
         popStates($selectUf, $selectCidade);
 
         $formTrabalhe.on('submit', function(e) {
             e.preventDefault();
             if(!validateForm($formTrabalhe, true)) return;
-            clearForm($formTrabalhe);
-            alert('Cadastro enviado com sucesso.');
+
+            $alert.prop('class', 'form-message').html('');
+
+            
+            $.post(site.baseEndpoint + '/curriculo', $formTrabalhe.serialize(), function(resp) {
+                if(resp.error) { showError($formTrabalhe.parent(), resp.error, $alert, true); }
+                if(resp.success) {
+                    // $alert.addClass('success').html(resp.success);
+                    clearForm($formTrabalhe);
+                    showSuccessMsg($formBody, $sucessoMsg, true);
+                }
+            });
         });
     }
 
@@ -785,7 +824,9 @@ $(function(){
         var $formFale = $('#form-fale'),
             $selectUf = $('#contato_cidade_id_uf'),
             $selectCidade = $('#contato_cidade_id_cidade'),
-            $alert = $formFale.parent().find('.form-message');
+            $alert = $formFale.parent().find('.form-message'),
+            $formBody = $('#form-body'),
+            $sucessoMsg = $('#sucesso-resp');
 
         popStates($selectUf, $selectCidade);
 
@@ -796,11 +837,11 @@ $(function(){
             $alert.prop('class', 'form-message').html('');
 
             $.post(site.baseEndpoint + '/contato', $formFale.serialize(), function(resp) {
-                if(resp.error) { $alert.addClass('error').html(resp.error); }
+                if(resp.error) { showError($formFale.parent(), resp.error, $alert, true); }
                 if(resp.success) {
                     // $alert.addClass('success').html(resp.success);
                     clearForm($formFale);
-                    alert('Mensagem enviada com sucesso.');
+                    showSuccessMsg($formBody, $sucessoMsg, true);
                 }
             });
         });
@@ -819,7 +860,7 @@ $(function(){
             $alert.prop('class', 'form-message').html('');
 
             $.post(site.baseEndpoint + '/depoimento', $formFale.serialize(), function(resp) {
-                if(resp.error) { $alert.addClass('error').html(resp.error); }
+                if(resp.error) { showError($formFale.parent(), resp.error, $alert, true); }
                 if(resp.success) {
                     // $alert.addClass('success').html(resp.success);
                     clearForm($formFale);
@@ -832,7 +873,11 @@ $(function(){
     /* FALE ESPECIALISTA */
     if($('#form-especialista').length) {
         var $formFale = $('#form-especialista'),
-            $alert = $formFale.parent().find('.form-message');
+            $alert = $formFale.parent().find('.form-message'),
+            $formBody = $('#form-body'),
+            $sucessoMsg = $('#sucesso-resp'),
+            $formBody = $('#form-body'),
+            $sucessoMsg = $('#sucesso-resp');
 
 
 
@@ -847,7 +892,7 @@ $(function(){
                 if(resp.success) {
                     // $alert.addClass('success').html(resp.success);
                     clearForm($formFale);
-                    alert('Mensagem enviada com sucesso.');
+                    showSuccessMsg($formBody, $sucessoMsg, true);
                 }
             });
         });

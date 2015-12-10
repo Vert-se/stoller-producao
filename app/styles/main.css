@@ -1264,12 +1264,6 @@ footer .social li.youtube a {
   }
 }
 
-@media screen and (max-width: 849px) {
-  .area.image.image_expand {
-    background-size: auto 100%;
-  }
-}
-
 .grid {
   width: 100%;
 }
@@ -2890,18 +2884,6 @@ body.culturas .cult_sec_title .cult_color {
   }
 }
 
-@media screen and (max-width: 849px) {
-  .scroll-wrapper {
-    bottom: 0;
-  }
-  body.culturas .sessao-galeria .empty {
-    margin-bottom: 170px;
-  }
-  body.culturas .sessao-galeria .sessao-galeria-text {
-    position: relative;
-  }
-}
-
 @media screen and (min-width: 100px) {
   .sidebar {
     display: inline-block;
@@ -4014,6 +3996,10 @@ textarea.error {
   color: #000!important;
   background-color: #C59F9F!important;
   border: 1px solid #b00;
+}
+
+.sucesso-msg {
+  display: none;
 }
 
 @media screen and (min-height: 680px) {

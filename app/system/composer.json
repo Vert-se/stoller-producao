@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+		"sairiz/mandrill": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -15,7 +16,8 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php",
-			"app/helpers"
+			"app/helpers",
+			"app/libraries"
 		]
 	},
 	"scripts": {
