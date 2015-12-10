@@ -2872,6 +2872,19 @@ body.culturas .cult_sec_title .cult_color {
   .sessao-galeria.sessao-galeria-double .carousel-single-wrapper {
     width: 100%;
   }
+  #desenvolvimento:after {
+    display: none !important;
+  }
+  #desenvolvimento .sessao-galeria {
+    display: none;
+  }
+  #desenvolvimento .sessao-mobile {
+    display: block;
+  }
+  #desenvolvimento .sessao-mobile img {
+    display: block;
+    margin: 40px auto 80px;
+  }
 }
 
 @media screen and (min-width: 850px) {
@@ -2881,6 +2894,15 @@ body.culturas .cult_sec_title .cult_color {
   }
   .sessao-galeria.sessao-galeria-double .carousel-single-wrapper:nth-child(even) {
     float: right;
+  }
+  #desenvolvimento:after {
+    display: block !important;
+  }
+  #desenvolvimento .sessao-galeria {
+    display: block;
+  }
+  #desenvolvimento .sessao-mobile {
+    display: none;
   }
 }
 

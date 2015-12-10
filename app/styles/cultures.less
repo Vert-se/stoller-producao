@@ -284,7 +284,23 @@
         width: 100%;
       }
     }
-  }  
+  }
+  #desenvolvimento{
+    &:after{
+      display: none !important;
+    }
+    .sessao-galeria{
+      display: none;
+    }
+
+    .sessao-mobile{
+      display: block;
+      img{
+        margin: 40px auto 80px;
+        display: block;
+      }
+    }
+  }
 }
 
 @media screen and(min-width:850px){
@@ -298,5 +314,17 @@
         }
       }
     }
-  }  
+  }
+  #desenvolvimento{
+    &:after{
+      display: block !important;
+    }
+    .sessao-galeria{
+      display: block;
+    }
+
+    .sessao-mobile{
+      display: none;
+    }
+  } 
 }
